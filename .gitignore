@@ -4,14 +4,6 @@ src/Builds/MacOSX/RecentFilesMenuTemplate.nib
 src/Builds/MacOSX/build/Debug/TDS.app/Contents/PkgInfo
 src/Builds/MacOSX/build/Debug/TDS.app/Contents/MacOS/TDS
 src/Builds/MacOSX/build/Debug/TDS.app/Contents/Resources/RecentFilesMenuTemplate.nib
-src/Builds/MacOSX/TDS.xcodeproj/project.pbxproj
-src/Builds/MacOSX/TDS.xcodeproj/project.xcworkspace/contents.xcworkspacedata
-src/Builds/MacOSX/TDS.xcodeproj/project.xcworkspace/xcuserdata/ccomte.xcuserdatad/UserInterfaceState.xcuserstate
-src/Builds/MacOSX/TDS.xcodeproj/project.xcworkspace/xcuserdata/Corentin.xcuserdatad/UserInterfaceState.xcuserstate
-src/Builds/MacOSX/TDS.xcodeproj/xcuserdata/ccomte.xcuserdatad/xcschemes/TDS (App).xcscheme
-src/Builds/MacOSX/TDS.xcodeproj/xcuserdata/ccomte.xcuserdatad/xcschemes/xcschememanagement.plist
-src/Builds/MacOSX/TDS.xcodeproj/xcuserdata/Corentin.xcuserdatad/xcschemes/TDS (App).xcscheme
-src/Builds/MacOSX/TDS.xcodeproj/xcuserdata/Corentin.xcuserdatad/xcschemes/xcschememanagement.plist
 src/JuceLibraryCode/AppConfig.h
 src/JuceLibraryCode/juce_audio_basics.cpp
 src/JuceLibraryCode/juce_audio_basics.mm
