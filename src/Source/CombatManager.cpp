@@ -56,7 +56,7 @@ int CombatManager::ComputeAttackEffect(Attack inAttack){
         coeff *= 0.5f;
     }
     else {
-       coeff_reputation -= mPlayer->GetReputation() / 100.f;
+        coeff_reputation -= std::max(mPlayer->GetReputation() / 100.f, 0.f); //std::max to be sure we do not go negative
     }
 
     // Compute now with player genre
@@ -92,11 +92,11 @@ int CombatManager::ComputeAttackEffect(Attack inAttack){
         }
     }
     
-    int final = basic_attack*coeff + 5*coeff_reputation;
+    int final_coeff = basic_attack*coeff + 5*coeff_reputation;
     if(inAttack.IsImpactingTarget())
-        final += inAttack.GetTargetMalus();
+        final_coeff += inAttack.GetTargetMalus();
     
-    return final;
+    return final_coeff;
 }
 
 ////////////////////////////////////////////////////////////////////////

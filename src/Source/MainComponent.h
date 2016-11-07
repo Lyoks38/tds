@@ -13,6 +13,7 @@ class GameEngine;
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "GameEngine.h"
+#include "GUI/GuiHeader.h"
 
 
 //==============================================================================
@@ -29,6 +30,9 @@ public:
 
     void paint (Graphics&);
     void resized();
+    
+    //bool DisplayMainMenu();
+    bool DisplayNewPlayer(){ return true; };
 
 private:
     //==============================================================================

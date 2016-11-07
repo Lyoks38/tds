@@ -17,6 +17,10 @@ MainContentComponent::MainContentComponent()
     // Creates the engine and attach it to GUI
     mEngine.reset(new GameEngine());
     mEngine->AttachGUI(this);
+    
+    MainMenu* mainGameMenu = new MainMenu();
+    addAndMakeVisible(mainGameMenu);
+    mainGameMenu->setBounds(0, 0, getWidth(), getHeight());
 }
 
 MainContentComponent::~MainContentComponent()
