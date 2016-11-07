@@ -6,11 +6,6 @@
 //
 //
 
-#ifndef GuiHeader_h
-#define GuiHeader_h
-
 
 //This is where all the headers for GUI windows should be included
 #include "MainMenu.h"
-
-#endif /* GuiHeader_h */
