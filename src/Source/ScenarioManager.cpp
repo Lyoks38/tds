@@ -12,7 +12,6 @@
 
 ScenarioManager::~ScenarioManager()
 {
-    mMainGUI.reset(nullptr);
     mCombatManager.reset(nullptr);
     mPlayer.reset(nullptr);
 }

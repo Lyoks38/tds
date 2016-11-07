@@ -21,6 +21,8 @@ public:
     
     ~GameEngine();
     
+    void PrepareToClose();
+    
     void AttachGUI(MainContentComponent* inGUI);
     
     void SaveGame(){};
@@ -30,6 +32,6 @@ private:
     
     std::unique_ptr<ScenarioManager> mScenarioManager = nullptr;
     
-    std::unique_ptr<MainContentComponent> mMainGUI = nullptr;
+    MainContentComponent* mMainGUI = nullptr;
     
 };

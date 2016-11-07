@@ -25,6 +25,7 @@ MainContentComponent::MainContentComponent()
 
 MainContentComponent::~MainContentComponent()
 {
+    mEngine.reset(nullptr);
 }
 
 void MainContentComponent::paint (Graphics& g)

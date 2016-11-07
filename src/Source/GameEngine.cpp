@@ -18,12 +18,16 @@ GameEngine::GameEngine()
 GameEngine::~GameEngine()
 {
     mScenarioManager.reset(nullptr);
-    //mMainGUI.reset(nullptr); //error when closing app
+}
+
+void GameEngine::PrepareToClose()
+{
+    mMainGUI = nullptr; //error when closing app
 }
 
 void GameEngine::AttachGUI(MainContentComponent *inGUI)
 {
-    mMainGUI.reset(inGUI);
+    mMainGUI = inGUI;
     
     mScenarioManager->AttachToGUI(inGUI);
 }

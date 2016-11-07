@@ -34,8 +34,8 @@ public:
     void LoadAttacks();
     
     void LoadGirls();
-    
-    void AttachToGUI(MainContentComponent* inGUI) { mMainGUI.reset(inGUI); };
+
+    void AttachToGUI(MainContentComponent* inGUI) { mMainGUI = inGUI; };
     
     //Manage Events
     void GoToNextEvent();
@@ -55,7 +55,7 @@ protected:
     
 private:
     
-    std::unique_ptr<MainContentComponent> mMainGUI = nullptr;
+    MainContentComponent* mMainGUI = nullptr;
     
     std::unique_ptr<CombatManager> mCombatManager = nullptr;
     
