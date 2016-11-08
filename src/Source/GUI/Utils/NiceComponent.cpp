@@ -18,10 +18,17 @@ juce::Component(inName)
 void NiceComponent::paint(juce::Graphics &inG)
 {
     juce::Colour bgColor = isMouseOver() ? mBgHoverColor : mBgColor ;
+    
+    if(!bgColor.isTransparent())
+        inG.fillAll(bgColor);
+    
+    if(mTextToDisplay.empty())
+        return;
+    
     juce::Colour textColour = isMouseOver() ? mTextHoverColor : mTextColor;
     
-    inG.fillAll(bgColor);
-    
-    inG.setColour(textColour);
-    inG.drawText(mTextToDisplay, getBounds(), mJustification);
+    if(!textColour.isTransparent()){
+        inG.setColour(textColour);
+        inG.drawText(mTextToDisplay, getBounds(), mJustification);
+    }
 }

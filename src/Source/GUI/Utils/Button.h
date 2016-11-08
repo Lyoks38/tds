@@ -12,6 +12,7 @@
 #include "GuiUtils.h"
 #include "NiceComponent.h"
 
+namespace TDS {
 
 class Button: public NiceComponent
 {
@@ -26,13 +27,22 @@ public:
     virtual void paint(juce::Graphics& inG) override;
     
     void SetToggleState(uint8_t inState);
+    uint8_t GetToggleState() const { return mToggleState; }
     
+    void SetActiveText(std::string inText) { mTextActive = inText; }
     
 private:
     
     uint8_t mToggleState = 0;
     
+    std::string mTextActive;
+    
+    juce::Colour mBgActiveColor = juce::Colours::transparentWhite;
+    juce::Colour mBgActiveHoverColor = juce::Colours::transparentWhite;
+    juce::Colour mTextActiveColor = juce::Colours::black;
+    juce::Colour mTextActiveHoverColor = juce::Colours::black;
+    
 };
 
-
+}
 #endif /* Button_h */

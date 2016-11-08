@@ -20,6 +20,7 @@
 		19AFC5C91CFF7B1000ECBC63 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19AFC5C81CFF7B1000ECBC63 /* Player.cpp */; };
 		1BDA33EAA239318C1482A570 /* juce_audio_formats.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F15BBC275967172319AC364 /* juce_audio_formats.mm */; };
 		294395984B822EC596048B72 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C6798BB1B1B6471E026E2A /* CoreMIDI.framework */; };
+		45B8A7951DD20B0F00E361A7 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* Button.cpp */; };
 		47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50A5B0E5097DF0431F8E565E /* juce_video.mm */; };
 		567516F1CC296B91ACFE418A /* RecentFilesMenuTemplate.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD70D7B1111CE7CAC7D8E4A /* RecentFilesMenuTemplate.nib */; };
 		59AF506B2FB0B6A6BFA011A5 /* juce_audio_devices.mm in Sources */ = {isa = PBXBuildFile; fileRef = 629AA793DEC2442C630B22A7 /* juce_audio_devices.mm */; };
@@ -374,6 +375,7 @@
 		45A453B12DC2D5F7343D37F0 /* compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = compat.h; path = ../../../JUCE/modules/juce_audio_formats/codecs/flac/compat.h; sourceTree = SOURCE_ROOT; };
 		45A7FCBFAE599B4149CB3AFE /* juce_Primes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_Primes.cpp; path = ../../../JUCE/modules/juce_cryptography/encryption/juce_Primes.cpp; sourceTree = SOURCE_ROOT; };
 		45AF5D111677436893631F55 /* juce_AudioProcessorGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_AudioProcessorGraph.h; path = ../../../JUCE/modules/juce_audio_processors/processors/juce_AudioProcessorGraph.h; sourceTree = SOURCE_ROOT; };
+		45B8A7941DD20B0F00E361A7 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../../Source/GUI/Utils/Button.cpp; sourceTree = "<group>"; };
 		45CC7A34B37DAB56D3E13304 /* juce_LocalisedStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_LocalisedStrings.h; path = ../../../JUCE/modules/juce_core/text/juce_LocalisedStrings.h; sourceTree = SOURCE_ROOT; };
 		45CEA2C6E70A52F4579B465A /* inffixed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../../../JUCE/modules/juce_core/zip/zlib/inffixed.h; sourceTree = SOURCE_ROOT; };
 		4639838A767CEC4784FF93AF /* juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_gui_extra.mm; path = ../../../JUCE/modules/juce_gui_extra/juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
@@ -1482,6 +1484,7 @@
 			children = (
 				196019E11DD11465004108F2 /* GuiUtils.h */,
 				196019E91DD129E9004108F2 /* Button.h */,
+				45B8A7941DD20B0F00E361A7 /* Button.cpp */,
 				196019EA1DD12BCB004108F2 /* NiceComponent.h */,
 				196019EB1DD13262004108F2 /* NiceComponent.cpp */,
 			);
@@ -3525,6 +3528,7 @@
 				73472D42337813788C99BDFD /* juce_opengl.mm in Sources */,
 				47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */,
 				196019EC1DD13262004108F2 /* NiceComponent.cpp in Sources */,
+				45B8A7951DD20B0F00E361A7 /* Button.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3573,6 +3577,7 @@
 				HEADER_SEARCH_PATHS = (
 					../../JuceLibraryCode,
 					"~/Documents/Dev/JUCE/modules",
+					"~/Documents/Perso/tds/juce/modules",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Info-App.plist";
@@ -3629,6 +3634,7 @@
 				HEADER_SEARCH_PATHS = (
 					../../JuceLibraryCode,
 					"~/Documents/Dev/JUCE/modules",
+					"~/Documents/Perso/tds/juce/modules",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Info-App.plist";

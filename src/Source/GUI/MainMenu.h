@@ -53,8 +53,8 @@ public:
     
 private:
     
-    Button* mNewGameButton = nullptr;
-    Button* mLoadGameButton = nullptr;
+    TDS::Button* mNewGameButton = nullptr;
+    TDS::Button* mLoadGameButton = nullptr;
 };
 
 #endif /* MainMenu_h */
