@@ -26,15 +26,18 @@ MainContentComponent::MainContentComponent()
 MainContentComponent::~MainContentComponent()
 {
     mEngine.reset(nullptr);
+    
+    juce::Component* mainMenu = getChildComponent(0);
+    removeChildComponent(mainMenu);
 }
 
 void MainContentComponent::paint (Graphics& g)
 {
     g.fillAll (Colour (0xff001F36));
 
-    g.setFont (Font (16.0f));
+    /*g.setFont (Font (16.0f));
     g.setColour (Colours::white);
-    g.drawText ("Ceci est le premier build du jeu TDS !", getLocalBounds(), Justification::centred, true);
+    g.drawText ("Ceci est le premier build du jeu TDS !", getLocalBounds(), Justification::centred, true);*/
 }
 
 void MainContentComponent::resized()

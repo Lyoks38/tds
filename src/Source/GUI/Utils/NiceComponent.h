@@ -19,18 +19,21 @@ public:
     
     NiceComponent(const std::string& inName);
     
-    ~NiceComponent();
+    ~NiceComponent(){};
     
     
     virtual void paint(juce::Graphics& inG) override;
     
+    virtual void mouseEnter(const juce::MouseEvent& e) override { repaint(); }
+    virtual void mouseExit(const juce::MouseEvent& e)  override { repaint(); }
+
     //Setters
     void SetTextToDisplay(std::string inText) { mTextToDisplay = inText; }
     void SetJustification(juce::Justification inJustification) { mJustification = inJustification; }
-    void SetBgColor(juce::Colour inColour) { mBgColor = inColour; }
-    void SetBgHoverColor(juce::Colour inColour) { mBgHoverColor = inColour; }
-    void SetTextColor(juce::Colour inColour) { mTextColor = inColour; }
-    void SetTextHoverColor(juce::Colour inColour) { mTextHoverColor = inColour; }
+    void SetBgColor(const juce::Colour& inColour) { mBgColor = inColour; }
+    void SetBgHoverColor(const juce::Colour& inColour) { mBgHoverColor = inColour; }
+    void SetTextColor(const juce::Colour& inColour) { mTextColor = inColour; }
+    void SetTextHoverColor(const juce::Colour& inColour) { mTextHoverColor = inColour; }
     
 protected:
     

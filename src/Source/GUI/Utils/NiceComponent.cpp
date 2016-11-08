@@ -12,6 +12,7 @@
 NiceComponent::NiceComponent(const std::string& inName):
 juce::Component(inName)
 {
+    
 }
 
 
@@ -19,8 +20,10 @@ void NiceComponent::paint(juce::Graphics &inG)
 {
     juce::Colour bgColor = isMouseOver() ? mBgHoverColor : mBgColor ;
     
-    if(!bgColor.isTransparent())
-        inG.fillAll(bgColor);
+    if(!bgColor.isTransparent()){
+        inG.setColour(bgColor);
+        inG.fillRect(0, 0, getWidth(), getHeight());
+    }
     
     if(mTextToDisplay.empty())
         return;
@@ -28,7 +31,8 @@ void NiceComponent::paint(juce::Graphics &inG)
     juce::Colour textColour = isMouseOver() ? mTextHoverColor : mTextColor;
     
     if(!textColour.isTransparent()){
+        inG.setFont (Font (16.0f));
         inG.setColour(textColour);
-        inG.drawText(mTextToDisplay, getBounds(), mJustification);
+        inG.drawText(mTextToDisplay, 0, 0, getWidth(), getHeight(), mJustification);
     }
 }

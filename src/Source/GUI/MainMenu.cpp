@@ -10,27 +10,36 @@
 
 MainMenu::MainMenu(): juce::Component("Main Menu")
 {
-    mNewGameButton = new Button("New Game Button");
-    mLoadGameButton = new Button("Load Game Button");
+    mNewGameButton = new NiceComponent("New Game Button");
+    mLoadGameButton = new NiceComponent("Load Game Button");
     
-    mNewGameButton->setButtonText("Start New Game");
-    mLoadGameButton->setButtonText("Load Saved Game");
+    mNewGameButton->SetTextToDisplay("Start New Game");
+    mLoadGameButton->SetTextToDisplay("Load Saved Game");
+    
+    mNewGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mLoadGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    
+    mNewGameButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mLoadGameButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    
+    mNewGameButton->setBounds(200, 133, 200, 70);
+    mLoadGameButton->setBounds(200, 266, 200, 70);
     
     addAndMakeVisible(mNewGameButton);
     addAndMakeVisible(mLoadGameButton);
 }
 
+MainMenu::~MainMenu()
+{
+    removeChildComponent(mNewGameButton);
+    removeChildComponent(mLoadGameButton);
+}
+
 void MainMenu::resized()
 {
-    int w = getWidth();
-    int h = getHeight();
-    
-    mNewGameButton->setBounds(w/3, h/6, w/3, h/3);
-    mLoadGameButton->setBounds(w/3, 4*h/6, w/3, h/3);
 }
 
 void MainMenu::paint(juce::Graphics& inG)
 {
-    inG.fillAll(juce::Colour (0xffFF1F36));
 }
 

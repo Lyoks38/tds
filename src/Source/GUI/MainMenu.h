@@ -9,10 +9,10 @@
 #ifndef MainMenu_h
 #define MainMenu_h
 
-class Button;
+class NiceComponent;
 
 #include "GuiUtils.h"
-#include "Utils/Button.h"
+#include "Utils/NiceComponent.h"
 
 
 
@@ -43,7 +43,7 @@ public:
     
     MainMenu();
     
-    ~MainMenu(){};
+    ~MainMenu();
     
     virtual void paint(juce::Graphics& inG) override;
     
@@ -53,8 +53,8 @@ public:
     
 private:
     
-    TDS::Button* mNewGameButton = nullptr;
-    TDS::Button* mLoadGameButton = nullptr;
+    NiceComponent* mNewGameButton = nullptr;
+    NiceComponent* mLoadGameButton = nullptr;
 };
 
 #endif /* MainMenu_h */
