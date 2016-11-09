@@ -55,6 +55,8 @@ private:
     
     NiceComponent* mNewGameButton = nullptr;
     NiceComponent* mLoadGameButton = nullptr;
+    
+    juce::Font mMainFont;
 };
 
 #endif /* MainMenu_h */
