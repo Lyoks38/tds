@@ -38,6 +38,8 @@ public:
 protected:
     
     std::string mTextToDisplay;
+    juce::Font mFont;
+    float mFontSize = 16.f;
     juce::Justification mJustification = juce::Justification::centred;
     
     juce::Colour mBgColor = juce::Colours::transparentWhite;

@@ -39,6 +39,8 @@ private:
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
     
     std::unique_ptr<GameEngine> mEngine;
+    
+    std::unique_ptr<MainMenu> mMainMenu = nullptr;
 };
 
 

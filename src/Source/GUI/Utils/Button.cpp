@@ -35,6 +35,8 @@ namespace TDS {
         
         juce::Colour textColor = isMouseOver() ? mTextActiveHoverColor : mTextActiveColor;
         if(!textColor.isTransparent()){
+            mFont.setHeight(mFontSize);
+            inG.setFont (mFont);
             inG.setColour(textColor);
             inG.drawText(mTextActive, 0, 0, getWidth(), getHeight(), mJustification);
         }

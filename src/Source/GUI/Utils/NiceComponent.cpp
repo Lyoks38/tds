@@ -31,7 +31,8 @@ void NiceComponent::paint(juce::Graphics &inG)
     juce::Colour textColour = isMouseOver() ? mTextHoverColor : mTextColor;
     
     if(!textColour.isTransparent()){
-        inG.setFont (Font (16.0f));
+        mFont.setHeight(mFontSize);
+        inG.setFont (mFont);
         inG.setColour(textColour);
         inG.drawText(mTextToDisplay, 0, 0, getWidth(), getHeight(), mJustification);
     }

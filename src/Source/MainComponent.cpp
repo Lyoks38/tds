@@ -18,17 +18,17 @@ MainContentComponent::MainContentComponent()
     mEngine.reset(new GameEngine());
     mEngine->AttachGUI(this);
     
-    MainMenu* mainGameMenu = new MainMenu();
-    addAndMakeVisible(mainGameMenu);
-    mainGameMenu->setBounds(0, 0, getWidth(), getHeight());
+    //We open the Main Menu of the game at opening
+    mMainMenu.reset(new MainMenu());
+    addAndMakeVisible(mMainMenu.get());
+    mMainMenu->setBounds(0, 0, getWidth(), getHeight());
 }
 
 MainContentComponent::~MainContentComponent()
 {
     mEngine.reset(nullptr);
     
-    juce::Component* mainMenu = getChildComponent(0);
-    removeChildComponent(mainMenu);
+    removeChildComponent(mMainMenu.get());
 }
 
 void MainContentComponent::paint (Graphics& g)
