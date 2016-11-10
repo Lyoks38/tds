@@ -7,7 +7,7 @@
 //
 
 #include "MainMenu.h"
-#include "OrangeJuice.h"
+#include "Utils/FontUtils.h"
 
 MainMenu::MainMenu(): juce::Component("Main Menu")
 {
@@ -29,8 +29,7 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
     addAndMakeVisible(mNewGameButton);
     addAndMakeVisible(mLoadGameButton);
     
-    juce::Typeface::Ptr t = juce::Typeface::createSystemTypefaceFor(OrangeJuice::orange_juice_2_0_ttf, OrangeJuice::orange_juice_2_0_ttfSize);
-    mMainFont = juce::Font(t);
+    mMainFont = FontUtils::OrangeJuice;
     mMainFont.setHeight(50.f);
 }
 
