@@ -17,9 +17,14 @@ juce::Component("New Player Menu")
     mMainFont.setHeight(50.f);
 }
 
+NewPlayerMenu::~NewPlayerMenu()
+{
+    removeAllChildren();
+}
+
 void NewPlayerMenu::paint(juce::Graphics& inG)
 {
     inG.setFont(mMainFont);
     inG.setColour(juce::Colours::white);
-    inG.drawText("Create New Player Here", 0, 0, getWidth(), 150, juce::Justification::centred);
+    inG.drawText("Create Your New Player", 0, 0, getWidth(), 150, juce::Justification::centred);
 }

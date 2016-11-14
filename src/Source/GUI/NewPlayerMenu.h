@@ -13,21 +13,27 @@ class NiceComponent;
 
 #include "GuiUtils.h"
 #include "Utils/NiceComponent.h"
+#include "Utils/NiceComponentListener.h"
 
-class NewPlayerMenu: public juce::Component
+
+class NewPlayerMenu: public juce::Component, public NiceComponentListener
 {
   
 public:
     
     NewPlayerMenu();
     
-    ~NewPlayerMenu(){};
+    ~NewPlayerMenu();
     
-     virtual void paint(juce::Graphics& inG) override;
+    virtual void paint(juce::Graphics& inG) override;
+    
+    virtual void onNiceComponentClicked(NiceComponent* inComp) override {};
     
 private:
     
     juce::Font mMainFont;
+    
+    NiceComponent* mReturnButton;
 
 };
 
