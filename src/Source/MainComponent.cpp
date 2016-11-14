@@ -29,13 +29,16 @@ MainContentComponent::~MainContentComponent()
 {
     mEngine.reset(nullptr);
     
-    //removeChildComponent(mMainMenu.get());
     removeAllChildren();
 }
 
 void MainContentComponent::paint (Graphics& g)
 {
     g.fillAll (Colour (0xff001F36));
+    
+    g.setColour(juce::Colours::white);
+    g.setFont(Font(8.f));
+    g.drawText("A game by Lyoks, all rights reserved, 2016", 400, 380, 190, 20, juce::Justification::right);
 }
 
 void MainContentComponent::resized()
