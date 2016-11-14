@@ -10,6 +10,7 @@
 #define NiceComponent_h
 
 #include "GuiUtils.h"
+#include "NiceComponentListener.h"
 
 
 class NiceComponent: public juce::Component
@@ -26,6 +27,7 @@ public:
     
     virtual void mouseEnter(const juce::MouseEvent& e) override { repaint(); }
     virtual void mouseExit(const juce::MouseEvent& e)  override { repaint(); }
+    virtual void mouseDown(const juce::MouseEvent& e)  override;
 
     //Setters
     void SetTextToDisplay(std::string inText) { mTextToDisplay = inText; }
@@ -34,6 +36,9 @@ public:
     void SetBgHoverColor(const juce::Colour& inColour) { mBgHoverColor = inColour; }
     void SetTextColor(const juce::Colour& inColour) { mTextColor = inColour; }
     void SetTextHoverColor(const juce::Colour& inColour) { mTextHoverColor = inColour; }
+    
+    //Listeners
+    void AddListener(NiceComponentListener* inListener);
     
 protected:
     
@@ -46,6 +51,10 @@ protected:
     juce::Colour mBgHoverColor = juce::Colours::transparentWhite;
     juce::Colour mTextColor = juce::Colours::black;
     juce::Colour mTextHoverColor = juce::Colours::black;
+    
+private:
+    
+    std::vector<NiceComponentListener*> mListeners;
 };
 
 #endif /* NiceComponent_h */

@@ -37,3 +37,14 @@ void NiceComponent::paint(juce::Graphics &inG)
         inG.drawText(mTextToDisplay, 0, 0, getWidth(), getHeight(), mJustification);
     }
 }
+
+
+void NiceComponent::AddListener(NiceComponentListener *inListener)
+{
+    if(inListener == nullptr)
+        return;
+    
+    //TODO : check if the listener is not already in the vector
+    
+    mListeners.emplace_back(inListener);
+}

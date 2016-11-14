@@ -385,6 +385,7 @@
 		45B8A7941DD20B0F00E361A7 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../../Source/GUI/Utils/Button.cpp; sourceTree = "<group>"; };
 		45BD1DB01DD9DBA700FB65F1 /* NewPlayerMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewPlayerMenu.h; path = ../../Source/GUI/NewPlayerMenu.h; sourceTree = "<group>"; };
 		45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewPlayerMenu.cpp; path = ../../Source/GUI/NewPlayerMenu.cpp; sourceTree = "<group>"; };
+		45BD1DB31DD9E5D200FB65F1 /* NiceComponentListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiceComponentListener.h; path = ../../Source/GUI/Utils/NiceComponentListener.h; sourceTree = "<group>"; };
 		45CC7A34B37DAB56D3E13304 /* juce_LocalisedStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_LocalisedStrings.h; path = ../../../JUCE/modules/juce_core/text/juce_LocalisedStrings.h; sourceTree = SOURCE_ROOT; };
 		45CEA2C6E70A52F4579B465A /* inffixed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../../../JUCE/modules/juce_core/zip/zlib/inffixed.h; sourceTree = SOURCE_ROOT; };
 		4639838A767CEC4784FF93AF /* juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_gui_extra.mm; path = ../../../JUCE/modules/juce_gui_extra/juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
@@ -1494,10 +1495,11 @@
 			isa = PBXGroup;
 			children = (
 				196019E11DD11465004108F2 /* GuiUtils.h */,
+				45BD1DB31DD9E5D200FB65F1 /* NiceComponentListener.h */,
 				196019E91DD129E9004108F2 /* Button.h */,
+				45B8A7941DD20B0F00E361A7 /* Button.cpp */,
 				45721DB11DD499EA00089EB7 /* FontUtils.h */,
 				45721DB21DD49BC500089EB7 /* FontUtils.cpp */,
-				45B8A7941DD20B0F00E361A7 /* Button.cpp */,
 				196019EA1DD12BCB004108F2 /* NiceComponent.h */,
 				196019EB1DD13262004108F2 /* NiceComponent.cpp */,
 			);
