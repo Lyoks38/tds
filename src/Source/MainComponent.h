@@ -32,7 +32,7 @@ public:
     void resized();
     
     //bool DisplayMainMenu();
-    bool DisplayNewPlayer(){ return true; };
+    bool DisplayNewPlayer();
 
 private:
     //==============================================================================
@@ -41,6 +41,10 @@ private:
     std::unique_ptr<GameEngine> mEngine;
     
     std::unique_ptr<MainMenu> mMainMenu = nullptr;
+    std::unique_ptr<NewPlayerMenu> mNewPlayerMenu = nullptr;
+    
+    
+    //juce::Component* mCurrentPage = nullptr; //maybe not useful
 };
 
 

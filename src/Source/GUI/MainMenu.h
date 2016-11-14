@@ -15,26 +15,6 @@ class NiceComponent;
 #include "Utils/NiceComponent.h"
 
 
-
-/*class NewGameButton : public juce::Button
-{
-    
-public:
-    
-    NewGameButton();
-    
-    ~NewGameButton();
-    
-};
-
-class LoadGameButton : public juce::Button
-{
-    
-};*/
-
-
-
-
 //Main Menu window
 class MainMenu : public juce::Component
 {
@@ -50,6 +30,10 @@ public:
     virtual void resized() override;
     
     void GoToNewGameMenu(){};
+        
+protected:
+    
+    virtual void mouseDown(const juce::MouseEvent& e) override;
     
 private:
     
@@ -57,6 +41,7 @@ private:
     NiceComponent* mLoadGameButton = nullptr;
     
     juce::Font mMainFont;
+    
 };
 
 #endif /* MainMenu_h */

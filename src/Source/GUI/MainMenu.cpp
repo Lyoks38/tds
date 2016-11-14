@@ -50,3 +50,11 @@ void MainMenu::paint(juce::Graphics& inG)
     inG.drawText("TDS : Le Jeu !", 0, 0, getWidth(), 150, juce::Justification::centred);
 }
 
+void MainMenu::mouseDown(const juce::MouseEvent &e){
+    
+    MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
+    if(parent)
+        parent->DisplayNewPlayer();
+    
+}
+
