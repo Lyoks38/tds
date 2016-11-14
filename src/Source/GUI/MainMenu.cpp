@@ -26,6 +26,8 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
     mNewGameButton->setBounds(200, 133, 200, 70);
     mLoadGameButton->setBounds(200, 266, 200, 70);
     
+    mNewGameButton->AddListener(this);
+    
     addAndMakeVisible(mNewGameButton);
     addAndMakeVisible(mLoadGameButton);
     
@@ -50,11 +52,13 @@ void MainMenu::paint(juce::Graphics& inG)
     inG.drawText("TDS : Le Jeu !", 0, 0, getWidth(), 150, juce::Justification::centred);
 }
 
-void MainMenu::mouseDown(const juce::MouseEvent &e){
+void MainMenu::onNiceComponentClicked(NiceComponent *inComp){
     
-    MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
-    if(parent)
-        parent->DisplayNewPlayer();
+    if(inComp == mNewGameButton){
+        MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
+        if(parent)
+            parent->DisplayNewPlayer();
+    }
     
 }
 

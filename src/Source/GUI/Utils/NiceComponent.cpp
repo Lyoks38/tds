@@ -44,7 +44,16 @@ void NiceComponent::AddListener(NiceComponentListener *inListener)
     if(inListener == nullptr)
         return;
     
-    //TODO : check if the listener is not already in the vector
+    auto it = std::find(mListeners.begin(), mListeners.end(), inListener);
+    
+    if(it == mListeners.end() && it != mListeners.begin())
+        return;
     
     mListeners.emplace_back(inListener);
+}
+
+void NiceComponent::mouseDown(const juce::MouseEvent &e)
+{
+    for(auto it : mListeners)
+        it->onNiceComponentClicked(this);
 }

@@ -13,10 +13,11 @@ class NiceComponent;
 
 #include "GuiUtils.h"
 #include "Utils/NiceComponent.h"
+#include "Utils/NiceComponentListener.h"
 
 
 //Main Menu window
-class MainMenu : public juce::Component
+class MainMenu : public juce::Component, public NiceComponentListener
 {
 
 public:
@@ -33,7 +34,7 @@ public:
         
 protected:
     
-    virtual void mouseDown(const juce::MouseEvent& e) override;
+    virtual void onNiceComponentClicked(NiceComponent* inComp) override;
     
 private:
     

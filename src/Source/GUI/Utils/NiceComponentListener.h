@@ -11,7 +11,7 @@
 
 #include "NiceComponent.h"
 
-class NiceComponentListener:
+class NiceComponentListener
 {
 public:
     
