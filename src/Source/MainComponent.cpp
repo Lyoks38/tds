@@ -22,7 +22,7 @@ MainContentComponent::MainContentComponent()
     mMainMenu.reset(new MainMenu());
     addAndMakeVisible(mMainMenu.get());
     mMainMenu->setBounds(0, 0, getWidth(), getHeight());
-    //mMainMenu->SetParentComponent();
+    mCurrentPage = mMainMenu.get();
 }
 
 MainContentComponent::~MainContentComponent()
@@ -49,6 +49,10 @@ void MainContentComponent::resized()
 }
 
 
+
+//////////////////////////////////////////////////////////////////
+// DISPLAY METHODS
+/////////////////////////////////////////////////////////////////
 bool MainContentComponent::DisplayNewPlayer()
 {
     if(mNewPlayerMenu == nullptr){
@@ -57,12 +61,32 @@ bool MainContentComponent::DisplayNewPlayer()
         mNewPlayerMenu->setBounds(0, 0, getWidth(), getHeight());
     }
     
-    mMainMenu->setEnabled(false);
-    mMainMenu->setVisible(false);
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
     
     mNewPlayerMenu->setEnabled(true);
     mNewPlayerMenu->setVisible(true);
     
-    return true;
+    mCurrentPage = mNewPlayerMenu.get();
     
+    return true;
+}
+
+bool MainContentComponent::DisplayMainMenu()
+{
+    if(mMainMenu == nullptr){
+        mMainMenu.reset(new MainMenu());
+        addChildComponent(mMainMenu.get());
+        mMainMenu->setBounds(0, 0, getWidth(), getHeight());
+    }
+    
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
+    
+    mMainMenu->setEnabled(true);
+    mMainMenu->setVisible(true);
+    
+    mCurrentPage = mMainMenu.get();
+    
+    return true;
 }

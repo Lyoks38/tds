@@ -1470,8 +1470,8 @@
 				196019E01DD11465004108F2 /* GuiHeader.h */,
 				196019E21DD11465004108F2 /* MainMenu.cpp */,
 				196019E31DD11465004108F2 /* MainMenu.h */,
-				45BD1DB01DD9DBA700FB65F1 /* NewPlayerMenu.h */,
 				45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */,
+				45BD1DB01DD9DBA700FB65F1 /* NewPlayerMenu.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";

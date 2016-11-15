@@ -31,7 +31,8 @@ public:
     void paint (Graphics&);
     void resized();
     
-    //bool DisplayMainMenu();
+    //Display methods
+    bool DisplayMainMenu();
     bool DisplayNewPlayer();
 
 private:
@@ -44,7 +45,7 @@ private:
     std::unique_ptr<NewPlayerMenu> mNewPlayerMenu = nullptr;
     
     
-    //juce::Component* mCurrentPage = nullptr; //maybe not useful
+    juce::Component* mCurrentPage = nullptr; //maybe not useful
 };
 
 

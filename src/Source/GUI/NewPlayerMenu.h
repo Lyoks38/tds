@@ -27,7 +27,7 @@ public:
     
     virtual void paint(juce::Graphics& inG) override;
     
-    virtual void onNiceComponentClicked(NiceComponent* inComp) override {};
+    virtual void onNiceComponentClicked(NiceComponent* inComp) override;
     
 private:
     
