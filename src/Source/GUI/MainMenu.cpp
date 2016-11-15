@@ -14,8 +14,8 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
     mNewGameButton = new NiceComponent("New Game Button");
     mLoadGameButton = new NiceComponent("Load Game Button");
     
-    mNewGameButton->SetTextToDisplay("Start New Game");
-    mLoadGameButton->SetTextToDisplay("Load Saved Game");
+    mNewGameButton->SetTextToDisplay("Nouvelle Partie");
+    mLoadGameButton->SetTextToDisplay("Charger Partie");
     
     mNewGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
     mLoadGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));

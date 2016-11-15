@@ -34,6 +34,8 @@ private:
     juce::Font mMainFont;
     
     NiceComponent* mReturnButton;
+    
+    Player::PlayerAttributes mNewPlayerAttributes;
 
 };
 
