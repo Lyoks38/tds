@@ -28,6 +28,8 @@ public:
     void SaveGame(){};
     void LoadSavedGame(){};
     
+    void NewGame(Player::PlayerAttributes inAttributes);
+    
 private:
     
     std::unique_ptr<ScenarioManager> mScenarioManager = nullptr;

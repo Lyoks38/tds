@@ -25,7 +25,7 @@ public:
     ~ScenarioManager();
     
     //Load infos
-    void LoadPlayer();
+    void LoadPlayer(Player::PlayerAttributes inAttributes) { mPlayer.reset(new Player(inAttributes)); }
     
     void LoadDatabase();
     

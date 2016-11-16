@@ -13,6 +13,7 @@ class GameEngine;
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "GameEngine.h"
+#include "Player.h"
 #include "GUI/GuiHeader.h"
 
 
@@ -34,6 +35,8 @@ public:
     //Display methods
     bool DisplayMainMenu();
     bool DisplayNewPlayer();
+    
+    bool LaunchNewGame(Player::PlayerAttributes inAttributes);
 
 private:
     //==============================================================================

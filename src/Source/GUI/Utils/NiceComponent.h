@@ -36,6 +36,7 @@ public:
     void SetBgHoverColor(const juce::Colour& inColour) { mBgHoverColor = inColour; }
     void SetTextColor(const juce::Colour& inColour) { mTextColor = inColour; }
     void SetTextHoverColor(const juce::Colour& inColour) { mTextHoverColor = inColour; }
+    void SetFont(juce::Font inFont) { mFont = inFont; }
     
     //Listeners
     void AddListener(NiceComponentListener* inListener);

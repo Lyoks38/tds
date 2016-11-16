@@ -12,6 +12,7 @@
 class NiceComponent;
 
 #include "GuiUtils.h"
+#include "Player.h"
 #include "Utils/NiceComponent.h"
 #include "Utils/NiceComponentListener.h"
 
@@ -34,6 +35,8 @@ private:
     juce::Font mMainFont;
     
     NiceComponent* mReturnButton;
+    NiceComponent* mStartButton;
+
     
     Player::PlayerAttributes mNewPlayerAttributes;
 

@@ -7,6 +7,8 @@
 //
 #pragma once
 
+#include "GlobalEnums.h"
+
 
 class Player {
     

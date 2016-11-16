@@ -90,3 +90,22 @@ bool MainContentComponent::DisplayMainMenu()
     
     return true;
 }
+
+
+bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
+{
+    if(mEngine != nullptr){
+        
+        mEngine->NewGame(inAttributes);
+        
+        //TODO : open panel
+    }
+    
+    return false;
+}
+
+
+
+
+
+

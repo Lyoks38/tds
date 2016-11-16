@@ -31,3 +31,15 @@ void GameEngine::AttachGUI(MainContentComponent *inGUI)
     
     mScenarioManager->AttachToGUI(inGUI);
 }
+
+
+////////////////////////////////////////////////////////////////////////
+// Games
+////////////////////////////////////////////////////////////////////////
+
+void GameEngine::NewGame(Player::PlayerAttributes inAttributes)
+{
+    if(mScenarioManager != nullptr)
+        mScenarioManager->LoadPlayer(inAttributes);
+    
+}

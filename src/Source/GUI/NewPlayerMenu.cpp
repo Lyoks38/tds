@@ -29,8 +29,17 @@ juce::Component("New Player Menu")
     //List
     
     //Start game
+    mStartButton = new NiceComponent("Start New Game");
+    mStartButton->SetTextToDisplay("COMMENCER");
+    mStartButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mStartButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mStartButton->setBounds(200, 330, 200, 55);
+    mStartButton->AddListener(this);
+    //mStartButton->SetFont(FontUtils::OrangeJuice);
     
     addAndMakeVisible(mReturnButton);
+    addAndMakeVisible(mStartButton);
+
     
     mMainFont = FontUtils::OrangeJuice;
     mMainFont.setHeight(50.f);
@@ -55,5 +64,17 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
         if(parent)
             parent->DisplayMainMenu();
+    }
+    else if(inComp == mStartButton){
+        
+        //TODO : fill the player attributes with the missing data
+        mNewPlayerAttributes.mName = "test";
+        mNewPlayerAttributes.mReputation = 0.f;
+        mNewPlayerAttributes.mChoppes.resize(0);
+        
+        MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
+        if(parent)
+            parent->LaunchNewGame(mNewPlayerAttributes);
+        
     }
 }
