@@ -15,10 +15,12 @@ juce::Component("New Player Menu")
 {
     //Return to main menu
     mReturnButton = new NiceComponent("Return To Main Menu");
-    mReturnButton->SetTextToDisplay("< Retour");
+    mReturnButton->SetTextToDisplay("Retour");
     mReturnButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
     mReturnButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
-    mReturnButton->setBounds(20, 20, 100, 25);
+    mReturnButton->SetTextColor(juce::Colours::white);
+    mReturnButton->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mReturnButton->setBounds(20, 20, 70, 25);
     mReturnButton->AddListener(this);
     
     //TODO
@@ -33,7 +35,9 @@ juce::Component("New Player Menu")
     mStartButton->SetTextToDisplay("COMMENCER");
     mStartButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
     mStartButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
-    mStartButton->setBounds(200, 330, 200, 55);
+    mStartButton->SetTextColor(juce::Colours::white);
+    mStartButton->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mStartButton->setBounds(200, 530, 400, 55);
     mStartButton->AddListener(this);
     //mStartButton->SetFont(FontUtils::OrangeJuice);
     
@@ -52,9 +56,17 @@ NewPlayerMenu::~NewPlayerMenu()
 
 void NewPlayerMenu::paint(juce::Graphics& inG)
 {
+    //Header
     inG.setFont(mMainFont);
     inG.setColour(juce::Colours::white);
     inG.drawText("Nouvelle Partie", 0, 0, getWidth(), 150, juce::Justification::centred);
+    
+    //Labels
+    inG.setFont(juce::Font(20.f));
+    inG.drawText("Entrez votre nom", 65, 150, 240, 30, juce::Justification::topLeft);
+    inG.drawText("Niveau de difficulte", 65, 260, 240, 30, juce::Justification::topLeft);
+    inG.drawText("Choisissez votre liste", 65, 380, 240, 30, juce::Justification::topLeft);
+
 }
 
 

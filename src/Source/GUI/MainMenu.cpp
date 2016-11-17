@@ -18,13 +18,17 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
     mLoadGameButton->SetTextToDisplay("Charger Partie");
     
     mNewGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
-    mLoadGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
-    
     mNewGameButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mNewGameButton->SetTextColor(juce::Colours::white);
+    mNewGameButton->SetTextHoverColor(juce::Colour(230, 230, 230));
+
+
+    mLoadGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mLoadGameButton->SetTextColor(juce::Colours::white);
     mLoadGameButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
     
-    mNewGameButton->setBounds(200, 133, 200, 70);
-    mLoadGameButton->setBounds(200, 266, 200, 70);
+    mNewGameButton->setBounds(250, 200, 300, 70);
+    mLoadGameButton->setBounds(250, 320, 300, 70);
     
     mNewGameButton->AddListener(this);
     
@@ -32,7 +36,7 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
     addAndMakeVisible(mLoadGameButton);
     
     mMainFont = FontUtils::OrangeJuice;
-    mMainFont.setHeight(50.f);
+    mMainFont.setHeight(75.f);
 }
 
 MainMenu::~MainMenu()

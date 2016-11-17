@@ -12,7 +12,7 @@
 //==============================================================================
 MainContentComponent::MainContentComponent()
 {
-    setSize (600, 400);
+    setSize (800, 600);
     
     // Creates the engine and attach it to GUI
     mEngine.reset(new GameEngine());
@@ -38,7 +38,7 @@ void MainContentComponent::paint (Graphics& g)
     
     g.setColour(juce::Colours::white);
     g.setFont(Font(8.f));
-    g.drawText("A game by Lyoks, all rights reserved, 2016", 400, 380, 190, 20, juce::Justification::right);
+    g.drawText("A game by Lyoks, all rights reserved, 2016", 600, 580, 190, 20, juce::Justification::right);
 }
 
 void MainContentComponent::resized()
