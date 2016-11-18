@@ -9,7 +9,9 @@
 #ifndef NiceComponentListener_h
 #define NiceComponentListener_h
 
-#include "NiceComponent.h"
+class NiceComponent;
+
+//#include "NiceComponent.h"
 
 class NiceComponentListener
 {

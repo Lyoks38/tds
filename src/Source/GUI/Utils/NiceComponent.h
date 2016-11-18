@@ -9,6 +9,7 @@
 #ifndef NiceComponent_h
 #define NiceComponent_h
 
+
 #include "GuiUtils.h"
 #include "NiceComponentListener.h"
 

@@ -25,8 +25,19 @@ juce::Component("New Player Menu")
     
     //TODO
     //Player's name
+    mPlayerNameEditor = new juce::TextEditor("Player Name Editor");
+    mPlayerNameEditor->setBounds(70, 190, 200, 23);
     
     //Difficulty
+    mPolardButton = new TDS::Button("Polard Button");
+    mPolardButton->SetTextToDisplay("Polard");
+    mPolardButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
+    mPolardButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));
+    mPolardButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.4f));
+    mPolardButton->SetTextColor(juce::Colours::white);
+    mPolardButton->SetTextHoverColor(juce::Colours::white);
+
+    
     
     //List
     
@@ -43,6 +54,7 @@ juce::Component("New Player Menu")
     
     addAndMakeVisible(mReturnButton);
     addAndMakeVisible(mStartButton);
+    addAndMakeVisible(mPlayerNameEditor);
 
     
     mMainFont = FontUtils::OrangeJuice;
@@ -64,8 +76,8 @@ void NewPlayerMenu::paint(juce::Graphics& inG)
     //Labels
     inG.setFont(juce::Font(20.f));
     inG.drawText("Entrez votre nom", 65, 150, 240, 30, juce::Justification::topLeft);
-    inG.drawText("Niveau de difficulte", 65, 260, 240, 30, juce::Justification::topLeft);
-    inG.drawText("Choisissez votre liste", 65, 380, 240, 30, juce::Justification::topLeft);
+    inG.drawText("Niveau de difficulte", 65, 240, 240, 30, juce::Justification::topLeft);
+    inG.drawText("Choisissez votre liste", 65, 360, 240, 30, juce::Justification::topLeft);
 
 }
 
@@ -80,7 +92,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
     else if(inComp == mStartButton){
         
         //TODO : fill the player attributes with the missing data
-        mNewPlayerAttributes.mName = "test";
+        mNewPlayerAttributes.mName = mPlayerNameEditor->getText().toStdString();
         mNewPlayerAttributes.mReputation = 0.f;
         mNewPlayerAttributes.mChoppes.resize(0);
         

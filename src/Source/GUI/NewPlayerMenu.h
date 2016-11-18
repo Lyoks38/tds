@@ -15,6 +15,7 @@ class NiceComponent;
 #include "Player.h"
 #include "Utils/NiceComponent.h"
 #include "Utils/NiceComponentListener.h"
+#include "Utils/Button.h"
 
 
 class NewPlayerMenu: public juce::Component, public NiceComponentListener
@@ -36,6 +37,8 @@ private:
     
     NiceComponent* mReturnButton;
     NiceComponent* mStartButton;
+    juce::TextEditor* mPlayerNameEditor;
+    TDS::Button* mPolardButton;
 
     
     Player::PlayerAttributes mNewPlayerAttributes;

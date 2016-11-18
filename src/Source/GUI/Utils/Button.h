@@ -30,6 +30,7 @@ public:
     uint8_t GetToggleState() const { return mToggleState; }
     
     void SetActiveText(std::string inText) { mTextActive = inText; }
+    void SetActiveBgColor(const juce::Colour& inColour) { mBgActiveColor = inColour; }
     
 private:
     
