@@ -9,13 +9,11 @@
 #ifndef NewPlayerMenu_h
 #define NewPlayerMenu_h
 
-class NiceComponent;
-
 #include "GuiUtils.h"
 #include "Player.h"
-#include "Utils/NiceComponent.h"
 #include "Utils/NiceComponentListener.h"
-#include "Utils/Button.h"
+#include "Utils/NiceButton.h"
+
 
 
 class NewPlayerMenu: public juce::Component, public NiceComponentListener
@@ -38,7 +36,7 @@ private:
     NiceComponent* mReturnButton;
     NiceComponent* mStartButton;
     juce::TextEditor* mPlayerNameEditor;
-    TDS::Button* mPolardButton;
+    NiceButton* mPolardButton;
 
     
     Player::PlayerAttributes mNewPlayerAttributes;

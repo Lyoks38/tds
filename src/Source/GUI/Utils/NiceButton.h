@@ -6,22 +6,20 @@
 //
 //
 
-#ifndef Button_h
-#define Button_h
+#ifndef NiceButton_h
+#define NiceButton_h
 
-#include "GuiUtils.h"
 #include "NiceComponent.h"
 
-namespace TDS {
 
-class Button: public NiceComponent
+class NiceButton: public NiceComponent
 {
     
 public:
     
-    Button(const std::string& inName);
+    NiceButton(const std::string& inName);
     
-    ~Button(){};
+    ~NiceButton(){};
     
     
     virtual void paint(juce::Graphics& inG) override;
@@ -45,5 +43,4 @@ private:
     
 };
 
-}
 #endif /* Button_h */

@@ -13,6 +13,7 @@
 #include "GuiUtils.h"
 #include "NiceComponentListener.h"
 
+//class NiceComponentListener;
 
 class NiceComponent: public juce::Component
 {

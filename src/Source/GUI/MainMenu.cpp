@@ -8,6 +8,7 @@
 
 #include "MainMenu.h"
 #include "Utils/FontUtils.h"
+#include "../MainComponent.h"
 
 MainMenu::MainMenu(): juce::Component("Main Menu")
 {

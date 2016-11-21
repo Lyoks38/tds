@@ -22,7 +22,7 @@
 		294395984B822EC596048B72 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C6798BB1B1B6471E026E2A /* CoreMIDI.framework */; };
 		456B11611DD34E0200680878 /* OrangeJuice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 456B115F1DD34E0200680878 /* OrangeJuice.cpp */; };
 		45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45721DB21DD49BC500089EB7 /* FontUtils.cpp */; };
-		45B8A7951DD20B0F00E361A7 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* Button.cpp */; };
+		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
 		45BD1DB21DD9DBC300FB65F1 /* NewPlayerMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */; };
 		47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50A5B0E5097DF0431F8E565E /* juce_video.mm */; };
 		567516F1CC296B91ACFE418A /* RecentFilesMenuTemplate.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD70D7B1111CE7CAC7D8E4A /* RecentFilesMenuTemplate.nib */; };
@@ -179,7 +179,7 @@
 		196019E11DD11465004108F2 /* GuiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuiUtils.h; path = ../../Source/GUI/GuiUtils.h; sourceTree = "<group>"; };
 		196019E21DD11465004108F2 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainMenu.cpp; path = ../../Source/GUI/MainMenu.cpp; sourceTree = "<group>"; };
 		196019E31DD11465004108F2 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = ../../Source/GUI/MainMenu.h; sourceTree = "<group>"; };
-		196019E91DD129E9004108F2 /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Button.h; path = ../../Source/GUI/Utils/Button.h; sourceTree = "<group>"; };
+		196019E91DD129E9004108F2 /* NiceButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiceButton.h; path = ../../Source/GUI/Utils/NiceButton.h; sourceTree = "<group>"; };
 		196019EA1DD12BCB004108F2 /* NiceComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiceComponent.h; path = ../../Source/GUI/Utils/NiceComponent.h; sourceTree = "<group>"; };
 		196019EB1DD13262004108F2 /* NiceComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NiceComponent.cpp; path = ../../Source/GUI/Utils/NiceComponent.cpp; sourceTree = "<group>"; };
 		19A0523D0FB3417F59EF2EF0 /* juce_win32_Fonts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_win32_Fonts.cpp; path = ../../../JUCE/modules/juce_graphics/native/juce_win32_Fonts.cpp; sourceTree = SOURCE_ROOT; };
@@ -382,7 +382,7 @@
 		45A453B12DC2D5F7343D37F0 /* compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = compat.h; path = ../../../JUCE/modules/juce_audio_formats/codecs/flac/compat.h; sourceTree = SOURCE_ROOT; };
 		45A7FCBFAE599B4149CB3AFE /* juce_Primes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_Primes.cpp; path = ../../../JUCE/modules/juce_cryptography/encryption/juce_Primes.cpp; sourceTree = SOURCE_ROOT; };
 		45AF5D111677436893631F55 /* juce_AudioProcessorGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_AudioProcessorGraph.h; path = ../../../JUCE/modules/juce_audio_processors/processors/juce_AudioProcessorGraph.h; sourceTree = SOURCE_ROOT; };
-		45B8A7941DD20B0F00E361A7 /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = ../../Source/GUI/Utils/Button.cpp; sourceTree = "<group>"; };
+		45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NiceButton.cpp; path = ../../Source/GUI/Utils/NiceButton.cpp; sourceTree = "<group>"; };
 		45BD1DB01DD9DBA700FB65F1 /* NewPlayerMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewPlayerMenu.h; path = ../../Source/GUI/NewPlayerMenu.h; sourceTree = "<group>"; };
 		45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewPlayerMenu.cpp; path = ../../Source/GUI/NewPlayerMenu.cpp; sourceTree = "<group>"; };
 		45BD1DB31DD9E5D200FB65F1 /* NiceComponentListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiceComponentListener.h; path = ../../Source/GUI/Utils/NiceComponentListener.h; sourceTree = "<group>"; };
@@ -1496,8 +1496,8 @@
 			children = (
 				196019E11DD11465004108F2 /* GuiUtils.h */,
 				45BD1DB31DD9E5D200FB65F1 /* NiceComponentListener.h */,
-				196019E91DD129E9004108F2 /* Button.h */,
-				45B8A7941DD20B0F00E361A7 /* Button.cpp */,
+				196019E91DD129E9004108F2 /* NiceButton.h */,
+				45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */,
 				45721DB11DD499EA00089EB7 /* FontUtils.h */,
 				45721DB21DD49BC500089EB7 /* FontUtils.cpp */,
 				196019EA1DD12BCB004108F2 /* NiceComponent.h */,
@@ -3556,7 +3556,7 @@
 				73472D42337813788C99BDFD /* juce_opengl.mm in Sources */,
 				47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */,
 				196019EC1DD13262004108F2 /* NiceComponent.cpp in Sources */,
-				45B8A7951DD20B0F00E361A7 /* Button.cpp in Sources */,
+				45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

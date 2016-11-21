@@ -8,6 +8,8 @@
 
 #include "NewPlayerMenu.h"
 #include "FontUtils.h"
+#include "../MainComponent.h"
+
 
 
 NewPlayerMenu::NewPlayerMenu():
@@ -29,7 +31,7 @@ juce::Component("New Player Menu")
     mPlayerNameEditor->setBounds(70, 190, 200, 23);
     
     //Difficulty
-    mPolardButton = new TDS::Button("Polard Button");
+    mPolardButton = new NiceButton("Polard Button");
     mPolardButton->SetTextToDisplay("Polard");
     mPolardButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
     mPolardButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));

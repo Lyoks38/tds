@@ -11,15 +11,13 @@
 
 class NiceComponent;
 
-//#include "NiceComponent.h"
-
 class NiceComponentListener
 {
 public:
     
     NiceComponentListener(){};
     
-    ~NiceComponentListener(){};
+    virtual ~NiceComponentListener(){};
 
     virtual void onNiceComponentClicked(NiceComponent* inComp) = 0;
 };
