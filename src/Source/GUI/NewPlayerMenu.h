@@ -36,7 +36,13 @@ private:
     NiceComponent* mReturnButton;
     NiceComponent* mStartButton;
     juce::TextEditor* mPlayerNameEditor;
+    
+    //Difficulty buttons
     NiceButton* mPolardButton;
+    NiceButton* mAmiButton;
+    NiceButton* mListeButton;
+    NiceButton* mMorueButton;
+
 
     
     Player::PlayerAttributes mNewPlayerAttributes;

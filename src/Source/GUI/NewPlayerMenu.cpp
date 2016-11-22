@@ -35,11 +35,53 @@ juce::Component("New Player Menu")
     mPolardButton->SetTextToDisplay("Polard");
     mPolardButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
     mPolardButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));
-    mPolardButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.4f));
+    mPolardButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mPolardButton->SetActiveBgHoverColor(juce::Colour (0xff001F36).brighter(0.7f));
     mPolardButton->SetTextColor(juce::Colours::white);
     mPolardButton->SetTextHoverColor(juce::Colours::white);
-
+    mPolardButton->SetActiveTextColor(juce::Colours::white);
+    mPolardButton->SetActiveTextHoverColor(juce::Colours::white);
+    mPolardButton->setBounds(70, 280, 100, 30);
+    mPolardButton->AddListener(this);
     
+    mAmiButton = new NiceButton("Ami de liste Button");
+    mAmiButton->SetTextToDisplay("Ami de liste");
+    mAmiButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
+    mAmiButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));
+    mAmiButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mAmiButton->SetActiveBgHoverColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mAmiButton->SetTextColor(juce::Colours::white);
+    mAmiButton->SetTextHoverColor(juce::Colours::white);
+    mAmiButton->SetActiveTextColor(juce::Colours::white);
+    mAmiButton->SetActiveTextHoverColor(juce::Colours::white);
+    mAmiButton->setBounds(200, 280, 100, 30);
+    mAmiButton->AddListener(this);
+    
+    mListeButton = new NiceButton("Liste Button");
+    mListeButton->SetTextToDisplay("Liste");
+    mListeButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
+    mListeButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));
+    mListeButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mListeButton->SetActiveBgHoverColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mListeButton->SetTextColor(juce::Colours::white);
+    mListeButton->SetTextHoverColor(juce::Colours::white);
+    mListeButton->SetActiveTextColor(juce::Colours::white);
+    mListeButton->SetActiveTextHoverColor(juce::Colours::white);
+    mListeButton->setBounds(330, 280, 100, 30);
+    mListeButton->AddListener(this);
+    
+    mMorueButton = new NiceButton("Morue Button");
+    mMorueButton->SetTextToDisplay("Morue");
+    mMorueButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
+    mMorueButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));
+    mMorueButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mMorueButton->SetActiveBgHoverColor(juce::Colour (0xff001F36).brighter(0.7f));
+    mMorueButton->SetTextColor(juce::Colours::white);
+    mMorueButton->SetTextHoverColor(juce::Colours::white);
+    mMorueButton->SetActiveTextColor(juce::Colours::white);
+    mMorueButton->SetActiveTextHoverColor(juce::Colours::white);
+    mMorueButton->setBounds(460, 280, 100, 30);
+    mMorueButton->AddListener(this);
     
     //List
     
@@ -57,6 +99,10 @@ juce::Component("New Player Menu")
     addAndMakeVisible(mReturnButton);
     addAndMakeVisible(mStartButton);
     addAndMakeVisible(mPlayerNameEditor);
+    addAndMakeVisible(mPolardButton);
+    addAndMakeVisible(mAmiButton);
+    addAndMakeVisible(mListeButton);
+    addAndMakeVisible(mMorueButton);
 
     
     mMainFont = FontUtils::OrangeJuice;
@@ -91,6 +137,36 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         if(parent)
             parent->DisplayMainMenu();
     }
+    //Difficulty buttons
+    else if(inComp == mPolardButton){
+        mNewPlayerAttributes.mGenre = POLARD;
+        //TO DO : deselect other buttons & display some explaining text
+        mAmiButton->SetToggleState(false);
+        mListeButton->SetToggleState(false);
+        mMorueButton->SetToggleState(false);
+    }
+    else if(inComp == mAmiButton){
+        mNewPlayerAttributes.mGenre = AMI_DE_LISTE;
+        //TO DO : deselect other buttons & display some explaining text
+        mPolardButton->SetToggleState(false);
+        mListeButton->SetToggleState(false);
+        mMorueButton->SetToggleState(false);
+    }
+    else if(inComp == mListeButton){
+        mNewPlayerAttributes.mGenre = LISTE;
+        //TO DO : deselect other buttons & display some explaining text
+        mPolardButton->SetToggleState(false);
+        mAmiButton->SetToggleState(false);
+        mMorueButton->SetToggleState(false);
+    }
+    else if(inComp == mMorueButton){
+        mNewPlayerAttributes.mGenre = MORUE;
+        //TO DO : deselect other buttons & display some explaining text
+        mPolardButton->SetToggleState(false);
+        mAmiButton->SetToggleState(false);
+        mListeButton->SetToggleState(false);
+    }
+    //Start Button
     else if(inComp == mStartButton){
         
         //TODO : fill the player attributes with the missing data

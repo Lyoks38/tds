@@ -18,7 +18,7 @@ NiceComponent(inName)
     
 void NiceButton::paint(juce::Graphics &inG)
 {
-    if(mToggleState == 0){
+    if(mToggleState == false){
         NiceComponent::paint(inG);
         return;
     }
@@ -41,4 +41,13 @@ void NiceButton::paint(juce::Graphics &inG)
         inG.drawText(mTextActive, 0, 0, getWidth(), getHeight(), mJustification);
     }
             
+}
+
+
+void NiceButton::mouseDown(const juce::MouseEvent& e)
+{
+    NiceComponent::mouseDown(e);
+    
+    SetToggleState(!mToggleState);
+    repaint();
 }

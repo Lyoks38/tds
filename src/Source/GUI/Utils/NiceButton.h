@@ -23,16 +23,21 @@ public:
     
     
     virtual void paint(juce::Graphics& inG) override;
+    virtual void mouseDown(const juce::MouseEvent& e) override;
     
-    void SetToggleState(uint8_t inState);
-    uint8_t GetToggleState() const { return mToggleState; }
+    void SetToggleState(bool inState) { mToggleState = inState; repaint();}
+    bool GetToggleState() const { return mToggleState; }
     
     void SetActiveText(std::string inText) { mTextActive = inText; }
     void SetActiveBgColor(const juce::Colour& inColour) { mBgActiveColor = inColour; }
+    void SetActiveBgHoverColor(const juce::Colour& inColour) { mBgActiveHoverColor = inColour; }
+    void SetActiveTextColor(const juce::Colour& inColour) { mTextActiveColor = inColour; }
+    void SetActiveTextHoverColor(const juce::Colour& inColour) { mTextActiveHoverColor = inColour; }
+
     
 private:
     
-    uint8_t mToggleState = 0;
+    bool mToggleState = false;
     
     std::string mTextActive;
     
