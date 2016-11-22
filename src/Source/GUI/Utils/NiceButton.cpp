@@ -18,7 +18,7 @@ NiceComponent(inName)
     
 void NiceButton::paint(juce::Graphics &inG)
 {
-    if(mToggleState == false){
+    if(mToggleState == false || !isEnabled()){
         NiceComponent::paint(inG);
         return;
     }

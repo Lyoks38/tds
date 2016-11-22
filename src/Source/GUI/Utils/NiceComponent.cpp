@@ -36,6 +36,11 @@ void NiceComponent::paint(juce::Graphics &inG)
         inG.setColour(textColour);
         inG.drawText(mTextToDisplay, 0, 0, getWidth(), getHeight(), mJustification);
     }
+    
+    if(!isEnabled()){
+        inG.setColour(mDisabledColor);
+        inG.fillRect(0, 0, getWidth(), getHeight());
+    }
 }
 
 

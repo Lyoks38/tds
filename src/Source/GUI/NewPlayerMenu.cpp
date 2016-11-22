@@ -126,6 +126,10 @@ void NewPlayerMenu::paint(juce::Graphics& inG)
     inG.drawText("Entrez votre nom", 65, 150, 240, 30, juce::Justification::topLeft);
     inG.drawText("Niveau de difficulte", 65, 240, 240, 30, juce::Justification::topLeft);
     inG.drawText("Choisissez votre liste", 65, 360, 240, 30, juce::Justification::topLeft);
+    
+    //Difficulty explained
+    inG.setFont(juce::Font(14.f));
+    inG.drawText(mDifficultyExplained, 610, 530, 190, 30, juce::Justification::topLeft);
 
 }
 
@@ -140,10 +144,10 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
     //Difficulty buttons
     else if(inComp == mPolardButton){
         mNewPlayerAttributes.mGenre = POLARD;
-        //TO DO : deselect other buttons & display some explaining text
         mAmiButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
+        mDifficultyExplained = "C'est chaud, gros.";
     }
     else if(inComp == mAmiButton){
         mNewPlayerAttributes.mGenre = AMI_DE_LISTE;
@@ -151,6 +155,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mPolardButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
+        mDifficultyExplained = "Ca passe.";
     }
     else if(inComp == mListeButton){
         mNewPlayerAttributes.mGenre = LISTE;
@@ -158,6 +163,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mPolardButton->SetToggleState(false);
         mAmiButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
+        mDifficultyExplained = "Au calme.";
     }
     else if(inComp == mMorueButton){
         mNewPlayerAttributes.mGenre = MORUE;
@@ -165,6 +171,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mPolardButton->SetToggleState(false);
         mAmiButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
+        mDifficultyExplained="On va niquer ce soir !";
     }
     //Start Button
     else if(inComp == mStartButton){

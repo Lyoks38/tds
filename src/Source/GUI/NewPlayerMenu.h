@@ -31,6 +31,8 @@ public:
     
 private:
     
+    std::string mDifficultyExplained = "";
+    
     juce::Font mMainFont;
     
     NiceComponent* mReturnButton;

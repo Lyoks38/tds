@@ -54,6 +54,7 @@ protected:
     juce::Colour mBgHoverColor = juce::Colours::transparentWhite;
     juce::Colour mTextColor = juce::Colours::black;
     juce::Colour mTextHoverColor = juce::Colours::black;
+    juce::Colour mDisabledColor = juce::Colour((uint8)127,127,127,0.5f);
     
 private:
     
