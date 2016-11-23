@@ -31,6 +31,8 @@ public:
     
 private:
     
+    void EnableLists(bool inEnabled);
+    
     std::string mDifficultyExplained = "";
     
     juce::Font mMainFont;
@@ -44,6 +46,14 @@ private:
     NiceButton* mAmiButton;
     NiceButton* mListeButton;
     NiceButton* mMorueButton;
+    
+    //List Buttons
+    NiceButton* mFoxButton;
+    NiceButton* mTopButton;
+    NiceButton* mPlayButton;
+    NiceButton* mWhoopButton;
+    NiceButton* mPulpButton;
+    NiceButton* mSpaceButton;
 
 
     

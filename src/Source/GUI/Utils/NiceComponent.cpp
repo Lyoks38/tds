@@ -59,6 +59,9 @@ void NiceComponent::AddListener(NiceComponentListener *inListener)
 
 void NiceComponent::mouseDown(const juce::MouseEvent &e)
 {
+    if(!isEnabled())
+        return;
+    
     for(auto it : mListeners)
         it->onNiceComponentClicked(this);
 }

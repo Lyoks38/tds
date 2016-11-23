@@ -27,8 +27,8 @@ public:
     
     virtual void paint(juce::Graphics& inG) override;
     
-    virtual void mouseEnter(const juce::MouseEvent& e) override { repaint(); }
-    virtual void mouseExit(const juce::MouseEvent& e)  override { repaint(); }
+    virtual void mouseEnter(const juce::MouseEvent& e) override { if(isEnabled()) repaint(); }
+    virtual void mouseExit(const juce::MouseEvent& e)  override { if(isEnabled()) repaint(); }
     virtual void mouseDown(const juce::MouseEvent& e)  override;
 
     //Setters

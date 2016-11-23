@@ -25,7 +25,6 @@ juce::Component("New Player Menu")
     mReturnButton->setBounds(20, 20, 70, 25);
     mReturnButton->AddListener(this);
     
-    //TODO
     //Player's name
     mPlayerNameEditor = new juce::TextEditor("Player Name Editor");
     mPlayerNameEditor->setBounds(70, 190, 200, 23);
@@ -84,6 +83,58 @@ juce::Component("New Player Menu")
     mMorueButton->AddListener(this);
     
     //List
+    mFoxButton = new NiceButton("Fox Button");
+    mFoxButton->SetTextToDisplay("FOX");
+    mFoxButton->SetBgColor(juce::Colour (0x885d2a80));
+    mFoxButton->SetBgHoverColor(juce::Colour (0xbb5d2a80));
+    mFoxButton->SetActiveBgColor(juce::Colour (0xff5d2a80));
+    mFoxButton->SetActiveBgHoverColor(juce::Colour (0xff5d2a80));
+    mFoxButton->SetTextColor(juce::Colour(0xffffe04c));
+    mFoxButton->SetTextHoverColor(juce::Colour(0xffffe04c));
+    mFoxButton->SetActiveTextColor(juce::Colour(0xffffe04c));
+    mFoxButton->SetActiveTextHoverColor(juce::Colour(0xffffe04c));
+    mFoxButton->setBounds(70, 400, 60, 30);
+    mFoxButton->AddListener(this);
+    
+    mTopButton = new NiceButton("Top Button");
+    mTopButton->SetTextToDisplay("TOP");
+    mTopButton->SetBgColor(juce::Colour (0x8814a038));
+    mTopButton->SetBgHoverColor(juce::Colour (0xbb14a038));
+    mTopButton->SetActiveBgColor(juce::Colour (0xff14a038));
+    mTopButton->SetActiveBgHoverColor(juce::Colour (0xff14a038));
+    mTopButton->SetTextColor(juce::Colours::white);
+    mTopButton->SetTextHoverColor(juce::Colours::white);
+    mTopButton->SetActiveTextColor(juce::Colours::white);
+    mTopButton->SetActiveTextHoverColor(juce::Colours::white);
+    mTopButton->setBounds(140, 400, 60, 30);
+    mTopButton->AddListener(this);
+    
+    mPlayButton = new NiceButton("Play Button");
+    mPlayButton->SetTextToDisplay("PLAY");
+    mPlayButton->SetBgColor(juce::Colour (0x88e71247));
+    mPlayButton->SetBgHoverColor(juce::Colour (0xbbe71247));
+    mPlayButton->SetActiveBgColor(juce::Colour (0xffe71247));
+    mPlayButton->SetActiveBgHoverColor(juce::Colour (0xffe71247));
+    mPlayButton->SetTextColor(juce::Colour(0xffcccccc));
+    mPlayButton->SetTextHoverColor(juce::Colour(0xffcccccc));
+    mPlayButton->SetActiveTextColor(juce::Colour(0xffcccccc));
+    mPlayButton->SetActiveTextHoverColor(juce::Colour(0xffcccccc));
+    mPlayButton->setBounds(210, 400, 60, 30);
+    mPlayButton->AddListener(this);
+    
+    mWhoopButton = new NiceButton("Whhop Button");
+    mWhoopButton->SetTextToDisplay("WHOOP");
+    mWhoopButton->SetBgColor(juce::Colour (0x883769ba));
+    mWhoopButton->SetBgHoverColor(juce::Colour (0xbb3769ba));
+    mWhoopButton->SetActiveBgColor(juce::Colour (0xff3769ba));
+    mWhoopButton->SetActiveBgHoverColor(juce::Colour (0xff3769ba));
+    mWhoopButton->SetTextColor(juce::Colours::white);
+    mWhoopButton->SetTextHoverColor(juce::Colours::white);
+    mWhoopButton->SetActiveTextColor(juce::Colours::white);
+    mWhoopButton->SetActiveTextHoverColor(juce::Colours::white);
+    mWhoopButton->setBounds(280, 400, 60, 30);
+    mWhoopButton->AddListener(this);
+
     
     //Start game
     mStartButton = new NiceComponent("Start New Game");
@@ -103,6 +154,10 @@ juce::Component("New Player Menu")
     addAndMakeVisible(mAmiButton);
     addAndMakeVisible(mListeButton);
     addAndMakeVisible(mMorueButton);
+    addAndMakeVisible(mFoxButton);
+    addAndMakeVisible(mTopButton);
+    addAndMakeVisible(mPlayButton);
+    addAndMakeVisible(mWhoopButton);
 
     
     mMainFont = FontUtils::OrangeJuice;
@@ -147,34 +202,60 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
         mDifficultyExplained = "C'est chaud, gros.";
+        EnableLists(false);
         repaint();
     }
     else if(inComp == mAmiButton){
         mNewPlayerAttributes.mGenre = AMI_DE_LISTE;
-        //TO DO : deselect other buttons & display some explaining text
         mPolardButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
         mDifficultyExplained = "Ca passe.";
+        EnableLists(true);
         repaint();
     }
     else if(inComp == mListeButton){
         mNewPlayerAttributes.mGenre = LISTE;
-        //TO DO : deselect other buttons & display some explaining text
         mPolardButton->SetToggleState(false);
         mAmiButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
         mDifficultyExplained = "Au calme.";
+        EnableLists(true);
         repaint();
     }
     else if(inComp == mMorueButton){
         mNewPlayerAttributes.mGenre = MORUE;
-        //TO DO : deselect other buttons & display some explaining text
         mPolardButton->SetToggleState(false);
         mAmiButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
         mDifficultyExplained="On va niquer ce soir !";
+        EnableLists(false);
         repaint();
+    }
+    //Lists
+    else if(inComp == mFoxButton){
+        mNewPlayerAttributes.mListe = FOX;
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+    }
+    else if(inComp == mTopButton){
+        mNewPlayerAttributes.mListe = TOP;
+        mFoxButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+    }
+    else if(inComp == mPlayButton){
+        mNewPlayerAttributes.mListe = PLAY;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+    }
+    else if(inComp == mWhoopButton){
+        mNewPlayerAttributes.mListe = WHOOP;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
     }
     //Start Button
     else if(inComp == mStartButton){
@@ -190,3 +271,13 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         
     }
 }
+
+
+void NewPlayerMenu::EnableLists(bool inEnabled)
+{
+    mFoxButton->setEnabled(inEnabled);
+    mTopButton->setEnabled(inEnabled);
+    mPlayButton->setEnabled(inEnabled);
+    mWhoopButton->setEnabled(inEnabled);
+}
+
