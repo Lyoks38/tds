@@ -128,8 +128,7 @@ void NewPlayerMenu::paint(juce::Graphics& inG)
     inG.drawText("Choisissez votre liste", 65, 360, 240, 30, juce::Justification::topLeft);
     
     //Difficulty explained
-    inG.setFont(juce::Font(14.f));
-    inG.drawText(mDifficultyExplained, 610, 530, 190, 30, juce::Justification::topLeft);
+    inG.drawText(mDifficultyExplained, 590, 280, 190, 30, juce::Justification::centredLeft);
 
 }
 
@@ -148,6 +147,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
         mDifficultyExplained = "C'est chaud, gros.";
+        repaint();
     }
     else if(inComp == mAmiButton){
         mNewPlayerAttributes.mGenre = AMI_DE_LISTE;
@@ -156,6 +156,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
         mDifficultyExplained = "Ca passe.";
+        repaint();
     }
     else if(inComp == mListeButton){
         mNewPlayerAttributes.mGenre = LISTE;
@@ -164,6 +165,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mAmiButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
         mDifficultyExplained = "Au calme.";
+        repaint();
     }
     else if(inComp == mMorueButton){
         mNewPlayerAttributes.mGenre = MORUE;
@@ -172,6 +174,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mAmiButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
         mDifficultyExplained="On va niquer ce soir !";
+        repaint();
     }
     //Start Button
     else if(inComp == mStartButton){
