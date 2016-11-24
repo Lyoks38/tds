@@ -46,6 +46,9 @@ void NiceButton::paint(juce::Graphics &inG)
 
 void NiceButton::mouseDown(const juce::MouseEvent& e)
 {
+    if(!isEnabled())
+        return;
+    
     NiceComponent::mouseDown(e);
     
     SetToggleState(!mToggleState);

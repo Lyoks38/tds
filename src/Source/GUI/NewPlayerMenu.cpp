@@ -122,7 +122,7 @@ juce::Component("New Player Menu")
     mPlayButton->setBounds(210, 400, 60, 30);
     mPlayButton->AddListener(this);
     
-    mWhoopButton = new NiceButton("Whhop Button");
+    mWhoopButton = new NiceButton("Whoop Button");
     mWhoopButton->SetTextToDisplay("WHOOP");
     mWhoopButton->SetBgColor(juce::Colour (0x883769ba));
     mWhoopButton->SetBgHoverColor(juce::Colour (0xbb3769ba));
@@ -134,7 +134,71 @@ juce::Component("New Player Menu")
     mWhoopButton->SetActiveTextHoverColor(juce::Colours::white);
     mWhoopButton->setBounds(280, 400, 60, 30);
     mWhoopButton->AddListener(this);
+    
+    mPulpButton = new NiceButton("Pulp Button");
+    mPulpButton->SetTextToDisplay("PULP");
+    mPulpButton->SetBgColor(juce::Colour (0x8829d0cb));
+    mPulpButton->SetBgHoverColor(juce::Colour (0xbb29d0cb));
+    mPulpButton->SetActiveBgColor(juce::Colour (0xff29d0cb));
+    mPulpButton->SetActiveBgHoverColor(juce::Colour (0xff29d0cb));
+    mPulpButton->SetTextColor(juce::Colour(0xffffe04c).darker(0.3f));
+    mPulpButton->SetTextHoverColor(juce::Colour(0xffffe04c).darker(0.3f));
+    mPulpButton->SetActiveTextColor(juce::Colour(0xffffe04c).darker(0.5f));
+    mPulpButton->SetActiveTextHoverColor(juce::Colour(0xffffe04c).darker(0.5f));
+    mPulpButton->setBounds(350, 400, 60, 30);
+    mPulpButton->AddListener(this);
+    
+    mSpaceButton = new NiceButton("Space Button");
+    mSpaceButton->SetTextToDisplay("SPACE");
+    mSpaceButton->SetBgColor(juce::Colour (0x88e96f0c));
+    mSpaceButton->SetBgHoverColor(juce::Colour (0xbbe96f0c));
+    mSpaceButton->SetActiveBgColor(juce::Colour (0xffe96f0c));
+    mSpaceButton->SetActiveBgHoverColor(juce::Colour (0xffe96f0c));
+    mSpaceButton->SetTextColor(juce::Colour(0xff131237));
+    mSpaceButton->SetTextHoverColor(juce::Colour(0xff131237));
+    mSpaceButton->SetActiveTextColor(juce::Colour(0xff131237));
+    mSpaceButton->SetActiveTextHoverColor(juce::Colour(0xff131237));
+    mSpaceButton->setBounds(420, 400, 60, 30);
+    mSpaceButton->AddListener(this);
 
+    mPeufButton = new NiceButton("Peuf Button");
+    mPeufButton->SetTextToDisplay("PEUF");
+    mPeufButton->SetBgColor(juce::Colour (0x8801926e));
+    mPeufButton->SetBgHoverColor(juce::Colour (0xbb01926e));
+    mPeufButton->SetActiveBgColor(juce::Colour (0xff01926e));
+    mPeufButton->SetActiveBgHoverColor(juce::Colour (0xff01926e));
+    mPeufButton->SetTextColor(juce::Colours::black);
+    mPeufButton->SetTextHoverColor(juce::Colours::black);
+    mPeufButton->SetActiveTextColor(juce::Colours::black);
+    mPeufButton->SetActiveTextHoverColor(juce::Colours::black);
+    mPeufButton->setBounds(490, 400, 60, 30);
+    mPeufButton->AddListener(this);
+    
+    mPearlButton = new NiceButton("Pearl Button");
+    mPearlButton->SetTextToDisplay("PEARL");
+    mPearlButton->SetBgColor(juce::Colour (0x88ffc974));
+    mPearlButton->SetBgHoverColor(juce::Colour (0xbbffc974));
+    mPearlButton->SetActiveBgColor(juce::Colour (0xffffc974));
+    mPearlButton->SetActiveBgHoverColor(juce::Colour (0xffffc974));
+    mPearlButton->SetTextColor(juce::Colour(0xff32201a));
+    mPearlButton->SetTextHoverColor(juce::Colour(0xff32201a));
+    mPearlButton->SetActiveTextColor(juce::Colour(0xff32201a));
+    mPearlButton->SetActiveTextHoverColor(juce::Colour(0xff32201a));
+    mPearlButton->setBounds(560, 400, 60, 30);
+    mPearlButton->AddListener(this);
+    
+    mFrapButton = new NiceButton("Frap Button");
+    mFrapButton->SetTextToDisplay("FRAP");
+    mFrapButton->SetBgColor(juce::Colour (0x88e70074));
+    mFrapButton->SetBgHoverColor(juce::Colour (0xbbe70074));
+    mFrapButton->SetActiveBgColor(juce::Colour (0xffe70074));
+    mFrapButton->SetActiveBgHoverColor(juce::Colour (0xffe70074));
+    mFrapButton->SetTextColor(juce::Colours::black);
+    mFrapButton->SetTextHoverColor(juce::Colours::black);
+    mFrapButton->SetActiveTextColor(juce::Colours::black);
+    mFrapButton->SetActiveTextHoverColor(juce::Colours::black);
+    mFrapButton->setBounds(630, 400, 60, 30);
+    mFrapButton->AddListener(this);
     
     //Start game
     mStartButton = new NiceComponent("Start New Game");
@@ -158,6 +222,11 @@ juce::Component("New Player Menu")
     addAndMakeVisible(mTopButton);
     addAndMakeVisible(mPlayButton);
     addAndMakeVisible(mWhoopButton);
+    addAndMakeVisible(mPulpButton);
+    addAndMakeVisible(mSpaceButton);
+    addAndMakeVisible(mPeufButton);
+    addAndMakeVisible(mPearlButton);
+    addAndMakeVisible(mFrapButton);
 
     
     mMainFont = FontUtils::OrangeJuice;
@@ -198,6 +267,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
     //Difficulty buttons
     else if(inComp == mPolardButton){
         mNewPlayerAttributes.mGenre = POLARD;
+        mNewPlayerAttributes.mListe = NON_LISTE;
         mAmiButton->SetToggleState(false);
         mListeButton->SetToggleState(false);
         mMorueButton->SetToggleState(false);
@@ -238,25 +308,101 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
         mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
     }
     else if(inComp == mTopButton){
         mNewPlayerAttributes.mListe = TOP;
         mFoxButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
         mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
     }
     else if(inComp == mPlayButton){
         mNewPlayerAttributes.mListe = PLAY;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
     }
     else if(inComp == mWhoopButton){
         mNewPlayerAttributes.mListe = WHOOP;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
     }
+    else if(inComp == mPulpButton){
+        mNewPlayerAttributes.mListe = WHOOP;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
+    }
+    else if(inComp == mSpaceButton){
+        mNewPlayerAttributes.mListe = WHOOP;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
+    }
+    else if(inComp == mPeufButton){
+        mNewPlayerAttributes.mListe = WHOOP;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
+    }
+    else if(inComp == mPearlButton){
+        mNewPlayerAttributes.mListe = WHOOP;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+        mFrapButton->SetToggleState(false);
+    }
+    else if(inComp == mFrapButton){
+        mNewPlayerAttributes.mListe = WHOOP;
+        mFoxButton->SetToggleState(false);
+        mTopButton->SetToggleState(false);
+        mPlayButton->SetToggleState(false);
+        mWhoopButton->SetToggleState(false);
+        mPulpButton->SetToggleState(false);
+        mPeufButton->SetToggleState(false);
+        mPearlButton->SetToggleState(false);
+        mSpaceButton->SetToggleState(false);
+    }
+
     //Start Button
     else if(inComp == mStartButton){
         
@@ -279,5 +425,11 @@ void NewPlayerMenu::EnableLists(bool inEnabled)
     mTopButton->setEnabled(inEnabled);
     mPlayButton->setEnabled(inEnabled);
     mWhoopButton->setEnabled(inEnabled);
+    mPulpButton->setEnabled(inEnabled);
+    mSpaceButton->setEnabled(inEnabled);
+    mPearlButton->setEnabled(inEnabled);
+    mPeufButton->setEnabled(inEnabled);
+    mFrapButton->setEnabled(inEnabled);
+
 }
 

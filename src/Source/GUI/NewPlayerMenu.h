@@ -54,6 +54,9 @@ private:
     NiceButton* mWhoopButton;
     NiceButton* mPulpButton;
     NiceButton* mSpaceButton;
+    NiceButton* mPeufButton;
+    NiceButton* mFrapButton;
+    NiceButton* mPearlButton;
 
 
     
