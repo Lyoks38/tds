@@ -27,6 +27,7 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
     mLoadGameButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
     mLoadGameButton->SetTextColor(juce::Colours::white);
     mLoadGameButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mLoadGameButton->SetTextHoverColor(juce::Colour(230, 230, 230));
     
     mNewGameButton->setBounds(250, 200, 300, 70);
     mLoadGameButton->setBounds(250, 320, 300, 70);

@@ -35,6 +35,7 @@ public:
     //Display methods
     bool DisplayMainMenu();
     bool DisplayNewPlayer();
+    bool DisplayWelcomePage(){};
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
 
