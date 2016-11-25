@@ -98,7 +98,21 @@ bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
         
         mEngine->NewGame(inAttributes);
         
-        //TODO : open panel
+        if(mWelcomePage == nullptr){
+            mWelcomePage.reset(new WelcomePage(inAttributes.mName));
+            addChildComponent(mWelcomePage.get());
+            mWelcomePage->setBounds(0, 0, getWidth(), getHeight());
+        }
+        
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+        
+        mWelcomePage->setEnabled(true);
+        mWelcomePage->setVisible(true);
+        
+        mCurrentPage = mWelcomePage.get();
+        
+        return true;
     }
     
     return false;

@@ -57,7 +57,7 @@ juce::Component("New Player Menu")
     mAmiButton->AddListener(this);
     
     mListeButton = new NiceButton("Liste Button");
-    mListeButton->SetTextToDisplay("Liste");
+    mListeButton->SetTextToDisplay("Listé");
     mListeButton->SetBgColor(juce::Colour (0xff001F36).brighter(0.2f));
     mListeButton->SetBgHoverColor(juce::Colour (0xff001F36).brighter(0.3f));
     mListeButton->SetActiveBgColor(juce::Colour (0xff001F36).brighter(0.7f));
@@ -406,7 +406,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
     //Start Button
     else if(inComp == mStartButton){
         
-        //TODO : fill the player attributes with the missing data
+        //TODO : check we do not send wrong datas !
         mNewPlayerAttributes.mName = mPlayerNameEditor->getText().toStdString();
         mNewPlayerAttributes.mReputation = 0.f;
         mNewPlayerAttributes.mChoppes.resize(0);

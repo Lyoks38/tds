@@ -18,21 +18,35 @@ class WelcomePage: public juce::Component, public NiceComponentListener
   
 public:
     
-    WelcomePage();
+    WelcomePage(const std::string& inPlayerName);
     
     ~WelcomePage();
     
     virtual void paint(juce::Graphics& inG) override;
+    
+    static const std::string kIntroText;
+    static const std::string kGoalsText;
+    static const std::string kGameplayText;
+
 
 protected:
     
-    virtual void onNiceComponentClicked(NiceComponent* inComp) override;
+    virtual void onNiceComponentClicked(NiceComponent* inComp) override{ mCurrentPage++; repaint(); };
     
 private:
     
     juce::Font mMainFont;
     
     NiceComponent* mNextButton;
+    std::string mPlayerName;
+    
+    //TODO : make sure we don't go too far
+    int mCurrentPage = 0;
+    enum{
+        INTRO = 0,
+        GOALS,
+        GAMEPLAY,
+    };
     
 };
 

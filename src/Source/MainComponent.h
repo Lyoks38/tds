@@ -35,7 +35,6 @@ public:
     //Display methods
     bool DisplayMainMenu();
     bool DisplayNewPlayer();
-    bool DisplayWelcomePage(){};
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
 
@@ -47,6 +46,7 @@ private:
     
     std::unique_ptr<MainMenu> mMainMenu = nullptr;
     std::unique_ptr<NewPlayerMenu> mNewPlayerMenu = nullptr;
+    std::unique_ptr<WelcomePage> mWelcomePage = nullptr;
     
     
     juce::Component* mCurrentPage = nullptr; //maybe not useful
