@@ -13,6 +13,7 @@ class ScenarioManager;
 #include "ScenarioManager.h"
 #include "Girl.h"
 #include "Player.h"
+#include "Event.h"
 
 
 class CombatManager {
@@ -23,7 +24,7 @@ public:
     
     ~CombatManager();
     
-    void LoadNewCombat(bool inIsKfet);
+    void LoadNewCombat(Event inEvent);
     
 protected:
     
@@ -60,7 +61,5 @@ private:
     std::unique_ptr<ScenarioManager> mScenarioManager;
     
     std::vector<Attack> mAttackDatabase;
-    
-    std::vector<Girl> GetGirlDatabaseFromEngine(){};
-    
+        
 };

@@ -23,6 +23,7 @@
 		456B11611DD34E0200680878 /* OrangeJuice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 456B115F1DD34E0200680878 /* OrangeJuice.cpp */; };
 		45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45721DB21DD49BC500089EB7 /* FontUtils.cpp */; };
 		45800E971DE712AA006A5EB7 /* WelcomePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45800E961DE712AA006A5EB7 /* WelcomePage.cpp */; };
+		4588BE471DEC57120009374F /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588BE461DEC57120009374F /* Event.cpp */; };
 		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
 		45BD1DB21DD9DBC300FB65F1 /* NewPlayerMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */; };
 		47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50A5B0E5097DF0431F8E565E /* juce_video.mm */; };
@@ -382,6 +383,8 @@
 		45721DB21DD49BC500089EB7 /* FontUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FontUtils.cpp; path = ../../Source/GUI/Utils/FontUtils.cpp; sourceTree = "<group>"; };
 		45800E951DE71294006A5EB7 /* WelcomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomePage.h; path = ../../Source/GUI/WelcomePage.h; sourceTree = "<group>"; };
 		45800E961DE712AA006A5EB7 /* WelcomePage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomePage.cpp; path = ../../Source/GUI/WelcomePage.cpp; sourceTree = "<group>"; };
+		4588BE451DEC57010009374F /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../Source/Event.h; sourceTree = "<group>"; };
+		4588BE461DEC57120009374F /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Event.cpp; path = ../../Source/Event.cpp; sourceTree = "<group>"; };
 		45A453B12DC2D5F7343D37F0 /* compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = compat.h; path = ../../../JUCE/modules/juce_audio_formats/codecs/flac/compat.h; sourceTree = SOURCE_ROOT; };
 		45A7FCBFAE599B4149CB3AFE /* juce_Primes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_Primes.cpp; path = ../../../JUCE/modules/juce_cryptography/encryption/juce_Primes.cpp; sourceTree = SOURCE_ROOT; };
 		45AF5D111677436893631F55 /* juce_AudioProcessorGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_AudioProcessorGraph.h; path = ../../../JUCE/modules/juce_audio_processors/processors/juce_AudioProcessorGraph.h; sourceTree = SOURCE_ROOT; };
@@ -1492,6 +1495,8 @@
 				194773DE1D0DE063009AC9D5 /* ScenarioManager.h */,
 				194773DA1D0D8C5E009AC9D5 /* Attack.cpp */,
 				194773D91D0D72FD009AC9D5 /* Attack.h */,
+				4588BE461DEC57120009374F /* Event.cpp */,
+				4588BE451DEC57010009374F /* Event.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -3548,6 +3553,7 @@
 				196019E41DD11465004108F2 /* MainMenu.cpp in Sources */,
 				194773DB1D0D8C5E009AC9D5 /* Attack.cpp in Sources */,
 				7A585E3A9167D321B2D1B49C /* juce_core.mm in Sources */,
+				4588BE471DEC57120009374F /* Event.cpp in Sources */,
 				19AFC5C51CFF751100ECBC63 /* Girl.cpp in Sources */,
 				F00E812FEF8BB3D7D9325E46 /* juce_cryptography.mm in Sources */,
 				194773DD1D0D97FA009AC9D5 /* CombatManager.cpp in Sources */,

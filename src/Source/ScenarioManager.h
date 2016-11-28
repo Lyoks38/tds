@@ -47,10 +47,9 @@ public:
     
 protected:
     
-    //std::vector<Events> mEvents
+    std::vector<Event> mEvents;
     int mCurrentEvent = 0;
     std::vector<Girl> mGirlDatabase;
-    int mNbYears = 3;
     
     
 private:
