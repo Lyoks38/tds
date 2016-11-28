@@ -27,17 +27,21 @@ public:
     static const std::string kIntroText;
     static const std::string kGoalsText;
     static const std::string kGameplayText;
+    static const std::string kCommandeText;
+    static const std::string kStartingText;
+
 
 
 protected:
     
-    virtual void onNiceComponentClicked(NiceComponent* inComp) override{ mCurrentPage++; repaint(); };
+    virtual void onNiceComponentClicked(NiceComponent* inComp) override;
     
 private:
     
     juce::Font mMainFont;
     
     NiceComponent* mNextButton;
+    NiceComponent* mStartButton;
     std::string mPlayerName;
     
     //TODO : make sure we don't go too far
@@ -46,6 +50,8 @@ private:
         INTRO = 0,
         GOALS,
         GAMEPLAY,
+        COMMANDE,
+        START
     };
     
 };

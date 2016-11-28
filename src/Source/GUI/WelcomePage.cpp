@@ -26,6 +26,19 @@ WelcomePage::WelcomePage(const std::string& inPlayerName): juce::Component("Welc
     mNextButton->AddListener(this);
     addAndMakeVisible(mNextButton);
     
+    mStartButton = new NiceComponent("Start New Game");
+    mStartButton->SetTextToDisplay("COMMENCER");
+    mStartButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mStartButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mStartButton->SetTextColor(juce::Colours::white);
+    mStartButton->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mStartButton->setBounds(200, 530, 400, 55);
+    mStartButton->AddListener(this);
+    addChildComponent(mStartButton);
+    mStartButton->setVisible(false);
+    mStartButton->setEnabled(false);
+
+    
     mMainFont = FontUtils::OrangeJuice;
     mMainFont.setHeight(60.f);
 }
@@ -52,6 +65,13 @@ void WelcomePage::paint(juce::Graphics &inG)
             break;
         case GAMEPLAY:
             inG.drawMultiLineText(kGameplayText, 200, 170, 400);
+            break;
+        case COMMANDE:
+            inG.drawMultiLineText(kCommandeText, 200, 170, 400);
+            break;
+        case START:
+            inG.drawText("Pret a te lancer ?", 200, 170, 400, 120, juce::Justification::centred);
+            break;
         default:
             break;
     }
@@ -59,6 +79,26 @@ void WelcomePage::paint(juce::Graphics &inG)
 }
 
 
+void WelcomePage::onNiceComponentClicked(NiceComponent *inComp)
+{
+    if(inComp == mNextButton){
+        mCurrentPage++;
+        if(mCurrentPage > START)
+            mCurrentPage = 0;
+        else if(mCurrentPage == START){
+            mNextButton->setVisible(false);
+            mNextButton->setEnabled(false);
+            mStartButton->setVisible(true);
+            mStartButton->setEnabled(true);
+        }
+        
+        repaint();
+    }
+    else if(inComp == mStartButton){
+        
+        //TODO : launch the game !
+    }
+}
 
 
 const std::string WelcomePage::kIntroText = "Tu as fait le bon choix en venant dans cette école.\n"
@@ -79,3 +119,9 @@ const std::string WelcomePage::kGameplayText = "Tu vas participer à plusieurs �
 "dans l'espoir d'un échange de salive par lèvres interposées. Les choper quoi.\n"
 "Seulement, attention ! On ne chope pas de l'ingée comme ça ! Il faut quand même la séduire un peu, sinon rien ne l'empêchera "
 "d'aller choper ton pote qui lui va à la salle tous les deux jours et qui mange pas tacos toutes les semaines comme toi.";
+
+const std::string WelcomePage::kCommandeText = "Lors d'un événement, tu auras droit à un nombre d'actions fixes : 30 actions par soirée, "
+"10 par kfet. Ces actions te serviront à séduire les différentes ”targets” possibles de l'événement.\nMais fais très attention ! "
+"Ces actions peuvent être à double tranchant : si tu es trop direct avec la gente demoiselle, ne t'étonne pas de te prendre une baffe ! "
+"Ou si tu tentes trop de la saoûler, elle finira peut-être par te vomir sur les pieds...\nAh oui, et ne bois pas trop, ça serait con de finir "
+"en PLS...";
