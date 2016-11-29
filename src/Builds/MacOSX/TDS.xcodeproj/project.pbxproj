@@ -22,6 +22,7 @@
 		294395984B822EC596048B72 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C6798BB1B1B6471E026E2A /* CoreMIDI.framework */; };
 		456B11611DD34E0200680878 /* OrangeJuice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 456B115F1DD34E0200680878 /* OrangeJuice.cpp */; };
 		45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45721DB21DD49BC500089EB7 /* FontUtils.cpp */; };
+		457223721DEDA81900DAE1F0 /* NewEventPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457223711DEDA81900DAE1F0 /* NewEventPage.cpp */; };
 		45800E971DE712AA006A5EB7 /* WelcomePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45800E961DE712AA006A5EB7 /* WelcomePage.cpp */; };
 		4588BE471DEC57120009374F /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588BE461DEC57120009374F /* Event.cpp */; };
 		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
@@ -381,6 +382,8 @@
 		456B11601DD34E0200680878 /* OrangeJuice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrangeJuice.h; path = ../../../Resources/OrangeJuice.h; sourceTree = "<group>"; };
 		45721DB11DD499EA00089EB7 /* FontUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FontUtils.h; path = ../../Source/GUI/Utils/FontUtils.h; sourceTree = "<group>"; };
 		45721DB21DD49BC500089EB7 /* FontUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FontUtils.cpp; path = ../../Source/GUI/Utils/FontUtils.cpp; sourceTree = "<group>"; };
+		457223701DEDA80500DAE1F0 /* NewEventPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewEventPage.h; path = ../../Source/GUI/NewEventPage.h; sourceTree = "<group>"; };
+		457223711DEDA81900DAE1F0 /* NewEventPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewEventPage.cpp; path = ../../Source/GUI/NewEventPage.cpp; sourceTree = "<group>"; };
 		45800E951DE71294006A5EB7 /* WelcomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomePage.h; path = ../../Source/GUI/WelcomePage.h; sourceTree = "<group>"; };
 		45800E961DE712AA006A5EB7 /* WelcomePage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomePage.cpp; path = ../../Source/GUI/WelcomePage.cpp; sourceTree = "<group>"; };
 		4588BE451DEC57010009374F /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../Source/Event.h; sourceTree = "<group>"; };
@@ -1480,6 +1483,8 @@
 				45BD1DB01DD9DBA700FB65F1 /* NewPlayerMenu.h */,
 				45800E961DE712AA006A5EB7 /* WelcomePage.cpp */,
 				45800E951DE71294006A5EB7 /* WelcomePage.h */,
+				457223711DEDA81900DAE1F0 /* NewEventPage.cpp */,
+				457223701DEDA80500DAE1F0 /* NewEventPage.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -3566,6 +3571,7 @@
 				CE5CC945798B83CFFEF19D27 /* juce_gui_extra.mm in Sources */,
 				194822BA1D04CB2B008C728F /* GameEngine.cpp in Sources */,
 				73472D42337813788C99BDFD /* juce_opengl.mm in Sources */,
+				457223721DEDA81900DAE1F0 /* NewEventPage.cpp in Sources */,
 				47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */,
 				196019EC1DD13262004108F2 /* NiceComponent.cpp in Sources */,
 				45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */,

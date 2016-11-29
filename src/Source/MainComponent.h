@@ -15,6 +15,7 @@ class GameEngine;
 #include "GameEngine.h"
 #include "Player.h"
 #include "GUI/GuiHeader.h"
+#include "Event.h"
 
 
 //==============================================================================
@@ -35,6 +36,8 @@ public:
     //Display methods
     bool DisplayMainMenu();
     bool DisplayNewPlayer();
+    bool DisplayNewEvent(const Event inEvent);
+    bool DisplayNewTarget(const Girl inTarget){};
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
 

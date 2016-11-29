@@ -27,14 +27,18 @@ void CombatManager::SetScenarioManager(ScenarioManager* inScenarioManager)
 }
 
 ///////////////////////////////////////
-void CombatManager::LoadNewCombat(bool inIsKfet)
+void CombatManager::LoadNewCombat(Event inEvent)
 {
-    if(inIsKfet){
+    if(inEvent.IsKfet()){
         mRemainingActions = 10;
     }
     else{
         mRemainingActions = 20;
     }
+    
+    mTargets = inEvent.GetTargets();
+    
+    mCurrentTarget = 0;
     
     //TO BE COMPLETED
 }

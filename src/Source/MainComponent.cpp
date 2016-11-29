@@ -92,6 +92,12 @@ bool MainContentComponent::DisplayMainMenu()
 }
 
 
+bool MainContentComponent::DisplayNewEvent(const Event inEvent)
+{
+    
+}
+
+
 bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
 {
     if(mEngine != nullptr){

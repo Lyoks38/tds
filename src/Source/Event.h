@@ -27,6 +27,8 @@ public:
     std::vector<Girl> GetTargets() const { return mPossibleTargets; }
     juce::Image* GetBanner() const { return mBanner; }
     
+    void SetBanner(juce::Image* inImage) { mBanner = inImage; }
+    
 private:
     
     std::string mName;
