@@ -18,9 +18,11 @@ class Event
     
 public:
     
-    Event(const std::string inName, bool inIsKfet, juce::Image inBanner);
+    Event(const std::string inName, bool inIsKfet, const juce::Image inBanner);
     
-    ~Event();
+    Event(Event const &other);
+    
+    ~Event(){};
     
     std::string GetName() const { return mName; }
     bool IsKfet() const { return mIsKfet; }
