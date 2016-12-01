@@ -23,6 +23,8 @@ public:
     
     void PrepareToClose();
     
+    ScenarioManager* GetScenarioManager() const { return mScenarioManager.get(); }
+    
     void AttachGUI(MainContentComponent* inGUI);
     
     void SaveGame(){};

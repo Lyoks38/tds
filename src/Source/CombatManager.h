@@ -24,7 +24,7 @@ public:
     
     ~CombatManager();
     
-    void LoadNewCombat(Event inEvent);
+    void LoadNewCombat(const Event inEvent);
     
 protected:
     

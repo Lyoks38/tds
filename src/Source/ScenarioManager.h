@@ -20,7 +20,7 @@ class ScenarioManager {
     
 public:
     
-    ScenarioManager(){};
+    ScenarioManager();
     
     ~ScenarioManager();
     
@@ -31,9 +31,9 @@ public:
     
     void LoadEvents();
     
-    void LoadAttacks();
+    void LoadAttacks(){};
     
-    void LoadGirls();
+    void LoadGirls(){};
 
     void AttachToGUI(MainContentComponent* inGUI) { mMainGUI = inGUI; };
     
@@ -48,7 +48,7 @@ public:
 protected:
     
     std::vector<Event> mEvents;
-    int mCurrentEvent = 0;
+    int mCurrentEvent = -1;
     std::vector<Girl> mGirlDatabase;
     
     

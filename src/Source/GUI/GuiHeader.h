@@ -8,8 +8,10 @@
 class MainMenu;
 class NewPlayerMenu;
 class WelcomePage;
+class NewEventPage;
 
 //This is where all the headers for GUI windows should be included
 #include "MainMenu.h"
 #include "NewPlayerMenu.h"
 #include "WelcomePage.h"
+#include "NewEventPage.h"

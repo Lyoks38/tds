@@ -6,4 +6,11 @@
 //
 //
 
-#include <stdio.h>
+#include "Event.h"
+
+Event::Event(const std::string inName, bool inIsKfet, juce::Image inBanner)
+{
+    mName = inName;
+    mIsKfet = inIsKfet;
+    mBanner = inBanner;
+}

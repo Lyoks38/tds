@@ -18,16 +18,16 @@ class Event
     
 public:
     
-    Event(std::string inName, bool inIsKfet, juce::Image* inBanner);
+    Event(const std::string inName, bool inIsKfet, juce::Image inBanner);
     
     ~Event();
     
     std::string GetName() const { return mName; }
     bool IsKfet() const { return mIsKfet; }
     std::vector<Girl> GetTargets() const { return mPossibleTargets; }
-    juce::Image* GetBanner() const { return mBanner; }
+    juce::Image GetBanner() const { return mBanner; }
     
-    void SetBanner(juce::Image* inImage) { mBanner = inImage; }
+    void SetBanner(juce::Image inImage) { mBanner = inImage; }
     
 private:
     
@@ -37,7 +37,7 @@ private:
     
     std::vector<Girl> mPossibleTargets;
     
-    juce::Image* mBanner;
+    juce::Image mBanner;
 };
 
 #endif /* Event_h */

@@ -24,6 +24,8 @@
 		45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45721DB21DD49BC500089EB7 /* FontUtils.cpp */; };
 		457223721DEDA81900DAE1F0 /* NewEventPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457223711DEDA81900DAE1F0 /* NewEventPage.cpp */; };
 		45800E971DE712AA006A5EB7 /* WelcomePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45800E961DE712AA006A5EB7 /* WelcomePage.cpp */; };
+		458704771DF0443100B366B8 /* ImageUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458704761DF0443100B366B8 /* ImageUtils.cpp */; };
+		4587047A1DF0464C00B366B8 /* BarbecueGc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458704781DF0464C00B366B8 /* BarbecueGc.cpp */; };
 		4588BE471DEC57120009374F /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588BE461DEC57120009374F /* Event.cpp */; };
 		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
 		45BD1DB21DD9DBC300FB65F1 /* NewPlayerMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */; };
@@ -386,6 +388,10 @@
 		457223711DEDA81900DAE1F0 /* NewEventPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewEventPage.cpp; path = ../../Source/GUI/NewEventPage.cpp; sourceTree = "<group>"; };
 		45800E951DE71294006A5EB7 /* WelcomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomePage.h; path = ../../Source/GUI/WelcomePage.h; sourceTree = "<group>"; };
 		45800E961DE712AA006A5EB7 /* WelcomePage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomePage.cpp; path = ../../Source/GUI/WelcomePage.cpp; sourceTree = "<group>"; };
+		458704751DF0441800B366B8 /* ImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageUtils.h; path = ../../Source/GUI/Utils/ImageUtils.h; sourceTree = "<group>"; };
+		458704761DF0443100B366B8 /* ImageUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageUtils.cpp; path = ../../Source/GUI/Utils/ImageUtils.cpp; sourceTree = "<group>"; };
+		458704781DF0464C00B366B8 /* BarbecueGc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BarbecueGc.cpp; path = ../../../Resources/BarbecueGc.cpp; sourceTree = "<group>"; };
+		458704791DF0464C00B366B8 /* BarbecueGc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarbecueGc.h; path = ../../../Resources/BarbecueGc.h; sourceTree = "<group>"; };
 		4588BE451DEC57010009374F /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../Source/Event.h; sourceTree = "<group>"; };
 		4588BE461DEC57120009374F /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Event.cpp; path = ../../Source/Event.cpp; sourceTree = "<group>"; };
 		45A453B12DC2D5F7343D37F0 /* compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = compat.h; path = ../../../JUCE/modules/juce_audio_formats/codecs/flac/compat.h; sourceTree = SOURCE_ROOT; };
@@ -1515,6 +1521,8 @@
 				45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */,
 				45721DB11DD499EA00089EB7 /* FontUtils.h */,
 				45721DB21DD49BC500089EB7 /* FontUtils.cpp */,
+				458704751DF0441800B366B8 /* ImageUtils.h */,
+				458704761DF0443100B366B8 /* ImageUtils.cpp */,
 				196019EA1DD12BCB004108F2 /* NiceComponent.h */,
 				196019EB1DD13262004108F2 /* NiceComponent.cpp */,
 			);
@@ -1990,6 +1998,8 @@
 		456B115E1DD34DEB00680878 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				458704781DF0464C00B366B8 /* BarbecueGc.cpp */,
+				458704791DF0464C00B366B8 /* BarbecueGc.h */,
 				456B115F1DD34E0200680878 /* OrangeJuice.cpp */,
 				456B11601DD34E0200680878 /* OrangeJuice.h */,
 			);
@@ -3547,6 +3557,7 @@
 			files = (
 				45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */,
 				F657BF078F673A328AB3FA56 /* MainComponent.cpp in Sources */,
+				4587047A1DF0464C00B366B8 /* BarbecueGc.cpp in Sources */,
 				8A90362B991A587E24EC5F3F /* Main.cpp in Sources */,
 				456B11611DD34E0200680878 /* OrangeJuice.cpp in Sources */,
 				D9794C895C21F16D49611B2A /* juce_audio_basics.mm in Sources */,
@@ -3563,6 +3574,7 @@
 				F00E812FEF8BB3D7D9325E46 /* juce_cryptography.mm in Sources */,
 				194773DD1D0D97FA009AC9D5 /* CombatManager.cpp in Sources */,
 				83F8BBD33ABD7BF3635E0678 /* juce_data_structures.mm in Sources */,
+				458704771DF0443100B366B8 /* ImageUtils.cpp in Sources */,
 				FFBBCBB6F7A50D5670CAB910 /* juce_events.mm in Sources */,
 				EE31C73BD0A5BA0B67E36B06 /* juce_graphics.mm in Sources */,
 				194773E01D0DE083009AC9D5 /* ScenarioManager.cpp in Sources */,

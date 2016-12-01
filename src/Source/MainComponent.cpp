@@ -94,7 +94,24 @@ bool MainContentComponent::DisplayMainMenu()
 
 bool MainContentComponent::DisplayNewEvent(const Event inEvent)
 {
+    if(mNewEventPage == nullptr){
+        
+        mNewEventPage.reset(new NewEventPage());
+        addChildComponent(mNewEventPage.get());
+        mNewEventPage->setBounds(0, 0, getWidth(), getHeight());
+    }
     
+    mNewEventPage->LoadEventInfos(inEvent);
+    
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
+    
+    mNewEventPage->setEnabled(true);
+    mNewEventPage->setVisible(true);
+    
+    mCurrentPage = mNewEventPage.get();
+    
+    return true;
 }
 
 
@@ -125,6 +142,17 @@ bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
 }
 
 
+bool MainContentComponent::GoToFirstEvent()
+{
+    if(mEngine != nullptr){
+        
+        mEngine->GetScenarioManager()->GoToNextEvent();
+        
+        return true;
+    }
+    
+    return false;
+}
 
 
 

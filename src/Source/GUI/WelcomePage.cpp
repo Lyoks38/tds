@@ -96,7 +96,10 @@ void WelcomePage::onNiceComponentClicked(NiceComponent *inComp)
     }
     else if(inComp == mStartButton){
         
-        //TODO : launch the game !
+        MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
+        if(parent)
+            parent->GoToFirstEvent();
+        
     }
 }
 

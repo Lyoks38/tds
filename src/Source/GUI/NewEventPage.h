@@ -34,7 +34,7 @@ protected:
     
 private:
     
-    juce::Image* mBanner;
+    juce::Image mBanner;
     std::string mEventName;
     bool mIsKfet;
     

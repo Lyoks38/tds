@@ -40,6 +40,7 @@ public:
     bool DisplayNewTarget(const Girl inTarget){};
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
+    bool GoToFirstEvent();
 
 private:
     //==============================================================================
@@ -50,6 +51,7 @@ private:
     std::unique_ptr<MainMenu> mMainMenu = nullptr;
     std::unique_ptr<NewPlayerMenu> mNewPlayerMenu = nullptr;
     std::unique_ptr<WelcomePage> mWelcomePage = nullptr;
+    std::unique_ptr<NewEventPage> mNewEventPage = nullptr;
     
     
     juce::Component* mCurrentPage = nullptr; //maybe not useful

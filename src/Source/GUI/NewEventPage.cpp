@@ -37,6 +37,14 @@ void NewEventPage::onNiceComponentClicked(NiceComponent *inComp)
     }
 }
 
+bool NewEventPage::LoadEventInfos(const Event inEvent)
+{
+    mEventName = inEvent.GetName();
+    mIsKfet = inEvent.IsKfet();
+    mBanner = inEvent.GetBanner();
+    
+    return true;
+}
 
 void NewEventPage::paint(juce::Graphics& inG)
 {
@@ -51,6 +59,7 @@ void NewEventPage::paint(juce::Graphics& inG)
     
     inG.drawText(eventName, 0, 150, getWidth(), 150, juce::Justification::centred);
     
-    //draw the banner
+    if(!mBanner.isNull())
+        inG.drawImage(mBanner, 0, 0, getWidth(), 100, 0, 0, mBanner.getWidth(), mBanner.getHeight());
 
 }
