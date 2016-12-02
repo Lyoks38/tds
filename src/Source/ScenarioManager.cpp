@@ -8,6 +8,7 @@
 
 #include "ScenarioManager.h"
 #include "ImageUtils.h"
+#include <time.h>
 
 
 ScenarioManager::ScenarioManager()
@@ -17,6 +18,8 @@ ScenarioManager::ScenarioManager()
     LoadAttacks();
     
     mCombatManager.reset(new CombatManager());
+    
+    srand(time(NULL));
 }
 
 
@@ -41,12 +44,35 @@ void ScenarioManager::GoToNextEvent()
     }
 }
 
+void ScenarioManager::FillEventWithTargets(Event inEvent)
+{
+    inEvent.SetTargets(mGirlDatabase); //just for testing for now
+}
+
 
 void ScenarioManager::LoadEvents()
 {
     mEvents.resize(0);
     
-    //Event("Barbecue GC", true, ImageUtils::BarbecueGC);
+    Event newEvent = Event("Barbecue GC", true, ImageUtils::BarbecueGC);
+    FillEventWithTargets(newEvent);
     
-    mEvents.push_back(Event("Barbecue GC", true, ImageUtils::BarbecueGC));
+    mEvents.push_back(newEvent);
+}
+
+
+void ScenarioManager::LoadGirls()
+{
+    mGirlDatabase.resize(0);
+    
+    Girl::GirlAttributes attr;
+    int id = 0;
+    
+    attr.mName = "Emma";
+    attr.mGenre = LISTEE;
+    attr.mListe = FOX;
+    attr.mID = id;
+    id++;
+    
+    mGirlDatabase.push_back(Girl(attr));
 }

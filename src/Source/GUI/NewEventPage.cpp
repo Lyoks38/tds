@@ -48,6 +48,16 @@ bool NewEventPage::LoadEventInfos(const Event inEvent)
 
 void NewEventPage::paint(juce::Graphics& inG)
 {
+    if(!mBanner.isNull())
+        inG.drawImage(mBanner, 0, 0, getWidth(), 200, 0, 0, mBanner.getWidth(), 200);
+    
+    inG.setColour(juce::Colours::white.withAlpha(0.4f));
+    inG.fillRect(0, 0, getWidth(), 200);
+    
+    juce::ColourGradient grad = juce::ColourGradient(Colour (0xff001F36), 0, 200, Colour (0xff001F36).withAlpha(0.f), 0, 0, false);
+    inG.setGradientFill(grad);
+    inG.fillRect(0, 0, getWidth(), 200);
+    
     inG.setFont(mMainFont);
     inG.setColour(juce::Colours::white);
     std::string eventName = mEventName;
@@ -57,9 +67,7 @@ void NewEventPage::paint(juce::Graphics& inG)
     else
         eventName += " (soirée)";
     
-    inG.drawText(eventName, 0, 150, getWidth(), 150, juce::Justification::centred);
+    inG.drawText(eventName, 0, 20, getWidth(), 150, juce::Justification::centred);
     
-    if(!mBanner.isNull())
-        inG.drawImage(mBanner, 0, 0, getWidth(), 100, 0, 0, mBanner.getWidth(), mBanner.getHeight());
-
+    
 }

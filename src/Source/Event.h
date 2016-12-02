@@ -32,6 +32,7 @@ public:
     juce::Image GetBanner() const { return mBanner; }
     
     void SetBanner(juce::Image inImage) { mBanner = inImage; }
+    void SetTargets(std::vector<Girl> inTargets) { mPossibleTargets = inTargets; }
     
 private:
     

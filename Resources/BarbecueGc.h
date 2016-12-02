@@ -6,7 +6,7 @@
 namespace BarbecueGc
 {
     extern const char*  barbeuc_gc_jpg;
-    const int           barbeuc_gc_jpgSize = 42998;
+    const int           barbeuc_gc_jpgSize = 70239;
 
 }
 

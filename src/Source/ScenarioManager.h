@@ -8,6 +8,12 @@
 
 #pragma once
 
+#define MAX_ACTIONS_SOIREE 30
+#define MAX_ACTIONS_KFET 10
+
+#define MAX_TARGETS_SOIREE 6
+#define MAX_TARGETS_KFET 3
+
 class MainContentComponent;
 class CombatManager;
 
@@ -33,12 +39,13 @@ public:
     
     void LoadAttacks(){};
     
-    void LoadGirls(){};
+    void LoadGirls();
 
     void AttachToGUI(MainContentComponent* inGUI) { mMainGUI = inGUI; };
     
     //Manage Events
     void GoToNextEvent();
+    void FillEventWithTargets(Event inEvent);
     
     //GUI
     void DisplayResults(){};
