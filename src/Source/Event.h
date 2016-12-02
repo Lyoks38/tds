@@ -18,6 +18,8 @@ class Event
     
 public:
     
+    Event(){};
+    
     Event(const std::string inName, bool inIsKfet, const juce::Image inBanner);
     
     Event(Event const &other);

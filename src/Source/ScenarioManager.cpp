@@ -15,6 +15,8 @@ ScenarioManager::ScenarioManager()
     LoadGirls();
     LoadEvents();
     LoadAttacks();
+    
+    mCombatManager.reset(new CombatManager());
 }
 
 

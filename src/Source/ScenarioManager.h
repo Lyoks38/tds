@@ -41,9 +41,9 @@ public:
     void GoToNextEvent();
     
     //GUI
-    void DisplayResults();
-    void DisplayVictory();
-    void DisplayDefeat();
+    void DisplayResults(){};
+    void DisplayVictory(){};
+    void DisplayDefeat(){};
     
 protected:
     
