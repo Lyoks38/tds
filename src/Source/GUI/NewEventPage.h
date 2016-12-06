@@ -38,6 +38,8 @@ private:
     std::string mEventName;
     bool mIsKfet;
     
+    int mNbTargets;
+    
     NiceComponent* mStartEventButton;
     
     juce::Font mMainFont;

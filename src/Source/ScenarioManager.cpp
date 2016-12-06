@@ -44,7 +44,7 @@ void ScenarioManager::GoToNextEvent()
     }
 }
 
-void ScenarioManager::FillEventWithTargets(Event inEvent)
+void ScenarioManager::FillEventWithTargets(Event& inEvent)
 {
     inEvent.SetTargets(mGirlDatabase); //just for testing for now
 }

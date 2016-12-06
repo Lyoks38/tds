@@ -43,6 +43,8 @@ bool NewEventPage::LoadEventInfos(const Event inEvent)
     mIsKfet = inEvent.IsKfet();
     mBanner = inEvent.GetBanner();
     
+    mNbTargets = static_cast<int>(inEvent.GetTargets().size());
+    
     return true;
 }
 
@@ -68,6 +70,9 @@ void NewEventPage::paint(juce::Graphics& inG)
         eventName += " (soirée)";
     
     inG.drawText(eventName, 0, 20, getWidth(), 150, juce::Justification::centred);
+    
+    inG.setFont(40.f);
+    inG.drawText("Nombre de targets : " + std::to_string(mNbTargets), 200, 200, 400, 100, juce::Justification::centred);
     
     
 }

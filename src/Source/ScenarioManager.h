@@ -45,7 +45,7 @@ public:
     
     //Manage Events
     void GoToNextEvent();
-    void FillEventWithTargets(Event inEvent);
+    void FillEventWithTargets(Event& inEvent);
     
     //GUI
     void DisplayResults(){};
