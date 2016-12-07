@@ -15,12 +15,10 @@
 #define MAX_TARGETS_KFET 3
 
 class MainContentComponent;
-class CombatManager;
 
 #include "CombatManager.h"
 #include "Girl.h"
 #include "Player.h"
-#include "MainComponent.h"
 
 class ScenarioManager {
     
@@ -29,6 +27,12 @@ public:
     ScenarioManager();
     
     ~ScenarioManager();
+    
+    //Getters
+    CombatManager* GetCombatManager() const { return mCombatManager.get(); }
+    MainContentComponent* GetMainGUI() const { return mMainGUI; }
+    Player* GetPlayer() const { return mPlayer.get(); }
+
     
     //Load infos
     void LoadPlayer(Player::PlayerAttributes inAttributes) { mPlayer.reset(new Player(inAttributes)); }

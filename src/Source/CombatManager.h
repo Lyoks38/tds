@@ -10,7 +10,7 @@
 class ScenarioManager;
 
 #include "Attack.h"
-#include "ScenarioManager.h"
+//#include "ScenarioManager.h"
 #include "Girl.h"
 #include "Player.h"
 #include "Event.h"
@@ -29,7 +29,7 @@ public:
 protected:
     
     std::vector<Girl> mTargets;
-    int mCurrentTarget = 0;
+    int mCurrentTarget = -1;
     int mRemainingActions = 20;
     
     
@@ -58,7 +58,7 @@ protected:
 private:
     
     std::unique_ptr<Player> mPlayer;
-    std::unique_ptr<ScenarioManager> mScenarioManager;
+    ScenarioManager* mScenarioManager;
     
     std::vector<Attack> mAttackDatabase;
         

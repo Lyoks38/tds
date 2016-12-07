@@ -23,7 +23,7 @@ CombatManager::~CombatManager()
 ///////////////////////////////////////
 void CombatManager::SetScenarioManager(ScenarioManager* inScenarioManager)
 {
-    mScenarioManager.reset(inScenarioManager);
+    mScenarioManager = inScenarioManager;
 }
 
 ///////////////////////////////////////
@@ -38,7 +38,7 @@ void CombatManager::LoadNewCombat(const Event inEvent)
     
     mTargets = inEvent.GetTargets();
     
-    mCurrentTarget = 0;
+    mCurrentTarget = -1;
     
     //TO BE COMPLETED
 }
@@ -214,7 +214,8 @@ void CombatManager::GoToNextTarget()
 {
     mCurrentTarget++;
     
-    if(mCurrentTarget == static_cast<int>(mTargets.size())){
+    if(mCurrentTarget >= static_cast<int>(mTargets.size())){
+        mCurrentTarget = -1;
         DisplayNormalEvent();
     }
     else{

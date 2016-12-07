@@ -5,7 +5,7 @@
 //  Created by Corentin Comte on 12/06/2016.
 //
 //
-
+#include "MainComponent.h"
 #include "ScenarioManager.h"
 #include "ImageUtils.h"
 #include <time.h>
@@ -54,7 +54,7 @@ void ScenarioManager::LoadEvents()
 {
     mEvents.resize(0);
     
-    Event newEvent = Event("Barbecue GC", true, ImageUtils::BarbecueGC);
+    Event newEvent = Event("Barbecue GC", true, ImageUtils::BarbecueGC, "MINP");
     FillEventWithTargets(newEvent);
     
     mEvents.push_back(newEvent);

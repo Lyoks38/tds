@@ -9,8 +9,9 @@
 
 class MainContentComponent;
 class ScenarioManager;
+class CombatManager;
 
-#include "MainComponent.h"
+//#include "MainComponent.h"
 #include "ScenarioManager.h"
 
 class GameEngine {
@@ -24,6 +25,7 @@ public:
     void PrepareToClose();
     
     ScenarioManager* GetScenarioManager() const { return mScenarioManager.get(); }
+    CombatManager* GetCombatManager() const { return mScenarioManager->GetCombatManager(); }
     
     void AttachGUI(MainContentComponent* inGUI);
     
