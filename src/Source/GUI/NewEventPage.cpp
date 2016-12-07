@@ -20,6 +20,8 @@ NewEventPage::NewEventPage()
     mStartEventButton->setBounds(200, 530, 400, 55);
     mStartEventButton->AddListener(this);
     
+    addAndMakeVisible(mStartEventButton);
+    
     mMainFont = FontUtils::OrangeJuice;
     mMainFont.setHeight(60.f);
 }
@@ -42,6 +44,7 @@ bool NewEventPage::LoadEventInfos(const Event inEvent)
     mEventName = inEvent.GetName();
     mIsKfet = inEvent.IsKfet();
     mBanner = inEvent.GetBanner();
+    mLocation = inEvent.GetLocation();
     
     mNbTargets = static_cast<int>(inEvent.GetTargets().size());
     
@@ -62,17 +65,16 @@ void NewEventPage::paint(juce::Graphics& inG)
     
     inG.setFont(mMainFont);
     inG.setColour(juce::Colours::white);
-    std::string eventName = mEventName;
+    inG.drawText(mEventName, 0, 20, getWidth(), 150, juce::Justification::centred);
     
+    std::string type;
     if(mIsKfet)
-        eventName += " (kfet)";
+        type = "Kfet";
     else
-        eventName += " (soirée)";
-    
-    inG.drawText(eventName, 0, 20, getWidth(), 150, juce::Justification::centred);
+        type = "Soirée";
     
     inG.setFont(40.f);
-    inG.drawText("Nombre de targets : " + std::to_string(mNbTargets), 200, 200, 400, 100, juce::Justification::centred);
-    
-    
+    inG.drawText("Type : " + type, 200, 200, 400, 100, juce::Justification::centred);
+    inG.drawText("Nombre de targets : " + std::to_string(mNbTargets), 200, 300, 400, 100, juce::Justification::centred);
+    inG.drawText("Lieu : " + mLocation, 200, 400, 400, 100, juce::Justification::centred);
 }

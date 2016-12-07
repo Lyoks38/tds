@@ -37,6 +37,7 @@ private:
     juce::Image mBanner;
     std::string mEventName;
     bool mIsKfet;
+    std::string mLocation;
     
     int mNbTargets;
     
