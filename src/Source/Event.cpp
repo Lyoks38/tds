@@ -8,11 +8,12 @@
 
 #include "Event.h"
 
-Event::Event(const std::string inName, bool inIsKfet, const juce::Image inBanner)
+Event::Event(const std::string inName, bool inIsKfet, const juce::Image inBanner, const std::string inLocation)
 {
     mName = inName;
     mIsKfet = inIsKfet;
     mBanner = inBanner;
+    mLocation = inLocation;
 }
 
 Event::Event(Event const& other)
@@ -21,4 +22,5 @@ Event::Event(Event const& other)
     mIsKfet = other.IsKfet();
     mBanner = other.GetBanner();
     mPossibleTargets = other.GetTargets();
+    mLocation = other.GetLocation();
 }

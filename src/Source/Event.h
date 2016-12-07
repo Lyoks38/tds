@@ -20,7 +20,7 @@ public:
     
     Event(){};
     
-    Event(const std::string inName, bool inIsKfet, const juce::Image inBanner);
+    Event(const std::string inName, bool inIsKfet, const juce::Image inBanner, const std::string inLocation);
     
     Event(Event const &other);
     
@@ -30,6 +30,7 @@ public:
     bool IsKfet() const { return mIsKfet; }
     std::vector<Girl> GetTargets() const { return mPossibleTargets; }
     juce::Image GetBanner() const { return mBanner; }
+    std::string GetLocation() const { return mLocation; }
     
     void SetBanner(juce::Image inImage) { mBanner = inImage; }
     void SetTargets(std::vector<Girl> inTargets) { mPossibleTargets = inTargets; }
@@ -43,6 +44,8 @@ private:
     std::vector<Girl> mPossibleTargets;
     
     juce::Image mBanner;
+    
+    std::string mLocation;
 };
 
 #endif /* Event_h */
