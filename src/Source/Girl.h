@@ -39,11 +39,11 @@ public:
     void SetDefense(int inDefense);
     
     //Getters
-    GirlGenre GetGenre() { return mGenre; };
-    std::string GetName() { return mName; };
-    List GetListe() { return mListe; };
-    int GetID() { return mID; };
-    int GetDefense() { return mDefense; }
+    GirlGenre GetGenre() const { return mGenre; };
+    std::string GetName() const { return mName; };
+    List GetListe() const { return mListe; };
+    int GetID() const { return mID; };
+    int GetDefense() const { return mDefense; }
     
 protected:
     

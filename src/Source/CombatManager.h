@@ -26,11 +26,20 @@ public:
     
     void LoadNewCombat(const Event inEvent);
     
+    void GoToNextTarget();
+    void TryToCatch();
+
+    void SetScenarioManager(ScenarioManager* inScenarioManager);
+
+    
 protected:
     
     std::vector<Girl> mTargets;
     int mCurrentTarget = -1;
     int mRemainingActions = 20;
+    
+    juce::Image mEventBanner;
+    std::string mEventName;
     
     
     // Combat functions
@@ -38,8 +47,6 @@ protected:
     int ComputeAttackEffect(Attack inAttack);
     float ComputeListCoeff();
     bool CanTargetBeCatched();
-    void TryToCatch();
-    void GoToNextTarget();
     
     
     // GUI fonctions
@@ -51,9 +58,7 @@ protected:
     void DisplayFailedEvent(){};
     void DisplayNormalEvent(){};
     
-    void DisplayNextTarget(){};
-    
-    void SetScenarioManager(ScenarioManager* inScenarioManager);
+    void DisplayNextTarget();
     
 private:
     

@@ -7,6 +7,8 @@
 //
 
 #include "CombatManager.h"
+#include "ScenarioManager.h"
+#include "MainComponent.h"
 
 
 CombatManager::CombatManager()
@@ -40,7 +42,8 @@ void CombatManager::LoadNewCombat(const Event inEvent)
     
     mCurrentTarget = -1;
     
-    //TO BE COMPLETED
+    mEventBanner = inEvent.GetBanner();
+    mEventName = inEvent.GetName();
 }
 
 //////////////////////////////////////
@@ -224,3 +227,13 @@ void CombatManager::GoToNextTarget()
 }
 
 
+/////////////////////////////////////////////////////////
+// Display calls
+/////////////////////////////////////////////////////////
+void CombatManager::DisplayNextTarget()
+{
+    MainContentComponent* mainWindow = mScenarioManager->GetMainGUI();
+    
+    if(mainWindow)
+        mainWindow->DisplayNewTarget(mTargets[mCurrentTarget], mEventBanner, mEventName);
+}

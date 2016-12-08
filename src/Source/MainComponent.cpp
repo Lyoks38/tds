@@ -115,6 +115,31 @@ bool MainContentComponent::DisplayNewEvent(const Event inEvent)
 }
 
 
+bool MainContentComponent::DisplayNewTarget(const Girl inTarget, juce::Image inBanner, std::string inEventName)
+{
+    if(mNewTargetPage == nullptr){
+        
+        mNewTargetPage.reset(new NewTargetPage());
+        addChildComponent(mNewTargetPage.get());
+        mNewTargetPage->setBounds(0, 0, getWidth(), getHeight());
+    }
+    
+    mNewTargetPage->LoadTargetInfos(inTarget, inBanner, inEventName);
+    
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
+    
+    mNewTargetPage->setEnabled(true);
+    mNewTargetPage->setVisible(true);
+    
+    mCurrentPage = mNewTargetPage.get();
+    
+    return true;
+}
+
+///////////////////////////////////////////////////////////////
+// Interactions with the engine
+
 bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
 {
     if(mEngine != nullptr){
@@ -155,5 +180,15 @@ bool MainContentComponent::GoToFirstEvent()
 }
 
 
-
+bool MainContentComponent::GoToFirstTarget()
+{
+    if(mEngine != nullptr){
+        
+        mEngine->GetCombatManager()->GoToNextTarget();
+        
+        return true;
+    }
+    
+    return false;
+}
 

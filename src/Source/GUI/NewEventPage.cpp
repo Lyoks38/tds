@@ -8,6 +8,7 @@
 
 #include "NewEventPage.h"
 #include "FontUtils.h"
+#include "MainComponent.h"
 
 NewEventPage::NewEventPage()
 {
@@ -35,7 +36,9 @@ NewEventPage::~NewEventPage()
 void NewEventPage::onNiceComponentClicked(NiceComponent *inComp)
 {
     if(inComp == mStartEventButton){
-        //GoToNextTarget
+        MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
+        if(parent)
+            parent->GoToFirstTarget();
     }
 }
 

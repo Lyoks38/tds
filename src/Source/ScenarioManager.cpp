@@ -18,6 +18,7 @@ ScenarioManager::ScenarioManager()
     LoadAttacks();
     
     mCombatManager.reset(new CombatManager());
+    mCombatManager->SetScenarioManager(this);
     
     srand(time(NULL));
 }

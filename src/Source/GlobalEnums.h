@@ -57,4 +57,7 @@ typedef enum List {
 
 
 
+std::string ListToString(List inList);
+std::string GirlGenreToString(GirlGenre inGenre);
+
 
