@@ -20,43 +20,43 @@ Attack::Attack(std::string inName){
 }
 
 ///////////////////////////////////////
-std::string Attack::GetName()
+std::string Attack::GetName() const
 {
     return mAttackName;
 }
 
 //////////////////////////////////////
-bool Attack::IsObvious()
+bool Attack::IsObvious() const
 {
     return mIsObvious;
 }
 
 //////////////////////////////////////
-bool Attack::IsImpactingPlayer()
+bool Attack::IsImpactingPlayer() const
 {
     return mImpactsPlayer;
 }
 
 //////////////////////////////////////
-bool Attack::IsImpactingTarget()
+bool Attack::IsImpactingTarget() const
 {
     return mImpactsTarget;
 }
 
 //////////////////////////////////////
-int Attack::GetPlayerBonus()
+int Attack::GetPlayerBonus() const
 {
     return mPlayerBonus;
 }
 
 //////////////////////////////////////
-int Attack::GetTargetMalus()
+int Attack::GetTargetMalus() const
 {
     return mTargetMalus;
 }
 
 /////////////////////////////////////
-std::string Attack::GetAttackText(bool inSuccess)
+std::string Attack::GetAttackText(bool inSuccess) const
 {
     int select = rand()%3;
     std::string output_text;

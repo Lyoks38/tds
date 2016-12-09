@@ -10,7 +10,6 @@
 class ScenarioManager;
 
 #include "Attack.h"
-//#include "ScenarioManager.h"
 #include "Girl.h"
 #include "Player.h"
 #include "Event.h"

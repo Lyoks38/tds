@@ -10,6 +10,7 @@ class NewPlayerMenu;
 class WelcomePage;
 class NewEventPage;
 class NewTargetPage;
+class CombatPage;
 
 
 //This is where all the headers for GUI windows should be included
@@ -18,3 +19,4 @@ class NewTargetPage;
 #include "WelcomePage.h"
 #include "NewEventPage.h"
 #include "NewTargetPage.h"
+#include "CombatPage.h"

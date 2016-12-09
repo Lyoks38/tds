@@ -8,6 +8,7 @@
 
 #include "NewTargetPage.h"
 #include "FontUtils.h"
+#include "MainComponent.h"
 
 NewTargetPage::NewTargetPage()
 {
@@ -50,6 +51,7 @@ bool NewTargetPage::LoadTargetInfos(const Girl inTarget, const juce::Image inEve
     
     return true;
 }
+
 
 void NewTargetPage::paint(juce::Graphics& inG)
 {

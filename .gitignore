@@ -37,3 +37,7 @@ src/Builds/MacOSX/TDS.xcodeproj/project.xcworkspace/xcuserdata/ccomte.xcuserdata
 src/Builds/MacOSX/TDS.xcodeproj/xcuserdata/ccomte.xcuserdatad/xcschemes/TDS (App).xcscheme
 src/Builds/MacOSX/TDS.xcodeproj/xcuserdata/ccomte.xcuserdatad/xcschemes/xcschememanagement.plist
 BinaryBuildingPlace/
+src/Builds/MacOSX/build/Release/TDS.zip
+src/Builds/MacOSX/build/Release/TDS.app/Contents/PkgInfo
+src/Builds/MacOSX/build/Release/TDS.app/Contents/MacOS/TDS
+src/Builds/MacOSX/build/Release/TDS.app/Contents/Resources/RecentFilesMenuTemplate.nib

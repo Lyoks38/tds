@@ -26,6 +26,8 @@ public:
     
     bool LoadTargetInfos(const Girl inTarget, const juce::Image inEventBanner, const std::string inEventName);
     
+    int GetRemainingActions() const;
+    
     void paint(juce::Graphics& inG) override;
     
 protected:

@@ -18,12 +18,13 @@ public:
     ~Attack(){};
     
     // Getters
-    std::string GetName();
-    bool IsObvious();
-    bool IsImpactingPlayer();
-    bool IsImpactingTarget();
-    int GetPlayerBonus();
-    int GetTargetMalus();
+    std::string GetName() const;
+    bool IsObvious() const;
+    bool IsImpactingPlayer() const;
+    bool IsImpactingTarget() const;
+    int GetPlayerBonus() const;
+    int GetTargetMalus() const;
+    int GetBaseDamages() const;
     
     // Setters
     void SetAttackText1(std::string inText) { mAttackEffect1 = inText; };
@@ -38,7 +39,7 @@ public:
     void SetPlayerBonus(int inBonus) { mPlayerBonus = inBonus; };
     
     // Tells to GUI the text to be displayed
-    std::string GetAttackText(bool inIsSuccess);
+    std::string GetAttackText(bool inIsSuccess) const;
     
 protected:
     
@@ -48,6 +49,8 @@ protected:
     int mPlayerBonus = 0;
     bool mImpactsTarget = false;
     int mTargetMalus = 0;
+    
+    int mBaseDamages = 0;
     
 private:
     

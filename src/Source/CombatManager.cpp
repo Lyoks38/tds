@@ -49,7 +49,7 @@ void CombatManager::LoadNewCombat(const Event inEvent)
 //////////////////////////////////////
 int CombatManager::ComputeAttackEffect(Attack inAttack){
     
-    int basic_attack = 25;
+    int basic_attack = inAttack.GetBaseDamages();
     float coeff = 1.f;
     float coeff_reputation = 1.f;
     
