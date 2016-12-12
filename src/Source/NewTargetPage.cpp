@@ -10,7 +10,9 @@
 #include "FontUtils.h"
 #include "MainComponent.h"
 
-NewTargetPage::NewTargetPage()
+NewTargetPage::NewTargetPage():
+juce::Component("New Target Page")
+
 {
     mStartCombatButton = new NiceComponent("Start New Combat");
     mStartCombatButton->SetTextToDisplay("L'APPROCHER");

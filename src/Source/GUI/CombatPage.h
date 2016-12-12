@@ -32,8 +32,10 @@ public:
     void onNiceComponentClicked(NiceComponent* inComp) override;
     
     void SendAttackToManager(Attack inAttack);
+    void SendTryToCatchToManager();
+    void SendNextTargetToManager();
     
-    void SetAttacks(std::vector<Attack> inAttacks) { mAttacks = inAttacks; } //make sure the size is equal to 4
+    void SetAttacks(std::vector<Attack> inAttacks); //make sure the size is equal to 4
     
 private:
     
@@ -57,7 +59,8 @@ enum GoTo {
     TO_NEW_ATTACK = 0,
     NEW_ATTACK,
     END_EVENT
-};
+} typedef GoTo;
+
 class AttackResultPanel: public juce::Component, public NiceComponentListener
 {
     
@@ -75,7 +78,7 @@ private:
     
     std::string mTextToDisplay;
     
-    GoTo mWhereToGo = GoTo::TO_NEW_ATTACK;
+    GoTo mWhereToGo = TO_NEW_ATTACK;
     
     NiceComponent* mContinueButton;
 };
@@ -96,15 +99,21 @@ public:
     void LinkToCombatManager(CombatManager* inManager) { mManager = inManager; }
     
     void SendAttackToManager(Attack inAttack);
+    void SendTryToCatchToManager();
+    void SendNextTargetToManager();
     
+    void DisplayAttacks();
+    void DisplayResult();
+
 private:
     
-    std::unique_ptr<AttackTabbedGroup*> mAttackTabbedPanel = nullptr;
-    std::unique_ptr<AttackResultPanel*> mAttackResultPanel = nullptr;
+    std::unique_ptr<AttackTabbedGroup> mAttackTabbedPanel = nullptr;
+    std::unique_ptr<AttackResultPanel> mAttackResultPanel = nullptr;
     
     CombatManager* mManager = nullptr;
     
-    
+    juce::Font mMainFont;
+
 };
 
 #endif /* CombatPage_h */

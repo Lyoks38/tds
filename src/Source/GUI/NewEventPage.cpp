@@ -10,7 +10,8 @@
 #include "FontUtils.h"
 #include "MainComponent.h"
 
-NewEventPage::NewEventPage()
+NewEventPage::NewEventPage():
+juce::Component("New Event Page")
 {
     mStartEventButton = new NiceComponent("Start New Event");
     mStartEventButton->SetTextToDisplay("COMMENCER");

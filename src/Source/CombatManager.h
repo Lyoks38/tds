@@ -30,6 +30,7 @@ public:
 
     void SetScenarioManager(ScenarioManager* inScenarioManager);
 
+    void HandleAttack(Attack inAttack);
     
 protected:
     
@@ -42,7 +43,6 @@ protected:
     
     
     // Combat functions
-    void HandleAttack(Attack inAttack);
     int ComputeAttackEffect(Attack inAttack);
     float ComputeListCoeff();
     bool CanTargetBeCatched();

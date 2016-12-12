@@ -54,6 +54,7 @@ private:
     std::unique_ptr<WelcomePage> mWelcomePage = nullptr;
     std::unique_ptr<NewEventPage> mNewEventPage = nullptr;
     std::unique_ptr<NewTargetPage> mNewTargetPage = nullptr;
+    std::unique_ptr<CombatPage> mCombatPage = nullptr;
     
     
     juce::Component* mCurrentPage = nullptr; //maybe not useful
