@@ -56,8 +56,8 @@ private:
 /////////////////////////////////////////////////////////////
 // ResultPanel class
 enum GoTo {
-    TO_NEW_ATTACK = 0,
-    NEW_ATTACK,
+    NEW_ATTACK = 0,
+    NEW_TARGET,
     END_EVENT
 } typedef GoTo;
 
@@ -78,7 +78,7 @@ private:
     
     std::string mTextToDisplay;
     
-    GoTo mWhereToGo = TO_NEW_ATTACK;
+    GoTo mWhereToGo = NEW_ATTACK;
     
     NiceComponent* mContinueButton;
 };
