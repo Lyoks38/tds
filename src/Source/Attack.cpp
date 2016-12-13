@@ -55,6 +55,12 @@ int Attack::GetTargetMalus() const
     return mTargetMalus;
 }
 
+//////////////////////////////////////
+int Attack::GetBaseDamages() const
+{
+    return mBaseDamages;
+}
+
 /////////////////////////////////////
 std::string Attack::GetAttackText(bool inSuccess) const
 {

@@ -13,7 +13,9 @@ class Attack {
     
 public:
     
-    Attack(std::string inName);
+    Attack(){};
+    
+    Attack(const std::string inName);
     
     ~Attack(){};
     

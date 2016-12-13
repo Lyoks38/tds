@@ -32,6 +32,8 @@ public:
 
     void HandleAttack(Attack inAttack);
     
+    std::vector<Attack> DeliverAttacks();
+    
 protected:
     
     std::vector<Girl> mTargets;

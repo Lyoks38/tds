@@ -227,6 +227,26 @@ void CombatManager::GoToNextTarget()
 }
 
 
+
+std::vector<Attack> CombatManager::DeliverAttacks()
+{
+    std::vector<Attack> out;
+    out.resize(0);
+    
+    int ind;
+    
+    /*while(static_cast<int>(out.size()) != 4){
+        ind = rand() % mAttackDatabase.size();
+        
+        auto it = std::find(out.begin(), out.end(), mAttackDatabase[ind]);
+        
+        if(it == out.end())
+            out.push_back(mAttackDatabase[ind]);
+    }*/
+    
+    return out;
+}
+
 /////////////////////////////////////////////////////////
 // Display calls
 /////////////////////////////////////////////////////////

@@ -38,6 +38,7 @@ public:
     bool DisplayNewPlayer();
     bool DisplayNewEvent(const Event inEvent);
     bool DisplayNewTarget(const Girl inTarget, juce::Image inBanner, std::string inEventName);
+    bool DisplayCombatPage();
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
     bool GoToFirstEvent();

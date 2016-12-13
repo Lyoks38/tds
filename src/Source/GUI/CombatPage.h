@@ -70,9 +70,9 @@ public:
     
     ~AttackResultPanel();
     
-    void paint(juce::Graphics& inG) override;
+    void paint(juce::Graphics& inG) override {};
     
-    void onNiceComponentClicked(NiceComponent* inComp) override;
+    void onNiceComponentClicked(NiceComponent* inComp) override {};
     
 private:
     
@@ -97,13 +97,16 @@ public:
     ~CombatPage();
     
     void LinkToCombatManager(CombatManager* inManager) { mManager = inManager; }
-    
+    bool IsCombatManagerLinked() { return mManager != nullptr; }
+
     void SendAttackToManager(Attack inAttack);
     void SendTryToCatchToManager();
     void SendNextTargetToManager();
     
     void DisplayAttacks();
     void DisplayResult();
+    
+    void LoadInfos();
 
 private:
     

@@ -38,7 +38,11 @@ NewTargetPage::~NewTargetPage()
 void NewTargetPage::onNiceComponentClicked(NiceComponent *inComp)
 {
     if(inComp == mStartCombatButton){
-        //GoToCombat !
+        if(inComp == mStartCombatButton){
+            MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
+            if(parent)
+                parent->DisplayCombatPage();
+        }
     }
 }
 

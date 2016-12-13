@@ -137,6 +137,32 @@ bool MainContentComponent::DisplayNewTarget(const Girl inTarget, juce::Image inB
     return true;
 }
 
+bool MainContentComponent::DisplayCombatPage()
+{
+    if(mCombatPage == nullptr){
+        
+        mCombatPage.reset(new CombatPage());
+        addChildComponent(mCombatPage.get());
+        mCombatPage->setBounds(0, 0, getWidth(), getHeight());
+    }
+    
+    if(!mCombatPage->IsCombatManagerLinked())
+        mCombatPage->LinkToCombatManager(mEngine->GetCombatManager());
+    
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
+    
+    mCombatPage->LoadInfos();
+    mCombatPage->DisplayAttacks();
+    
+    mCombatPage->setEnabled(true);
+    mCombatPage->setVisible(true);
+    
+    mCurrentPage = mCombatPage.get();
+    
+    return true;
+}
+
 ///////////////////////////////////////////////////////////////
 // Interactions with the engine
 

@@ -16,7 +16,63 @@
 AttackTabbedGroup::AttackTabbedGroup():
 juce::Component("Attack Tabbed Group")
 {
+    mAttack1 = new NiceComponent("Attack 1");
+    mAttack1->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mAttack1->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mAttack1->SetTextColor(juce::Colours::white);
+    mAttack1->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mAttack1->setBounds(50, 0, 225, 55);
+    mAttack1->AddListener(this);
     
+    mAttack2 = new NiceComponent("Attack 2");
+    mAttack2->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mAttack2->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mAttack2->SetTextColor(juce::Colours::white);
+    mAttack2->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mAttack2->setBounds(325, 0, 225, 55);
+    mAttack2->AddListener(this);
+    
+    mAttack3 = new NiceComponent("Attack 3");
+    mAttack3->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mAttack3->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mAttack3->SetTextColor(juce::Colours::white);
+    mAttack3->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mAttack3->setBounds(50, 80, 225, 55);
+    mAttack3->AddListener(this);
+    
+    mAttack4 = new NiceComponent("Attack 4");
+    mAttack4->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mAttack4->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mAttack4->SetTextColor(juce::Colours::white);
+    mAttack4->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mAttack4->setBounds(325, 80, 225, 55);
+    mAttack4->AddListener(this);
+
+    mCatchButton = new NiceComponent("Catch Button");
+    mCatchButton->SetTextToDisplay("Essayer de la choper");
+    mCatchButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mCatchButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mCatchButton->SetTextColor(juce::Colours::white);
+    mCatchButton->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mCatchButton->setBounds(100, 230, 400, 60);
+    mCatchButton->AddListener(this);
+    
+    mNextTarget = new NiceComponent("Skip Target");
+    mNextTarget->SetTextToDisplay("Passer à la target suivante");
+    mNextTarget->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mNextTarget->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mNextTarget->SetTextColor(juce::Colours::white);
+    mNextTarget->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mNextTarget->setBounds(200, 300, 200, 40);
+    mNextTarget->AddListener(this);
+    
+    addAndMakeVisible(mAttack1);
+    addAndMakeVisible(mAttack2);
+    addAndMakeVisible(mAttack3);
+    addAndMakeVisible(mAttack4);
+    addAndMakeVisible(mCatchButton);
+    addAndMakeVisible(mNextTarget);
+
 }
 
 AttackTabbedGroup::~AttackTabbedGroup()
@@ -87,7 +143,15 @@ void AttackTabbedGroup::paint(juce::Graphics &inG)
 
 ////////////////////////////////////////////////////////////////
 // Attack Result Panel
+AttackResultPanel::AttackResultPanel()
+{
+    
+}
 
+AttackResultPanel::~AttackResultPanel()
+{
+    
+}
 
 
 
@@ -97,7 +161,6 @@ void AttackTabbedGroup::paint(juce::Graphics &inG)
 CombatPage::CombatPage():
 juce::Component("Combat Page")
 {
-    
     mAttackTabbedPanel.reset(new AttackTabbedGroup());
     mAttackTabbedPanel->setBounds(100, 250, 600, 350);
     addChildComponent(mAttackTabbedPanel.get());
@@ -114,6 +177,11 @@ CombatPage::~CombatPage()
     removeAllChildren();
 }
 
+
+void CombatPage::LoadInfos()
+{
+    mAttackTabbedPanel->SetAttacks(mManager->DeliverAttacks());
+}
 
 void CombatPage::SendAttackToManager(Attack inAttack)
 {
