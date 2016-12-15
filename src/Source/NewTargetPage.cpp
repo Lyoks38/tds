@@ -31,7 +31,7 @@ juce::Component("New Target Page")
 
 NewTargetPage::~NewTargetPage()
 {
-    removeAllChildren();
+    deleteAllChildren();
 }
 
 

@@ -30,7 +30,7 @@ juce::Component("New Event Page")
 
 NewEventPage::~NewEventPage()
 {
-    removeAllChildren();
+    deleteAllChildren();
 }
 
 

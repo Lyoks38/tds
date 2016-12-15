@@ -77,7 +77,7 @@ juce::Component("Attack Tabbed Group")
 
 AttackTabbedGroup::~AttackTabbedGroup()
 {
-    removeAllChildren();
+    deleteAllChildren();
 }
 
 void AttackTabbedGroup::SendAttackToManager(Attack inAttack)

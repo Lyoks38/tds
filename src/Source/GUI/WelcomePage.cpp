@@ -45,7 +45,7 @@ WelcomePage::WelcomePage(const std::string& inPlayerName): juce::Component("Welc
 
 WelcomePage::~WelcomePage()
 {
-    removeAllChildren();
+    deleteAllChildren();
 }
 
 void WelcomePage::paint(juce::Graphics &inG)

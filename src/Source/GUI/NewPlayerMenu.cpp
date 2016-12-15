@@ -235,7 +235,7 @@ juce::Component("New Player Menu")
 
 NewPlayerMenu::~NewPlayerMenu()
 {
-    removeAllChildren();
+    deleteAllChildren();
 }
 
 void NewPlayerMenu::paint(juce::Graphics& inG)

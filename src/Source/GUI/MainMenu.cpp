@@ -43,8 +43,7 @@ MainMenu::MainMenu(): juce::Component("Main Menu")
 
 MainMenu::~MainMenu()
 {
-    removeChildComponent(mNewGameButton);
-    removeChildComponent(mLoadGameButton);
+    deleteAllChildren();
 }
 
 void MainMenu::resized()
