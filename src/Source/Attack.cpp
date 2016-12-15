@@ -10,6 +10,8 @@
 
 Attack::Attack(std::string inName){
     
+    mAttackName = inName;
+    
     mAttackEffect1 = "";
     mAttackEffect2 = "";
     mAttackEffect3 = "";
@@ -17,6 +19,19 @@ Attack::Attack(std::string inName){
     mAttackFailed2 = "";
     mAttackFailed3 = "";
     
+}
+
+Attack::Attack(Attack const& other)
+{
+    mAttackName = other.GetName();
+    mIsObvious = other.IsObvious();
+    mImpactsPlayer = other.IsImpactingPlayer();
+    mImpactsTarget = other.IsImpactingTarget();
+    mBaseDamages = other.GetBaseDamages();
+    mPlayerBonus = other.GetPlayerBonus();
+    mTargetMalus = other.GetTargetMalus();
+    
+    //TODO : transfer also the attack effects
 }
 
 ///////////////////////////////////////

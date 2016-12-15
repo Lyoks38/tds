@@ -242,9 +242,10 @@ std::vector<Attack> CombatManager::DeliverAttacks()
         
         if(it == out.end())
             out.push_back(mAttackDatabase[ind]);
-    }*/
+    }
     
-    return out;
+    return out;*/
+    return mAttackDatabase;
 }
 
 /////////////////////////////////////////////////////////
@@ -257,3 +258,32 @@ void CombatManager::DisplayNextTarget()
     if(mainWindow)
         mainWindow->DisplayNewTarget(mTargets[mCurrentTarget], mEventBanner, mEventName);
 }
+
+
+
+
+/////////////////////////////////////////////////////////
+// Load Attacks
+void CombatManager::LoadAttacks()
+{
+    mAttackDatabase.resize(0);
+    
+    Attack attack = Attack("Lui offrir un verre");
+    mAttackDatabase.push_back(attack);
+    attack = Attack("Lui faire le coup de la Lamborghini");
+    mAttackDatabase.push_back(attack);
+    attack = Attack("Mettre ta main sur sa hanche");
+    mAttackDatabase.push_back(attack);
+    attack = Attack("Lui crier : “T'es pas belle !“");
+    mAttackDatabase.push_back(attack);
+
+}
+
+
+
+
+
+
+
+
+

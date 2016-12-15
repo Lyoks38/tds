@@ -41,7 +41,7 @@ public:
     
     void LoadEvents();
     
-    void LoadAttacks(){};
+    void LoadAttacks(){ if(mCombatManager) mCombatManager->LoadAttacks(); };
     
     void LoadGirls();
 

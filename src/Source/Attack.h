@@ -17,6 +17,8 @@ public:
     
     Attack(const std::string inName);
     
+    Attack(Attack const &other);
+    
     ~Attack(){};
     
     // Getters

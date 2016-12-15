@@ -30,9 +30,15 @@ public:
 
     void SetScenarioManager(ScenarioManager* inScenarioManager);
 
+    void LoadAttacks();
+    
     void HandleAttack(Attack inAttack);
     
     std::vector<Attack> DeliverAttacks();
+    juce::Image GetBanner() const { return mEventBanner; }
+    std::string GetEventName() const { return mEventName; }
+    
+    const Girl* GetCurrentTarget() const { return &(mTargets[mCurrentTarget]); }
     
 protected:
     

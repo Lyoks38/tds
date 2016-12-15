@@ -107,6 +107,8 @@ public:
     void DisplayResult();
     
     void LoadInfos();
+    
+    void paint(juce::Graphics& inG) override;
 
 private:
     

@@ -28,6 +28,8 @@ public:
     
     Girl(GirlAttributes inAttributes);
     
+    
+    
     //Destructor
     ~Girl(){};
     

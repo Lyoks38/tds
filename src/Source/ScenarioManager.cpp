@@ -15,11 +15,12 @@ ScenarioManager::ScenarioManager()
 {
     LoadGirls();
     LoadEvents();
-    LoadAttacks();
     
     mCombatManager.reset(new CombatManager());
     mCombatManager->SetScenarioManager(this);
     
+    LoadAttacks();
+
     srand(time(NULL));
 }
 
@@ -69,9 +70,9 @@ void ScenarioManager::LoadGirls()
     Girl::GirlAttributes attr;
     int id = 0;
     
-    attr.mName = "Emma";
-    attr.mGenre = LISTEE;
-    attr.mListe = FOX;
+    attr.mName = "Delphine";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = WHOOP;
     attr.mID = id;
     id++;
     
