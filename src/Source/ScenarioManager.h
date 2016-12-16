@@ -35,7 +35,7 @@ public:
 
     
     //Load infos
-    void LoadPlayer(Player::PlayerAttributes inAttributes) { mPlayer.reset(new Player(inAttributes)); }
+    void LoadPlayer(Player::PlayerAttributes inAttributes) { mPlayer.reset(new Player(inAttributes)); mCombatManager->SetPlayer(mPlayer.get()); }
     
     void LoadDatabase();
     

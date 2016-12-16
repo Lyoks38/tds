@@ -203,6 +203,27 @@ void CombatPage::paint(juce::Graphics &inG)
     inG.setFont(35.f);
     inG.drawText(subtitle, 0, 80, getWidth(), 100, juce::Justification::centred);
 
+    int nbActions = mManager->GetRemainingActions();
+    inG.setFont(Font(16.f));
+    inG.drawText("Actions restantes :", 620, 450, 150, 30, juce::Justification::centred);
+    inG.drawText(std::to_string(nbActions), 620, 475, 150, 30, juce::Justification::centred);
+    
+    float sober = mManager->GetDrunkIndex() / 100.f;
+    juce::Colour colour;
+    if(sober >= 0.4f)
+        colour = juce::Colour(0xff25c73a);
+    else if(sober >= 0.15f)
+        colour = juce::Colour(0xffffb429);
+    else
+        colour = juce::Colour(0xfff44e47);
+    
+    inG.setColour(colour);
+    inG.fillRoundedRectangle(30.f, 486.f, 120.f * sober, 12.f, 5.f);
+    inG.setColour(juce::Colours::white);
+    inG.drawRoundedRectangle(30.f, 486.f, 120.f, 12.f, 5.f, 2.f);
+
+    inG.drawText("Sobriete :", 30, 450, 120, 30, juce::Justification::centred);
+    
 }
 
 

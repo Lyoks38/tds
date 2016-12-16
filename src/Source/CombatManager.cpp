@@ -44,6 +44,8 @@ void CombatManager::LoadNewCombat(const Event inEvent)
     
     mEventBanner = inEvent.GetBanner();
     mEventName = inEvent.GetName();
+    
+    mPlayer->SetAttack(10);
 }
 
 //////////////////////////////////////

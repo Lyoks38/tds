@@ -23,6 +23,8 @@ public:
     
     ~CombatManager();
     
+    void SetPlayer(Player* inP) { mPlayer = inP; }
+    
     void LoadNewCombat(const Event inEvent);
     
     void GoToNextTarget();
@@ -39,6 +41,8 @@ public:
     std::string GetEventName() const { return mEventName; }
     
     const Girl* GetCurrentTarget() const { return &(mTargets[mCurrentTarget]); }
+    int GetRemainingActions() const { return mRemainingActions; }
+    int GetDrunkIndex() const { return mPlayer->GetAttack(); }
     
 protected:
     
@@ -69,7 +73,7 @@ protected:
     
 private:
     
-    std::unique_ptr<Player> mPlayer;
+    Player* mPlayer;
     ScenarioManager* mScenarioManager;
     
     std::vector<Attack> mAttackDatabase;
