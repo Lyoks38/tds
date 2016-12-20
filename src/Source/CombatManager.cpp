@@ -179,7 +179,6 @@ void CombatManager::HandleAttack(Attack inAttack)
     //Si l'attaque nécessite un jet de dés
     bool attack_effective = true;
     if(inAttack.GetDiceThreshold() != -1){
-        
         int dices = rand() % 100;
         dices += (100 - previous_defense);
         attack_effective = dices >= inAttack.GetDiceThreshold();
@@ -229,6 +228,9 @@ void CombatManager::TryToCatch()
         else
             DisplayFailedTargetOnCatch();
     }
+    else
+        DisplayFailedTargetOnCatch();
+
 }
 
 /////////////////////////////////////////////////////////
