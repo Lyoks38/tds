@@ -60,15 +60,17 @@ protected:
     bool CanTargetBeCatched();
     
     
-    // GUI fonctions
-    void DisplayAttackEffect(Attack inAttack){};
-    void DisplayFailedAttack(Attack inAttack){};
-    void DisplaySuccesPanel(){};
-    void DisplayFailPanel(){};
-    
+    ////// GUI fonctions
+    //Attacks
+    void DisplayAttackEffect(Attack inAttack, bool inSuccess){};
+    void DisplayFailedTargetOnAttack(Attack inAttack){};
+    //Catch
+    void DisplayFailedTargetOnCatch(){};
+    void DisplaySuccessCatch(){};
+    //Event
     void DisplayFailedEvent(){};
     void DisplayNormalEvent(){};
-    
+    //Others
     void DisplayNextTarget();
     
 private:

@@ -45,7 +45,7 @@ void CombatManager::LoadNewCombat(const Event inEvent)
     mEventBanner = inEvent.GetBanner();
     mEventName = inEvent.GetName();
     
-    mPlayer->SetAttack(10);
+    mPlayer->SetAttack(100);
 }
 
 //////////////////////////////////////
@@ -102,8 +102,6 @@ int CombatManager::ComputeAttackEffect(Attack inAttack){
     }
     
     int final_coeff = basic_attack*coeff + 5*coeff_reputation;
-    if(inAttack.IsImpactingTarget())
-        final_coeff += inAttack.GetTargetMalus();
     
     return final_coeff;
 }
@@ -163,27 +161,46 @@ float CombatManager::ComputeListCoeff()
 /////////////////////////////////////////////////////////
 void CombatManager::HandleAttack(Attack inAttack)
 {
+    //Si l'attaque inflige des dégats au joueur
     if(inAttack.IsImpactingPlayer()){
         int previous_attack = mPlayer->GetAttack();
-        if(previous_attack + inAttack.GetPlayerBonus() < 0){
+        if(previous_attack + inAttack.GetPlayerImpact() < 0){
             // End level with ScenarioManager
         }
         else{
-            mPlayer->SetAttack(previous_attack + inAttack.GetPlayerBonus());
+            mPlayer->SetAttack(previous_attack + inAttack.GetPlayerImpact());
         }
     }
     
-    
+    //Calcul des dégats sur la cible
     int result = ComputeAttackEffect(inAttack);
     int previous_defense = mTargets[mCurrentTarget].GetDefense();
     
-    if(previous_defense - result > 0){
-        mTargets[mCurrentTarget].SetDefense(previous_defense - result);
-        DisplayAttackEffect(inAttack);
+    //Si l'attaque nécessite un jet de dés
+    bool attack_effective = true;
+    if(inAttack.GetDiceThreshold() != -1){
+        
+        int dices = rand() % 100;
+        dices += (100 - previous_defense);
+        attack_effective = dices >= inAttack.GetDiceThreshold();
     }
-    else {
-        DisplayFailedAttack(inAttack);
+    
+    //Si le jet de dés a réussi (ou qu'il n'y en avait pas besoin)
+    if(attack_effective){
+        //La cible a encore assez de défense
+        if(previous_defense - result > 0){
+            mTargets[mCurrentTarget].SetDefense(previous_defense - result);
+        }
+        //La target atteint les 0
+        else {
+            DisplayFailedTargetOnAttack(inAttack);
+        }
     }
+    //Le jet de dés a échoué
+    else{
+        DisplayAttackEffect(inAttack, true);
+    }
+    
     mRemainingActions--;
 }
 
@@ -207,10 +224,10 @@ void CombatManager::TryToCatch()
         int dices = std::rand() %4;
         if(dices >= 1){
             mPlayer->AddChoppe(mTargets[mCurrentTarget].GetID());
-            DisplaySuccesPanel();
+            DisplaySuccessCatch();
         }
         else
-            DisplayFailPanel();
+            DisplayFailedTargetOnCatch();
     }
 }
 

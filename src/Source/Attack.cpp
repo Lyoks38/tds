@@ -24,14 +24,17 @@ Attack::Attack(std::string inName){
 Attack::Attack(Attack const& other)
 {
     mAttackName = other.GetName();
-    mIsObvious = other.IsObvious();
+    mDiceThreshold = other.GetDiceThreshold();
     mImpactsPlayer = other.IsImpactingPlayer();
-    mImpactsTarget = other.IsImpactingTarget();
     mBaseDamages = other.GetBaseDamages();
-    mPlayerBonus = other.GetPlayerBonus();
-    mTargetMalus = other.GetTargetMalus();
+    mPlayerImpact = other.GetPlayerImpact();
     
-    //TODO : transfer also the attack effects
+    mAttackEffect1 = other.GetAttackText1();
+    mAttackEffect2 = other.GetAttackText2();
+    mAttackEffect3 = other.GetAttackText3();
+    mAttackFailed1 = other.GetFailedText1();
+    mAttackFailed2 = other.GetFailedText2();
+    mAttackFailed3 = other.GetFailedText3();
 }
 
 ///////////////////////////////////////
@@ -41,9 +44,9 @@ std::string Attack::GetName() const
 }
 
 //////////////////////////////////////
-bool Attack::IsObvious() const
+int Attack::GetDiceThreshold() const
 {
-    return mIsObvious;
+    return mDiceThreshold;
 }
 
 //////////////////////////////////////
@@ -53,21 +56,9 @@ bool Attack::IsImpactingPlayer() const
 }
 
 //////////////////////////////////////
-bool Attack::IsImpactingTarget() const
+int Attack::GetPlayerImpact() const
 {
-    return mImpactsTarget;
-}
-
-//////////////////////////////////////
-int Attack::GetPlayerBonus() const
-{
-    return mPlayerBonus;
-}
-
-//////////////////////////////////////
-int Attack::GetTargetMalus() const
-{
-    return mTargetMalus;
+    return mPlayerImpact;
 }
 
 //////////////////////////////////////
