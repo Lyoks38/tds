@@ -9,6 +9,7 @@
 #include "CombatManager.h"
 #include "ScenarioManager.h"
 #include "MainComponent.h"
+#include "AttackStrings.h"
 
 
 CombatManager::CombatManager()
@@ -189,6 +190,7 @@ void CombatManager::HandleAttack(Attack inAttack)
         //La cible a encore assez de défense
         if(previous_defense - result > 0){
             mTargets[mCurrentTarget].SetDefense(previous_defense - result);
+            DisplayAttackEffect(inAttack, true);
         }
         //La target atteint les 0
         else {
@@ -197,7 +199,7 @@ void CombatManager::HandleAttack(Attack inAttack)
     }
     //Le jet de dés a échoué
     else{
-        DisplayAttackEffect(inAttack, true);
+        DisplayAttackEffect(inAttack, false);
     }
     
     mRemainingActions--;
@@ -290,12 +292,47 @@ void CombatManager::LoadAttacks()
     mAttackDatabase.resize(0);
     
     Attack attack = Attack("Lui offrir un verre");
+    attack.SetImpactsPlayer(true);
+    attack.SetPlayerImpact(10);
+    attack.SetBaseDamages(30);
+    attack.SetAttackText1(AttackStrings::BoireEffect1);
+    attack.SetAttackText2(AttackStrings::BoireEffect2);
+    attack.SetAttackText3(AttackStrings::BoireEffect3);
+    attack.SetFailedText1(AttackStrings::BoireFailed1);
+    attack.SetFailedText2(AttackStrings::BoireFailed2);
+    attack.SetFailedText3(AttackStrings::BoireFailed3);
     mAttackDatabase.push_back(attack);
+    
     attack = Attack("Lui faire le coup de la Lamborghini");
+    attack.SetBaseDamages(20);
+    attack.SetAttackText1(AttackStrings::LamborghiniEffect1);
+    attack.SetAttackText2(AttackStrings::LamborghiniEffect2);
+    attack.SetAttackText3(AttackStrings::LamborghiniEffect3);
+    attack.SetFailedText1(AttackStrings::LamborghiniFailed1);
+    attack.SetFailedText2(AttackStrings::LamborghiniFailed2);
+    attack.SetFailedText3(AttackStrings::LamborghiniFailed3);
     mAttackDatabase.push_back(attack);
+    
     attack = Attack("Mettre ta main sur sa hanche");
+    attack.SetBaseDamages(25);
+    attack.SetAttackText1(AttackStrings::HancheEffect1);
+    attack.SetAttackText2(AttackStrings::HancheEffect2);
+    attack.SetAttackText3(AttackStrings::HancheEffect3);
+    attack.SetFailedText1(AttackStrings::HancheFailed1);
+    attack.SetFailedText2(AttackStrings::HancheFailed2);
+    attack.SetFailedText3(AttackStrings::HancheFailed3);
     mAttackDatabase.push_back(attack);
+    
     attack = Attack("Lui crier : “T'es pas belle !“");
+    attack.SetImpactsPlayer(true);
+    attack.SetPlayerImpact(10);
+    attack.SetBaseDamages(30);
+    attack.SetAttackText1(AttackStrings::PasBelleEffect1);
+    attack.SetAttackText2(AttackStrings::PasBelleEffect2);
+    attack.SetAttackText3(AttackStrings::PasBelleEffect3);
+    attack.SetFailedText1(AttackStrings::PasBelleFailed1);
+    attack.SetFailedText2(AttackStrings::PasBelleFailed2);
+    attack.SetFailedText3(AttackStrings::PasBelleFailed3);
     mAttackDatabase.push_back(attack);
 
 }

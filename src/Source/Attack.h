@@ -45,7 +45,7 @@ public:
     
     void SetImpactsPlayer(bool inImpact) { mImpactsPlayer = inImpact; };
     void SetPlayerImpact(int inImpact) { mPlayerImpact = inImpact; };
-    
+    void SetBaseDamages(int inDamages) { mBaseDamages = inDamages; };
     // Tells to GUI the text to be displayed
     std::string GetAttackText(bool inIsSuccess) const;
     
