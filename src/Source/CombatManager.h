@@ -63,7 +63,7 @@ protected:
     ////// GUI fonctions
     //Attacks
     void DisplayAttackEffect(Attack inAttack, bool inSuccess){};
-    void DisplayFailedTargetOnAttack(Attack inAttack){};
+    void DisplayFailedTargetOnAttack(Attack inAttack){ DisplayAttackEffect(inAttack, false); }
     //Catch
     void DisplayFailedTargetOnCatch(){};
     void DisplaySuccessCatch(){};

@@ -40,3 +40,36 @@ const std::string AttackStrings::HancheEffect3 = "Plus entreprenante, elle met c
 const std::string AttackStrings::HancheFailed1 = "Elle repousse gentiment ta main avec air avec un sourire gêné. “Je croyais que tu étais gay...“ Ah, dommage !";
 const std::string AttackStrings::HancheFailed2 = "Elle repousse ta main et se met à danser collé-serré avec sa pote. Message reçu, tu te casses.";
 const std::string AttackStrings::HancheFailed3 = "Un autre type arrive et lui met la main au cul. Elle se jette dans ses bras. Il a été plus entreprenant que toi, dommage.";
+
+//Terminator
+const std::string AttackStrings::TerminatorEffect1 = "Elle est trop torchée pour capter la référence, mais c'est pas grave. Elle s'aggrippe à toi telle une moule à son rocher.";
+const std::string AttackStrings::TerminatorEffect2 = "“Je suis pas Sarah Connor, mais ok !“. Ah, enfin une qui comprend la référence ! C'est pas trop tôt !";
+const std::string AttackStrings::TerminatorEffect3 = "“Non, là j'ai surtout envie de boire. Tu viens avec moi ?“. Suis-la, elle va peut-être payer sa tournée."; 
+const std::string AttackStrings::TerminatorFailed1 = "“Euuuh c'est dans film, non ...?“ Putain, encore une inculte ! Allez, on se casse, elle en vaut pas la peine.";
+const std::string AttackStrings::TerminatorFailed2 = "Elle te répond : “Je reviendrai !“, tout en s'éloignant vers le bar. Sauf qu'elle ne reviendra pas.";
+const std::string AttackStrings::TerminatorFailed3 = "Elle te jette un regard bizarre. C'est peut être elle le Terminator, fuis !";;
+
+//Trempette
+const std::string AttackStrings::TrempetteEffect1 = "Mais rien ne se passe !";
+const std::string AttackStrings::TrempetteEffect2 = "Mais rien ne se passe !";
+const std::string AttackStrings::TrempetteEffect3 = "Mais rien ne se passe !";
+const std::string AttackStrings::TrempetteFailed1 = "Mais rien ne se passe !";
+const std::string AttackStrings::TrempetteFailed2 = "Mais rien ne se passe !";
+const std::string AttackStrings::TrempetteFailed3 = "Mais rien ne se passe !";
+
+//Pain de mie
+const std::string AttackStrings::PainMieEffect1 = "“Oui !“ “Moi aussi, ça nous fait un point commun ! On baise ?“. Elle éclate de rire. Visiblement, tu es un comique, donc tout n'est pas perdu.";
+const std::string AttackStrings::PainMieEffect2 = "“Non, pourquoi ?“ “Euuuh, je... Je voulais te faire des toasts au petit dej demain matin !“. Bien rattrapé ! Et vu le sourire qu'elle a, elle serait pas contre un petit dej avec toi demain...";
+const std::string AttackStrings::PainMieEffect3 = "“Oui !“ “Moi aussi, ça nous fait un point commun ! On baise ?“ “Allez !“. Houla ! Elle a l'air chaude celle-là !";
+const std::string AttackStrings::PainMieFailed1 = "“Non.“. Merde, elle devait répondre oui... Tu ne sais plus quoi dire et perds tes moyens. Du coup, elle se casse.";
+const std::string AttackStrings::PainMieFailed2 = "“Seulement s'il est sans gluten et sans croûte.“. Oh putain, une reloue ! Fuis !";
+const std::string AttackStrings::PainMieFailed3 = "“Oui.“ “Moi aussi ! Ça nous fait un point commun : on baise ?“ “Non.“. Ah dommage. Hé, t'en va pas ! C'était une blague... Ah si. Bon tant pis.";
+
+//Camion
+const std::string AttackStrings::CamionEffect1 = "“Hé !“ dit-elle en repoussant tes mains. Néanmoins elle ne t'en colle pas une et ne s'enfuis pas, c'est déjà ça !";
+const std::string AttackStrings::CamionEffect2 = "“Hé !“ dit-elle en repoussant tes mains, après plusieurs secondes de contact avec sa poitrine. Ça avait pas l'air de lui déplaire !";
+const std::string AttackStrings::CamionEffect3 = "“Héhé, je la connais, tu m'auras pas !“, dit-elle en te lâchant un petit clin d'oeil.";
+const std::string AttackStrings::CamionFailed1 = "Et vlan ! Une bonne tarte dans ta gueule ! Au revoir !";
+const std::string AttackStrings::CamionFailed2 = "“Tu me crois assez conne pour tomber dans le panneau... Pov' con.“. Ouch, ça pique. Allons tripoter des nibards ailleurs.";
+const std::string AttackStrings::CamionFailed3 = "Ses seins sont tellement petits que tu vises mal ton coup et ";
+
