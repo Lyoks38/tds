@@ -47,7 +47,7 @@ const std::string AttackStrings::TerminatorEffect2 = "“Je suis pas Sarah Conno
 const std::string AttackStrings::TerminatorEffect3 = "“Non, là j'ai surtout envie de boire. Tu viens avec moi ?“. Suis-la, elle va peut-être payer sa tournée."; 
 const std::string AttackStrings::TerminatorFailed1 = "“Euuuh c'est dans film, non ...?“ Putain, encore une inculte ! Allez, on se casse, elle en vaut pas la peine.";
 const std::string AttackStrings::TerminatorFailed2 = "Elle te répond : “Je reviendrai !“, tout en s'éloignant vers le bar. Sauf qu'elle ne reviendra pas.";
-const std::string AttackStrings::TerminatorFailed3 = "Elle te jette un regard bizarre. C'est peut être elle le Terminator, fuis !";;
+const std::string AttackStrings::TerminatorFailed3 = "Elle te jette un regard bizarre. C'est peut être elle le Terminator, fuis !";
 
 //Trempette
 const std::string AttackStrings::TrempetteEffect1 = "Mais rien ne se passe !";
@@ -71,5 +71,36 @@ const std::string AttackStrings::CamionEffect2 = "“Hé !“ dit-elle en repous
 const std::string AttackStrings::CamionEffect3 = "“Héhé, je la connais, tu m'auras pas !“, dit-elle en te lâchant un petit clin d'oeil.";
 const std::string AttackStrings::CamionFailed1 = "Et vlan ! Une bonne tarte dans ta gueule ! Au revoir !";
 const std::string AttackStrings::CamionFailed2 = "“Tu me crois assez conne pour tomber dans le panneau... Pov' con.“. Ouch, ça pique. Allons tripoter des nibards ailleurs.";
-const std::string AttackStrings::CamionFailed3 = "Ses seins sont tellement petits que tu vises mal ton coup et ";
+const std::string AttackStrings::CamionFailed3 = "Tu appuies trop fort sur ses boobs, et elle lâche un petit cri de douleur avant de coller une énorme mandale.";
 
+//Mains cul
+const std::string AttackStrings::MainsCulEffect1 = "Elle glisse également sa main sur tes fesses. Booyah !";
+const std::string AttackStrings::MainsCulEffect2 = "Elle te jette un petit regard intéressé. Ça va le faire, gros.";
+const std::string AttackStrings::MainsCulEffect3 = "Elle glisse son bras autour de tes hanches. Allez !";
+const std::string AttackStrings::MainsCulFailed1 = "“Je peux savoir ce que tu fais là ?!“ Oups. “Pervers.“ Au revoir !";
+const std::string AttackStrings::MainsCulFailed2 = "Elle aurait pu kiffer si tu n'avais pas à moitié relevé sa jupe. Et vu que tout le monde a pu voir son cul, elle t'en colle une. Logique.";
+const std::string AttackStrings::MainsCulFailed3 = "Elle porte un kigurumi. Du coup tu n'arrives pas à évaluer où sont ses fesses et tu tâtonnes. En gros, tu lui palpes la jambe et le cul. Elle te regarde bizarrement puis s'éloigne, apeurée.";
+
+//Danser
+const std::string AttackStrings::DanserEffect1 = "“J'adore cette chanson en plus !“ dit-elle. Allez donc vous trémousser sur la piste !";
+const std::string AttackStrings::DanserEffect2 = "“Ok, mais seulement si on fait un battle de twerk !“. Allez vas-y, le ridicule ne tue pas... Putain mais tu twerkes bien en fait !";
+const std::string AttackStrings::DanserEffect3 = "Les filles ne résistent pas à un bon vieux rock. Fais-la tournoyer, mon grand !";
+const std::string AttackStrings::DanserFailed1 = "Le DJ balance la chorée Papet'. Du coup toute la salle envahit la piste et tu perds ta target de vue.";
+const std::string AttackStrings::DanserFailed2 = "Vous commencez quelques pas de rock mais sur un tourné mal négocié, tu lui fous un coup de coude dans la tronche et elle se met à saigner du nez. Bravo, elle risque de faire la gueule un certain temps.";
+const std::string AttackStrings::DanserFailed3 = "“Nan, j'aime pas la musique. Je pense que je vais me barrer en fait, je m'emmerde.“ Au mons c'est clair. Allez, salut !";
+
+//Pain de mie
+const std::string AttackStrings::DanserSerreEffect1 = "Zumba hé ! Zumba Ha ! Allez dansez mes chéris ! C'est chaud !";
+const std::string AttackStrings::DanserSerreEffect2 = "Et on descend, et on descend, et on descend ! Heureusement que tu as fait des squats hier aprem !";
+const std::string AttackStrings::DanserSerreEffect3 = "Ne pas bander, ne pas bander, ne pas bander ! Pense à Petitclair ! Voilà, c'est ça ! Allez, danse bébé !";
+const std::string AttackStrings::DanserSerreFailed1 = "Le sol est tellement glissant qu'elle dérape et se tord la cheville au moment le plus chaud de votre danse. Elle est évacuée par un staff qui l'amène aux urgences.";
+const std::string AttackStrings::DanserSerreFailed2 = "“Euh, c'est ton téléphone que je sens ?“ “Non je l'ai laissé au vestiaire.“ “Putain mais les mecs quoi ! Tous des porcs !“. Pourquoi tu lui as dit que tu l'avais laissé au vestiaire ? Abruti !";
+const std::string AttackStrings::DanserSerreFailed3 = "Après seulement 30s, elle se dégage de ton étreinte et s'en va danser avec une pote. Message reçu, ciao !";
+
+//Sep
+const std::string AttackStrings::SepEffect1 = "Elle éclate de rire. “Comme Barney dans How I Met !“. Bon, elle a capté la référence, c'est déjà ça !";
+const std::string AttackStrings::SepEffect2 = "“Tu sais que je suis en BIOMED. Je pourrais y jeter un oeil si tu veux.“ Ooooooh yeaaaaaah !";
+const std::string AttackStrings::SepEffect3 = "“Oooooooh ! Mais tu mets quelle taille de caleçons alors ?“ Houla, il semblerait qu'elle soit bien bourrée celle-là ! Si elle croit que tu as pénis énorme, il y a plus qu'à lui dire qu'il exauce aussi des voeux et c'est dans la poche.";
+const std::string AttackStrings::SepFailed1 = "“Tu m'as vraiment pris pour une conne en fait ? Connard.“. Et... Dommage !";
+const std::string AttackStrings::SepFailed2 = "“Dommage que tu t'en serves jamais, de ton pénis.“. Boum ! Drop the mic ! Ramasse le peu de diginité qu'il te reste et casse-toi.";
+const std::string AttackStrings::SepFailed3 = "“C'est bizarre, c'est pas ce que dit ton pantalon.“ dit-elle en jetant un regard désabusé à ton paquet. Foutu legging lépoard. Crédibilté 0, tu peux passer ton chemin.";

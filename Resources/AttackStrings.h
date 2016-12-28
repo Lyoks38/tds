@@ -78,6 +78,38 @@ public:
     static const std::string CamionFailed1;
     static const std::string CamionFailed2;
     static const std::string CamionFailed3;
+    
+    //Mains cul
+    static const std::string MainsCulEffect1;
+    static const std::string MainsCulEffect2;
+    static const std::string MainsCulEffect3;
+    static const std::string MainsCulFailed1;
+    static const std::string MainsCulFailed2;
+    static const std::string MainsCulFailed3;
+    
+    //Danser
+    static const std::string DanserEffect1;
+    static const std::string DanserEffect2;
+    static const std::string DanserEffect3;
+    static const std::string DanserFailed1;
+    static const std::string DanserFailed2;
+    static const std::string DanserFailed3;
+    
+    //Danser collé-serré
+    static const std::string DanserSerreEffect1;
+    static const std::string DanserSerreEffect2;
+    static const std::string DanserSerreEffect3;
+    static const std::string DanserSerreFailed1;
+    static const std::string DanserSerreFailed2;
+    static const std::string DanserSerreFailed3;
+    
+    //SEP
+    static const std::string SepEffect1;
+    static const std::string SepEffect2;
+    static const std::string SepEffect3;
+    static const std::string SepFailed1;
+    static const std::string SepFailed2;
+    static const std::string SepFailed3;
 
 };
 #endif /* AttackStrings_h */
