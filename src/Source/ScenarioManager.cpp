@@ -55,26 +55,16 @@ void ScenarioManager::FillEventWithTargets(Event& inEvent)
 void ScenarioManager::LoadEvents()
 {
     mEvents.resize(0);
+    mEvents = mLoader.LoadEvents();
     
-    Event newEvent = Event("Barbecue GC", true, ImageUtils::BarbecueGC, "MINP");
-    FillEventWithTargets(newEvent);
+    for(int i = 0; i < mEvents.size(); i++)
+        FillEventWithTargets(mEvents[i]);
     
-    mEvents.push_back(newEvent);
 }
 
 
 void ScenarioManager::LoadGirls()
 {
     mGirlDatabase.resize(0);
-    
-    Girl::GirlAttributes attr;
-    int id = 0;
-    
-    attr.mName = "Delphine";
-    attr.mGenre = AMIE_DE_LISTE;
-    attr.mListe = WHOOP;
-    attr.mID = id;
-    id++;
-    
-    mGirlDatabase.push_back(Girl(attr));
+    mGirlDatabase = mLoader.LoadGirlDatabase();
 }

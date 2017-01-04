@@ -20,6 +20,9 @@ class MainContentComponent;
 #include "Girl.h"
 #include "Player.h"
 
+#include "ContentLoader.h"
+
+
 class ScenarioManager {
     
 public:
@@ -72,6 +75,6 @@ private:
     std::unique_ptr<Player> mPlayer = nullptr;
     
     
-    
+    ContentLoader mLoader;
     
 };

@@ -89,7 +89,7 @@ const std::string AttackStrings::DanserFailed1 = "Le DJ balance la chorée Papet
 const std::string AttackStrings::DanserFailed2 = "Vous commencez quelques pas de rock mais sur un tourné mal négocié, tu lui fous un coup de coude dans la tronche et elle se met à saigner du nez. Bravo, elle risque de faire la gueule un certain temps.";
 const std::string AttackStrings::DanserFailed3 = "“Nan, j'aime pas la musique. Je pense que je vais me barrer en fait, je m'emmerde.“ Au mons c'est clair. Allez, salut !";
 
-//Pain de mie
+//danser collé serré
 const std::string AttackStrings::DanserSerreEffect1 = "Zumba hé ! Zumba Ha ! Allez dansez mes chéris ! C'est chaud !";
 const std::string AttackStrings::DanserSerreEffect2 = "Et on descend, et on descend, et on descend ! Heureusement que tu as fait des squats hier aprem !";
 const std::string AttackStrings::DanserSerreEffect3 = "Ne pas bander, ne pas bander, ne pas bander ! Pense à Petitclair ! Voilà, c'est ça ! Allez, danse bébé !";
@@ -100,7 +100,29 @@ const std::string AttackStrings::DanserSerreFailed3 = "Après seulement 30s, ell
 //Sep
 const std::string AttackStrings::SepEffect1 = "Elle éclate de rire. “Comme Barney dans How I Met !“. Bon, elle a capté la référence, c'est déjà ça !";
 const std::string AttackStrings::SepEffect2 = "“Tu sais que je suis en BIOMED. Je pourrais y jeter un oeil si tu veux.“ Ooooooh yeaaaaaah !";
-const std::string AttackStrings::SepEffect3 = "“Oooooooh ! Mais tu mets quelle taille de caleçons alors ?“ Houla, il semblerait qu'elle soit bien bourrée celle-là ! Si elle croit que tu as pénis énorme, il y a plus qu'à lui dire qu'il exauce aussi des voeux et c'est dans la poche.";
+const std::string AttackStrings::SepEffect3 = "“Oooooooh ! Mais tu mets quelle taille de caleçons alors ?“ Houla, il semblerait qu'elle soit bien bourrée celle-là ! Si elle croit que tu as un pénis énorme, il y a plus qu'à lui dire qu'il exauce aussi des voeux et c'est dans la poche.";
 const std::string AttackStrings::SepFailed1 = "“Tu m'as vraiment pris pour une conne en fait ? Connard.“. Et... Dommage !";
 const std::string AttackStrings::SepFailed2 = "“Dommage que tu t'en serves jamais, de ton pénis.“. Boum ! Drop the mic ! Ramasse le peu de diginité qu'il te reste et casse-toi.";
 const std::string AttackStrings::SepFailed3 = "“C'est bizarre, c'est pas ce que dit ton pantalon.“ dit-elle en jetant un regard désabusé à ton paquet. Foutu legging lépoard. Crédibilté 0, tu peux passer ton chemin.";
+
+//batman
+const std::string AttackStrings::BatmanEffect1 = "Elle te chuchote à l'oreille qu'elle a un costume de chat chez elle. Coquine !";
+const std::string AttackStrings::BatmanEffect2 = "“Ça veut donc dire que tu es très riche...“ Héhé, viens là poupée...";
+const std::string AttackStrings::BatmanEffect3 = "“Tu me montres ta Batmobile ?“ demande-t-elle, surexcitée. “Plus tard dans la soirée“ réponds-tu en te rappelant que tu n'as qu'une vieille Twingo toute rouillée.";
+const std::string AttackStrings::BatmanFailed1 = "“Et moi Mère Thérésa !” Ah, bah dommage ! Au revoir !";
+const std::string AttackStrings::BatmanFailed2 = "“Hein ?“ Tiens, elle comprend pas l'anglais celle-là. Encore une qui a pas son Bulats. Allez, next.";
+const std::string AttackStrings::BatmanFailed3 = "“Et ?“ dit-elle d'un ton dédaigneux avant de te tourner le dos. Joli petit cul, mais tu y toucheras pas ce soir du coup.";
+
+//GHB
+const std::string AttackStrings::GhbEffect1 = "Tu lui fais croire que c'est un cachet d'ecsta. Et elle le gobe d'un coup !";
+const std::string AttackStrings::GhbEffect2 = "Tu ravales tous tes scrupules et tu mets le cacheton dans son verre.";
+const std::string AttackStrings::GhbEffect3 = "Allez, balec. Tente le coup.";
+const std::string AttackStrings::GhbFailed1 = "Tu te ravises. Tu pourrais quand même finir en taule pour ça !";
+const std::string AttackStrings::GhbFailed2 = "Du GHB ? Sérieux, mec, tu vaux mieux que ça.";
+const std::string AttackStrings::GhbFailed3 = "Non non non, mauvaise idée !";
+
+
+
+
+
+

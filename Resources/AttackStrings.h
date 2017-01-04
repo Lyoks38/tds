@@ -110,6 +110,23 @@ public:
     static const std::string SepFailed1;
     static const std::string SepFailed2;
     static const std::string SepFailed3;
+    
+    //Batman
+    static const std::string BatmanEffect1;
+    static const std::string BatmanEffect2;
+    static const std::string BatmanEffect3;
+    static const std::string BatmanFailed1;
+    static const std::string BatmanFailed2;
+    static const std::string BatmanFailed3;
+
+    //GHB
+    static const std::string GhbEffect1;
+    static const std::string GhbEffect2;
+    static const std::string GhbEffect3;
+    static const std::string GhbFailed1;
+    static const std::string GhbFailed2;
+    static const std::string GhbFailed3;
+
 
 };
 #endif /* AttackStrings_h */

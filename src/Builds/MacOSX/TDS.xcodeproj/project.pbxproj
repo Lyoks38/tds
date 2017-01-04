@@ -25,6 +25,7 @@
 		456FC2231E0A98F3004DB888 /* AttackStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 456FC2221E0A98F3004DB888 /* AttackStrings.cpp */; };
 		45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45721DB21DD49BC500089EB7 /* FontUtils.cpp */; };
 		457223721DEDA81900DAE1F0 /* NewEventPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457223711DEDA81900DAE1F0 /* NewEventPage.cpp */; };
+		4572A21C1E1D1AB90086299B /* ContentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4572A21B1E1D1AB90086299B /* ContentLoader.cpp */; };
 		45800E971DE712AA006A5EB7 /* WelcomePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45800E961DE712AA006A5EB7 /* WelcomePage.cpp */; };
 		458704771DF0443100B366B8 /* ImageUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458704761DF0443100B366B8 /* ImageUtils.cpp */; };
 		4587047A1DF0464C00B366B8 /* BarbecueGc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 458704781DF0464C00B366B8 /* BarbecueGc.cpp */; };
@@ -394,6 +395,8 @@
 		45721DB21DD49BC500089EB7 /* FontUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FontUtils.cpp; path = ../../Source/GUI/Utils/FontUtils.cpp; sourceTree = "<group>"; };
 		457223701DEDA80500DAE1F0 /* NewEventPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewEventPage.h; path = ../../Source/GUI/NewEventPage.h; sourceTree = "<group>"; };
 		457223711DEDA81900DAE1F0 /* NewEventPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewEventPage.cpp; path = ../../Source/GUI/NewEventPage.cpp; sourceTree = "<group>"; };
+		4572A21A1E1D1AA80086299B /* ContentLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContentLoader.h; path = ../../Source/ContentLoader.h; sourceTree = "<group>"; };
+		4572A21B1E1D1AB90086299B /* ContentLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ContentLoader.cpp; path = ../../Source/ContentLoader.cpp; sourceTree = "<group>"; };
 		45800E951DE71294006A5EB7 /* WelcomePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomePage.h; path = ../../Source/GUI/WelcomePage.h; sourceTree = "<group>"; };
 		45800E961DE712AA006A5EB7 /* WelcomePage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomePage.cpp; path = ../../Source/GUI/WelcomePage.cpp; sourceTree = "<group>"; };
 		458704751DF0441800B366B8 /* ImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImageUtils.h; path = ../../Source/GUI/Utils/ImageUtils.h; sourceTree = "<group>"; };
@@ -1523,6 +1526,8 @@
 				194773D91D0D72FD009AC9D5 /* Attack.h */,
 				4588BE461DEC57120009374F /* Event.cpp */,
 				4588BE451DEC57010009374F /* Event.h */,
+				4572A21B1E1D1AB90086299B /* ContentLoader.cpp */,
+				4572A21A1E1D1AA80086299B /* ContentLoader.h */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -3573,6 +3578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4572A21C1E1D1AB90086299B /* ContentLoader.cpp in Sources */,
 				45721DB31DD49BC500089EB7 /* FontUtils.cpp in Sources */,
 				F657BF078F673A328AB3FA56 /* MainComponent.cpp in Sources */,
 				4587047A1DF0464C00B366B8 /* BarbecueGc.cpp in Sources */,

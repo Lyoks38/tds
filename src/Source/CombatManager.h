@@ -13,6 +13,7 @@ class ScenarioManager;
 #include "Girl.h"
 #include "Player.h"
 #include "Event.h"
+#include "ContentLoader.h"
 
 
 class CombatManager {
@@ -79,5 +80,7 @@ private:
     ScenarioManager* mScenarioManager;
     
     std::vector<Attack> mAttackDatabase;
+    
+    ContentLoader mLoader;
         
 };
