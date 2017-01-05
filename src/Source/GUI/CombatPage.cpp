@@ -145,17 +145,34 @@ void AttackTabbedGroup::paint(juce::Graphics &inG)
 // Attack Result Panel
 AttackResultPanel::AttackResultPanel()
 {
-    
+    mContinueButton = new NiceComponent("Skip Target");
+    mContinueButton->SetTextToDisplay("Continuer");
+    mContinueButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
+    mContinueButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
+    mContinueButton->SetTextColor(juce::Colours::white);
+    mContinueButton->SetTextHoverColor(juce::Colour(230, 230, 230));
+    mContinueButton->setBounds(200, 270, 200, 40);
+    mContinueButton->AddListener(this);
 }
 
 AttackResultPanel::~AttackResultPanel()
 {
+}
+
+void AttackResultPanel::paint(juce::Graphics& inG)
+{
+    inG.setColour(juce::Colours::white);
+    inG.setFont(juce::Font(20));
+    
+    inG.drawMultiLineText(mTextToDisplay, 100, 50, 400);
     
 }
 
 
-
-
+void AttackResultPanel::onNiceComponentClicked(NiceComponent *inComp)
+{
+    
+}
 ////////////////////////////////////////////////////////////////
 // CombatPage
 CombatPage::CombatPage():
@@ -260,14 +277,15 @@ void CombatPage::DisplayAttacks()
     mAttackTabbedPanel->setVisible(true);
 }
 
-void CombatPage::DisplayResult()
+void CombatPage::DisplayResult(std::string inText, GoTo inWhereToGo)
 {
     mAttackTabbedPanel->setEnabled(false);
     mAttackTabbedPanel->setVisible(false);
     
+    mAttackResultPanel->SetText(inText);
+    mAttackResultPanel->SetGoTo(inWhereToGo);
     mAttackResultPanel->setEnabled(true);
     mAttackResultPanel->setVisible(true);
-
 }
 
 

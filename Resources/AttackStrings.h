@@ -126,6 +126,14 @@ public:
     static const std::string GhbFailed1;
     static const std::string GhbFailed2;
     static const std::string GhbFailed3;
+    
+    //Fin du monde
+    static const std::string FinMondeEffect1;
+    static const std::string FinMondeEffect2;
+    static const std::string FinMondeEffect3;
+    static const std::string FinMondeFailed1;
+    static const std::string FinMondeFailed2;
+    static const std::string FinMondeFailed3;
 
 
 };

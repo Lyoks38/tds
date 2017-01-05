@@ -121,7 +121,13 @@ const std::string AttackStrings::GhbFailed1 = "Tu te ravises. Tu pourrais quand 
 const std::string AttackStrings::GhbFailed2 = "Du GHB ? Sérieux, mec, tu vaux mieux que ça.";
 const std::string AttackStrings::GhbFailed3 = "Non non non, mauvaise idée !";
 
-
+//Fin du monde
+const std::string AttackStrings::FinMondeEffect1 = "“Il y aurait bien 2-3 trucs que je voudrais encore faire avant de mourir...“ dit-elle en se rapprochant ostensiblement de toi.";
+const std::string AttackStrings::FinMondeEffect2 = "“Raison de plus pour picoler alors !“ te répond-elle. J'aime cet état d'esprit.";
+const std::string AttackStrings::FinMondeEffect3 = "";
+const std::string AttackStrings::FinMondeFailed1 = "“Sérieux ?! Faut absolument que je choppe Chachou alors !“ crie-t-elle en s'enfuyant dans la foule. Pourquoi, monde cruel ?";
+const std::string AttackStrings::FinMondeFailed2 = "“C'était en 2012 la fin du monde, abruti.“ Gnagnagna ! Mademoiselle je-sais-tout, va ! Allez, on se casse !";
+const std::string AttackStrings::FinMondeFailed3 = "Elle est tellement saoule qu'elle s'effondre en larmes à l'idée de sa mort imminente. Une amie arrive pour la consoler et toi tu n'as plus qu'à aller voir ailleurs.";
 
 
 

@@ -282,7 +282,38 @@ void CombatManager::DisplayNextTarget()
 }
 
 
-
+void CombatManager::DisplayAttackEffect(Attack inAttack, bool inSuccess)
+{
+    int ind = rand() % 3;
+    std::string textToDisplay = "";
+    switch (ind) {
+        case 0:
+            textToDisplay = inSuccess ? inAttack.GetAttackText1() : inAttack.GetFailedText1();
+            break;
+        case 1:
+            textToDisplay = inSuccess ? inAttack.GetAttackText2() : inAttack.GetFailedText2();
+            break;
+        case 2:
+            textToDisplay = inSuccess ? inAttack.GetAttackText3() : inAttack.GetFailedText3();
+            break;
+        default:
+            break;
+    }
+    
+    GoTo whereTo;
+    
+    if(mRemainingActions == 0)
+        whereTo = END_EVENT;
+    else if(inSuccess)
+        whereTo = NEW_ATTACK;
+    else
+        whereTo = NEW_TARGET;
+    
+    MainContentComponent* mainWindow = mScenarioManager->GetMainGUI();
+    
+    if(mainWindow)
+        mainWindow->CombatPageDisplayResult(textToDisplay, whereTo);
+}
 
 /////////////////////////////////////////////////////////
 // Load Attacks

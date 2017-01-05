@@ -59,11 +59,12 @@ protected:
     int ComputeAttackEffect(Attack inAttack);
     float ComputeListCoeff();
     bool CanTargetBeCatched();
+    void ApplyAlcoholOnEveryone(){ /*Has to be called after every attack to apply the soirée effect*/};
     
     
     ////// GUI fonctions
     //Attacks
-    void DisplayAttackEffect(Attack inAttack, bool inSuccess){};
+    void DisplayAttackEffect(Attack inAttack, bool inSuccess);
     void DisplayFailedTargetOnAttack(Attack inAttack){ DisplayAttackEffect(inAttack, false); }
     //Catch
     void DisplayFailedTargetOnCatch(){};

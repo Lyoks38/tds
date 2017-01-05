@@ -70,9 +70,12 @@ public:
     
     ~AttackResultPanel();
     
-    void paint(juce::Graphics& inG) override {};
+    void paint(juce::Graphics& inG) override;
     
-    void onNiceComponentClicked(NiceComponent* inComp) override {};
+    void onNiceComponentClicked(NiceComponent* inComp) override;
+    
+    void SetText(std::string inText) { mTextToDisplay = inText; }
+    void SetGoTo(GoTo inWhereToGo) { mWhereToGo = inWhereToGo; }
     
 private:
     
@@ -104,7 +107,7 @@ public:
     void SendNextTargetToManager();
     
     void DisplayAttacks();
-    void DisplayResult();
+    void DisplayResult(std::string inText, GoTo inWhereToGo);
     
     void LoadInfos();
     

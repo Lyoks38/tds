@@ -163,6 +163,20 @@ bool MainContentComponent::DisplayCombatPage()
     return true;
 }
 
+
+bool MainContentComponent::CombatPageDisplayResult(std::string inText, GoTo inWhereToGo)
+{
+    if(mCurrentPage != mCombatPage.get()){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+        mCombatPage->setEnabled(true);
+        mCombatPage->setVisible(true);
+        mCurrentPage = mCombatPage.get();
+    }
+    
+    mCombatPage->DisplayResult(inText, inWhereToGo);
+}
+
 ///////////////////////////////////////////////////////////////
 // Interactions with the engine
 
