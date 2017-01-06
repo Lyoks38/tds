@@ -39,8 +39,8 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     
     Attack attack = Attack("Lui offrir un verre");
     attack.SetImpactsPlayer(true);
-    attack.SetPlayerImpact(10);
-    attack.SetBaseDamages(30);
+    attack.SetPlayerImpact(25);
+    attack.SetBaseDamages(20);
     attack.SetAttackText1(AttackStrings::BoireEffect1);
     attack.SetAttackText2(AttackStrings::BoireEffect2);
     attack.SetAttackText3(AttackStrings::BoireEffect3);
@@ -50,7 +50,9 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     output.push_back(attack);
     
     attack = Attack("Lui faire le coup de la Lamborghini");
-    attack.SetBaseDamages(20);
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(30);
+    attack.SetDiceThreshold(60);
     attack.SetAttackText1(AttackStrings::LamborghiniEffect1);
     attack.SetAttackText2(AttackStrings::LamborghiniEffect2);
     attack.SetAttackText3(AttackStrings::LamborghiniEffect3);
@@ -60,7 +62,9 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     output.push_back(attack);
     
     attack = Attack("Mettre ta main sur sa hanche");
-    attack.SetBaseDamages(25);
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(15);
+    attack.SetDiceThreshold(20);
     attack.SetAttackText1(AttackStrings::HancheEffect1);
     attack.SetAttackText2(AttackStrings::HancheEffect2);
     attack.SetAttackText3(AttackStrings::HancheEffect3);
@@ -70,9 +74,9 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     output.push_back(attack);
     
     attack = Attack("Lui crier : “T'es pas belle !“");
-    attack.SetImpactsPlayer(true);
-    attack.SetPlayerImpact(10);
-    attack.SetBaseDamages(30);
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(20);
+    attack.SetDiceThreshold(80);
     attack.SetAttackText1(AttackStrings::PasBelleEffect1);
     attack.SetAttackText2(AttackStrings::PasBelleEffect2);
     attack.SetAttackText3(AttackStrings::PasBelleEffect3);

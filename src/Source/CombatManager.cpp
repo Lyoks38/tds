@@ -33,11 +33,12 @@ void CombatManager::LoadNewCombat(const Event inEvent)
 {
     if(inEvent.IsKfet()){
         mRemainingActions = 10;
+        mAlcoolEffect = 5;
     }
     else{
         mRemainingActions = 20;
+        mAlcoolEffect = 3;
     }
-    mAlcoolEffect = static_cast<int>(mRemainingActions * 0.4f);
     
     mTargets = inEvent.GetTargets();
     
@@ -222,7 +223,7 @@ bool CombatManager::ApplyAlcoholOnEveryone()
     
     int new_defense;
     for(int i = mCurrentTarget+1; i < mTargets.size(); i++){ //mTarget+1 because the current target does not drink
-        new_defense = mTargets[i].GetDefense() - new_defense;
+        new_defense = mTargets[i].GetDefense() - mAlcoolEffect;
         mTargets[i].SetDefense(new_defense);
     }
     return true;
