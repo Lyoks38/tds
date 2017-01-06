@@ -37,6 +37,7 @@ void CombatManager::LoadNewCombat(const Event inEvent)
     else{
         mRemainingActions = 20;
     }
+    mAlcoolEffect = static_cast<int>(mRemainingActions * 0.4f);
     
     mTargets = inEvent.GetTargets();
     
@@ -161,6 +162,10 @@ float CombatManager::ComputeListCoeff()
 /////////////////////////////////////////////////////////
 void CombatManager::HandleAttack(Attack inAttack)
 {
+    if(!ApplyAlcoholOnEveryone()){
+        //End level with scenario manager
+    }
+    
     //Si l'attaque inflige des dégats au joueur
     if(inAttack.IsImpactingPlayer()){
         int previous_attack = mPlayer->GetAttack();
@@ -204,6 +209,24 @@ void CombatManager::HandleAttack(Attack inAttack)
     mRemainingActions--;
 }
 
+
+/////////////////////////////////////////////////////////
+bool CombatManager::ApplyAlcoholOnEveryone()
+{
+    int new_attack = mPlayer->GetAttack() - mAlcoolEffect;
+    
+    if(new_attack <= 0)
+        return false;
+    
+    mPlayer->SetAttack(new_attack);
+    
+    int new_defense;
+    for(int i = mCurrentTarget+1; i < mTargets.size(); i++){ //mTarget+1 because the current target does not drink
+        new_defense = mTargets[i].GetDefense() - new_defense;
+        mTargets[i].SetDefense(new_defense);
+    }
+    return true;
+}
 
 /////////////////////////////////////////////////////////
 bool CombatManager::CanTargetBeCatched()

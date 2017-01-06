@@ -50,6 +50,7 @@ protected:
     std::vector<Girl> mTargets;
     int mCurrentTarget = -1;
     int mRemainingActions = 20;
+    int mAlcoolEffect;
     
     juce::Image mEventBanner;
     std::string mEventName;
@@ -59,7 +60,7 @@ protected:
     int ComputeAttackEffect(Attack inAttack);
     float ComputeListCoeff();
     bool CanTargetBeCatched();
-    void ApplyAlcoholOnEveryone(){ /*Has to be called after every attack to apply the soirée effect*/};
+    bool ApplyAlcoholOnEveryone();
     
     
     ////// GUI fonctions

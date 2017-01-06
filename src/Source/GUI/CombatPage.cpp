@@ -145,7 +145,7 @@ void AttackTabbedGroup::paint(juce::Graphics &inG)
 // Attack Result Panel
 AttackResultPanel::AttackResultPanel()
 {
-    mContinueButton = new NiceComponent("Skip Target");
+    mContinueButton = new NiceComponent("Next Action");
     mContinueButton->SetTextToDisplay("Continuer");
     mContinueButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
     mContinueButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
@@ -153,6 +153,8 @@ AttackResultPanel::AttackResultPanel()
     mContinueButton->SetTextHoverColor(juce::Colour(230, 230, 230));
     mContinueButton->setBounds(200, 270, 200, 40);
     mContinueButton->AddListener(this);
+    
+    addAndMakeVisible(mContinueButton);
 }
 
 AttackResultPanel::~AttackResultPanel()
@@ -171,7 +173,28 @@ void AttackResultPanel::paint(juce::Graphics& inG)
 
 void AttackResultPanel::onNiceComponentClicked(NiceComponent *inComp)
 {
-    
+    switch (mWhereToGo) {
+        case END_EVENT:
+            //End event with scenario manager
+            break;
+        case NEW_ATTACK:{
+            CombatPage* parent = dynamic_cast<CombatPage*>(getParentComponent());
+            if(parent){
+                parent->LoadInfos();
+                parent->DisplayAttacks();
+            }
+        }
+            break;
+        case NEW_TARGET:{
+            CombatPage* parent = dynamic_cast<CombatPage*>(getParentComponent());
+            if(parent)
+                parent->SendNextTargetToManager();
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 ////////////////////////////////////////////////////////////////
 // CombatPage
