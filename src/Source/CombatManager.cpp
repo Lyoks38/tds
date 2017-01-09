@@ -186,7 +186,7 @@ void CombatManager::HandleAttack(Attack inAttack)
     bool attack_effective = true;
     if(inAttack.GetDiceThreshold() != -1){
         int dices = rand() % 100;
-        dices += (100 - previous_defense);
+        dices += (100 - previous_defense)*0.4f;
         attack_effective = dices >= inAttack.GetDiceThreshold();
     }
     
@@ -274,24 +274,33 @@ void CombatManager::GoToNextTarget()
 
 
 
-std::vector<Attack> CombatManager::DeliverAttacks()
+std::vector<Attack> CombatManager::DeliverAttacks() const
 {
     std::vector<Attack> out;
     out.resize(0);
     
     int ind;
     
-    /*while(static_cast<int>(out.size()) != 4){
+    while(static_cast<int>(out.size()) != 4){
         ind = rand() % mAttackDatabase.size();
         
-        auto it = std::find(out.begin(), out.end(), mAttackDatabase[ind]);
+        bool alreadyIn = false;
         
-        if(it == out.end())
-            out.push_back(mAttackDatabase[ind]);
+        for(int i = 0; i < static_cast<int>(out.size()) ; i++){
+            if(out[i].GetName() == mAttackDatabase[ind].GetName()){
+                alreadyIn = true;
+                break;
+            }
+        }
+        
+        if(!alreadyIn){
+            Attack attack = mAttackDatabase[ind];
+            out.push_back(attack);
+        }
     }
     
-    return out;*/
-    return mAttackDatabase;
+    return out;
+    //return mAttackDatabase;
 }
 
 /////////////////////////////////////////////////////////

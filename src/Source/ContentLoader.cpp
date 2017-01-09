@@ -64,7 +64,7 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     attack = Attack("Mettre ta main sur sa hanche");
     attack.SetImpactsPlayer(false);
     attack.SetBaseDamages(15);
-    attack.SetDiceThreshold(20);
+    attack.SetDiceThreshold(-1);
     attack.SetAttackText1(AttackStrings::HancheEffect1);
     attack.SetAttackText2(AttackStrings::HancheEffect2);
     attack.SetAttackText3(AttackStrings::HancheEffect3);
@@ -85,6 +85,55 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     attack.SetFailedText3(AttackStrings::PasBelleFailed3);
     output.push_back(attack);
 
+    attack = Attack("“Viens avec moi si tu veux vivre !“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(25);
+    attack.SetDiceThreshold(50);
+    attack.SetAttackText1(AttackStrings::TerminatorEffect1);
+    attack.SetAttackText2(AttackStrings::TerminatorEffect2);
+    attack.SetAttackText3(AttackStrings::TerminatorEffect3);
+    attack.SetFailedText1(AttackStrings::TerminatorFailed1);
+    attack.SetFailedText2(AttackStrings::TerminatorFailed2);
+    attack.SetFailedText3(AttackStrings::TerminatorFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("Trempette");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(0);
+    attack.SetDiceThreshold(-1);
+    attack.SetAttackText1(AttackStrings::TrempetteEffect1);
+    attack.SetAttackText2(AttackStrings::TrempetteEffect2);
+    attack.SetAttackText3(AttackStrings::TrempetteEffect3);
+    attack.SetFailedText1(AttackStrings::TrempetteFailed1);
+    attack.SetFailedText2(AttackStrings::TrempetteFailed2);
+    attack.SetFailedText3(AttackStrings::TrempetteFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“T'aimes le pain de mie ?“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(15);
+    attack.SetDiceThreshold(40);
+    attack.SetAttackText1(AttackStrings::HancheEffect1);
+    attack.SetAttackText2(AttackStrings::HancheEffect2);
+    attack.SetAttackText3(AttackStrings::HancheEffect3);
+    attack.SetFailedText1(AttackStrings::HancheFailed1);
+    attack.SetFailedText2(AttackStrings::HancheFailed2);
+    attack.SetFailedText3(AttackStrings::HancheFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“Dis camion !“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(30);
+    attack.SetDiceThreshold(80);
+    attack.SetAttackText1(AttackStrings::PasBelleEffect1);
+    attack.SetAttackText2(AttackStrings::PasBelleEffect2);
+    attack.SetAttackText3(AttackStrings::PasBelleEffect3);
+    attack.SetFailedText1(AttackStrings::PasBelleFailed1);
+    attack.SetFailedText2(AttackStrings::PasBelleFailed2);
+    attack.SetFailedText3(AttackStrings::PasBelleFailed3);
+    output.push_back(attack);
+
+    
     return output;
 }
 

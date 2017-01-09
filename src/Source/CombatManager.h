@@ -37,7 +37,7 @@ public:
     
     void HandleAttack(Attack inAttack);
     
-    std::vector<Attack> DeliverAttacks();
+    std::vector<Attack> DeliverAttacks() const;
     juce::Image GetBanner() const { return mEventBanner; }
     std::string GetEventName() const { return mEventName; }
     

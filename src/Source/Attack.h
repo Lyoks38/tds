@@ -20,7 +20,7 @@ public:
     Attack(Attack const &other);
     
     ~Attack(){};
-    
+        
     // Getters
     std::string GetName() const;
     int GetDiceThreshold() const;
