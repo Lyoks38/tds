@@ -18,9 +18,9 @@ const std::string ChoppeStrings::Text4 = "Elle se laisse aller et te détartre l
 const std::string ChoppeStrings::Text5 = "Tu ne comprends rien à ce qu'elle fait avec sa langue, mais bon, tu t'en fous, tu es en train de chopper. Aïe, putain elle t'a mordu.";
 const std::string ChoppeStrings::Text6 = "Un de tes potes arrive et commence à prendre des photos. Toi tu vas finir dans Secret Phoenix !";
 const std::string ChoppeStrings::Text7 = "Un de tes potes te rappelle discrètement que c'est sa fillotte que tu essayes de chopper. Mais bon, comme tu t'en fous, tu lui roules un gros patin et tu laisses ton pote dans son seum.";
-const std::string ChoppeStrings::Text8 = "";
-const std::string ChoppeStrings::Text9 = "";
-const std::string ChoppeStrings::Text10 = "";
+const std::string ChoppeStrings::Text8 = "Après ce baiser passionné, tu est recouvert de la moitié de son maquillage fluo. Tout le monde va savoir que vous êtes choppés rien qu'à ton visage bariolé.";
+const std::string ChoppeStrings::Text9 = "Une de ses potes arrive au moment où vous vous échangez vos bactéries buccales et l'arrache de tes bras. Mais c'est trop tard, le mal est fait ! Booyah !";
+const std::string ChoppeStrings::Text10 = "“Hé mais c'est ma meuf !“, Oups, déso' gros ! (Bien ouej sinon !)";
 
 const std::string ChoppeStrings::Fail1 = "Elle détourne la tête au dernier moment. Ah la salpoe !";
 const std::string ChoppeStrings::Fail2 = "Elle te repousse gentiment avec un sourire gêné. “Je préfère qu'on reste pote“. La classique.";
