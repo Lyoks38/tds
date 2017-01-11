@@ -9,6 +9,7 @@
 #include "CombatManager.h"
 #include "ScenarioManager.h"
 #include "MainComponent.h"
+#include "ChoppeStrings.h"
 
 
 CombatManager::CombatManager()
@@ -170,7 +171,7 @@ void CombatManager::HandleAttack(Attack inAttack)
     //Si l'attaque inflige des dégats au joueur
     if(inAttack.IsImpactingPlayer()){
         int previous_attack = mPlayer->GetAttack();
-        if(previous_attack + inAttack.GetPlayerImpact() < 0){
+        if(previous_attack - inAttack.GetPlayerImpact() < 0){
             // End level with ScenarioManager
         }
         else{
@@ -248,13 +249,13 @@ void CombatManager::TryToCatch()
         int dices = std::rand() %4;
         if(dices >= 1){
             mPlayer->AddChoppe(mTargets[mCurrentTarget].GetID());
-            DisplaySuccessCatch();
+            DisplayCatchResult(true);
         }
         else
-            DisplayFailedTargetOnCatch();
+            DisplayCatchResult(false);
     }
     else
-        DisplayFailedTargetOnCatch();
+        DisplayCatchResult(false);
 
 }
 
@@ -346,6 +347,61 @@ void CombatManager::DisplayAttackEffect(Attack inAttack, bool inSuccess)
     
     if(mainWindow)
         mainWindow->CombatPageDisplayResult(textToDisplay, whereTo);
+}
+
+
+void CombatManager::DisplayCatchResult(bool inSuccess)
+{
+    int ind = (rand() % 10) + 1;
+    
+    std::string textToDisplay = "";
+    switch (ind) {
+        case 1:
+            textToDisplay = inSuccess ? ChoppeStrings::Text1 : ChoppeStrings::Fail1;
+            break;
+        case 2:
+            textToDisplay = inSuccess ? ChoppeStrings::Text2 : ChoppeStrings::Fail2;
+            break;
+        case 3:
+            textToDisplay = inSuccess ? ChoppeStrings::Text3 : ChoppeStrings::Fail3;
+            break;
+        case 4:
+            textToDisplay = inSuccess ? ChoppeStrings::Text4 : ChoppeStrings::Fail4;
+            break;
+        case 5:
+            textToDisplay = inSuccess ? ChoppeStrings::Text5 : ChoppeStrings::Fail5;
+            break;
+        case 6:
+            textToDisplay = inSuccess ? ChoppeStrings::Text6 : ChoppeStrings::Fail6;
+            break;
+        case 7:
+            textToDisplay = inSuccess ? ChoppeStrings::Text7 : ChoppeStrings::Fail7;
+            break;
+        case 8:
+            textToDisplay = inSuccess ? ChoppeStrings::Text8 : ChoppeStrings::Fail8;
+            break;
+        case 9:
+            textToDisplay = inSuccess ? ChoppeStrings::Text9 : ChoppeStrings::Fail9;
+            break;
+        case 10:
+            textToDisplay = inSuccess ? ChoppeStrings::Text10 : ChoppeStrings::Fail10;
+            break;
+        default:
+            break;
+    }
+    
+    GoTo whereTo;
+    
+    if(mCurrentTarget == static_cast<int>(mTargets.size()-1)) //This was the last possible target of the event
+        whereTo = END_EVENT;
+    else
+        whereTo = NEW_TARGET;
+    
+    MainContentComponent* mainWindow = mScenarioManager->GetMainGUI();
+    
+    if(mainWindow)
+        mainWindow->CombatPageDisplayResult(textToDisplay, whereTo);
+
 }
 
 /////////////////////////////////////////////////////////

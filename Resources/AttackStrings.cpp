@@ -37,7 +37,7 @@ const std::string AttackStrings::PasBelleFailed3 = "“Je sais que j'ai pris du 
 const std::string AttackStrings::HancheEffect1 = "Elle se rappoche très perceptiblement de toi. Ça part bien mon gars.";
 const std::string AttackStrings::HancheEffect2 = "Elle passe également sa main sur tes hanches. Ça y est, tu bandes.";
 const std::string AttackStrings::HancheEffect3 = "Plus entreprenante, elle met carrément sa main sur ses fesses. C'est pas le moment de craquer.";
-const std::string AttackStrings::HancheFailed1 = "Elle repousse gentiment ta main avec air avec un sourire gêné. “Je croyais que tu étais gay...“ Ah, dommage !";
+const std::string AttackStrings::HancheFailed1 = "Elle repousse gentiment ta main avec un sourire gêné. “Je croyais que tu étais gay...“ Ah, dommage !";
 const std::string AttackStrings::HancheFailed2 = "Elle repousse ta main et se met à danser collé-serré avec sa pote. Message reçu, tu te casses.";
 const std::string AttackStrings::HancheFailed3 = "Un autre type arrive et lui met la main au cul. Elle se jette dans ses bras. Il a été plus entreprenant que toi, dommage.";
 

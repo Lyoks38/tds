@@ -68,8 +68,7 @@ protected:
     void DisplayAttackEffect(Attack inAttack, bool inSuccess);
     void DisplayFailedTargetOnAttack(Attack inAttack){ DisplayAttackEffect(inAttack, false); }
     //Catch
-    void DisplayFailedTargetOnCatch(){};
-    void DisplaySuccessCatch(){};
+    void DisplayCatchResult(bool inSuccess);
     //Event
     void DisplayFailedEvent(){};
     void DisplayNormalEvent(){};

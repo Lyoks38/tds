@@ -22,7 +22,7 @@ const std::string ChoppeStrings::Text8 = "Après ce baiser passionné, tu est re
 const std::string ChoppeStrings::Text9 = "Une de ses potes arrive au moment où vous vous échangez vos bactéries buccales et l'arrache de tes bras. Mais c'est trop tard, le mal est fait ! Booyah !";
 const std::string ChoppeStrings::Text10 = "“Hé mais c'est ma meuf !“, Oups, déso' gros ! (Bien ouej sinon !)";
 
-const std::string ChoppeStrings::Fail1 = "Elle détourne la tête au dernier moment. Ah la salpoe !";
+const std::string ChoppeStrings::Fail1 = "Elle détourne la tête au dernier moment. Ah la salope !";
 const std::string ChoppeStrings::Fail2 = "Elle te repousse gentiment avec un sourire gêné. “Je préfère qu'on reste pote“. La classique.";
 const std::string ChoppeStrings::Fail3 = "“Euh... Non ? Tu croyais quoi là ?“ Ok, message reçu.";
 const std::string ChoppeStrings::Fail4 = "Tu rates ton coup et lui fous ton nez dans son oeil. Elle n'apprécie pas trop et se barre.";
