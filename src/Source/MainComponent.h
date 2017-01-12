@@ -40,9 +40,10 @@ public:
     bool DisplayNewTarget(const Girl inTarget, juce::Image inBanner, std::string inEventName);
     bool DisplayCombatPage();
     bool CombatPageDisplayResult(std::string inText, GoTo inWhereToGo);
+    bool DisplayEndEvent(const Event inEvent, int inNbChoppes, bool inWasNotFailed);
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
-    bool GoToFirstEvent();
+    bool GoToNextEvent();
     bool GoToFirstTarget();
 
 private:
@@ -57,6 +58,7 @@ private:
     std::unique_ptr<NewEventPage> mNewEventPage = nullptr;
     std::unique_ptr<NewTargetPage> mNewTargetPage = nullptr;
     std::unique_ptr<CombatPage> mCombatPage = nullptr;
+    std::unique_ptr<EndEventPage> mEndEventPage = nullptr;
     
     
     juce::Component* mCurrentPage = nullptr; //maybe not useful

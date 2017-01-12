@@ -52,6 +52,8 @@ protected:
     int mRemainingActions = 20;
     int mAlcoolEffect;
     
+    int mNbChoppe = 0;
+    
     juce::Image mEventBanner;
     std::string mEventName;
     
@@ -70,8 +72,7 @@ protected:
     //Catch
     void DisplayCatchResult(bool inSuccess);
     //Event
-    void DisplayFailedEvent(){};
-    void DisplayNormalEvent(){};
+    void DisplayEndEvent(bool inWasNotFailed);
     //Others
     void DisplayNextTarget();
     

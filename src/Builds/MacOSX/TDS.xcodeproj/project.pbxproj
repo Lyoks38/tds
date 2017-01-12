@@ -32,6 +32,7 @@
 		45870CB21DF97E6600AEEAF7 /* NewTargetPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45870CB11DF97E6600AEEAF7 /* NewTargetPage.cpp */; };
 		45870CB41DF9858E00AEEAF7 /* ToString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45870CB31DF9858E00AEEAF7 /* ToString.cpp */; };
 		4588BE471DEC57120009374F /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588BE461DEC57120009374F /* Event.cpp */; };
+		4595565F1E27A2B6001A3D76 /* EndEventPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4595565E1E27A2B6001A3D76 /* EndEventPage.cpp */; };
 		459D61391E23B26F00B1DD16 /* ChoppeStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D61381E23B26F00B1DD16 /* ChoppeStrings.cpp */; };
 		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
 		45BD1DB21DD9DBC300FB65F1 /* NewPlayerMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */; };
@@ -409,6 +410,8 @@
 		45870CB31DF9858E00AEEAF7 /* ToString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ToString.cpp; path = ../../Source/ToString.cpp; sourceTree = "<group>"; };
 		4588BE451DEC57010009374F /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../../Source/Event.h; sourceTree = "<group>"; };
 		4588BE461DEC57120009374F /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Event.cpp; path = ../../Source/Event.cpp; sourceTree = "<group>"; };
+		4595565E1E27A2B6001A3D76 /* EndEventPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EndEventPage.cpp; path = ../../Source/GUI/EndEventPage.cpp; sourceTree = "<group>"; };
+		459556601E27A2E4001A3D76 /* EndEventPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EndEventPage.h; path = ../../Source/GUI/EndEventPage.h; sourceTree = "<group>"; };
 		459D61371E23B25B00B1DD16 /* ChoppeStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChoppeStrings.h; path = ../../../Resources/ChoppeStrings.h; sourceTree = "<group>"; };
 		459D61381E23B26F00B1DD16 /* ChoppeStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChoppeStrings.cpp; path = ../../../Resources/ChoppeStrings.cpp; sourceTree = "<group>"; };
 		45A453B12DC2D5F7343D37F0 /* compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = compat.h; path = ../../../JUCE/modules/juce_audio_formats/codecs/flac/compat.h; sourceTree = SOURCE_ROOT; };
@@ -1512,6 +1515,8 @@
 				45870CB01DF97E4600AEEAF7 /* NewTargetPage.h */,
 				456EAF8E1DFAD08A00A261FA /* CombatPage.cpp */,
 				456EAF901DFAD0B600A261FA /* CombatPage.h */,
+				4595565E1E27A2B6001A3D76 /* EndEventPage.cpp */,
+				459556601E27A2E4001A3D76 /* EndEventPage.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -3604,6 +3609,7 @@
 				4588BE471DEC57120009374F /* Event.cpp in Sources */,
 				19AFC5C51CFF751100ECBC63 /* Girl.cpp in Sources */,
 				F00E812FEF8BB3D7D9325E46 /* juce_cryptography.mm in Sources */,
+				4595565F1E27A2B6001A3D76 /* EndEventPage.cpp in Sources */,
 				194773DD1D0D97FA009AC9D5 /* CombatManager.cpp in Sources */,
 				83F8BBD33ABD7BF3635E0678 /* juce_data_structures.mm in Sources */,
 				458704771DF0443100B366B8 /* ImageUtils.cpp in Sources */,

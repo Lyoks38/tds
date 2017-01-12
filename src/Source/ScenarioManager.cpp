@@ -46,6 +46,11 @@ void ScenarioManager::GoToNextEvent()
     }
 }
 
+void ScenarioManager::EndEvent(int inNbChoppe, bool inWasNotFailed)
+{
+    mMainGUI->DisplayEndEvent(mEvents[mCurrentEvent], inNbChoppe, inWasNotFailed);
+}
+
 void ScenarioManager::FillEventWithTargets(Event& inEvent)
 {
     inEvent.SetTargets(mGirlDatabase); //just for testing for now

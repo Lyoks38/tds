@@ -98,7 +98,7 @@ void WelcomePage::onNiceComponentClicked(NiceComponent *inComp)
         
         MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
         if(parent)
-            parent->GoToFirstEvent();
+            parent->GoToNextEvent();
         
     }
 }

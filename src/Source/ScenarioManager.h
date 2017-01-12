@@ -52,6 +52,7 @@ public:
     
     //Manage Events
     void GoToNextEvent();
+    void EndEvent(int inNbChoppe, bool inWasNotFailed);
     void FillEventWithTargets(Event& inEvent);
     
     //GUI

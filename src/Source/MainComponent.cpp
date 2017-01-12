@@ -175,7 +175,34 @@ bool MainContentComponent::CombatPageDisplayResult(std::string inText, GoTo inWh
     }
     
     mCombatPage->DisplayResult(inText, inWhereToGo);
+    
+    return true;
 }
+
+
+bool MainContentComponent::DisplayEndEvent(const Event inEvent, int inNbChoppes, bool inWasNotFailed)
+{
+    if(mEndEventPage == nullptr){
+        
+        mEndEventPage.reset(new EndEventPage());
+        addChildComponent(mNewEventPage.get());
+        mEndEventPage->setBounds(0, 0, getWidth(), getHeight());
+    }
+    
+    mEndEventPage->LoadEventInfos(inEvent, inNbChoppes, inWasNotFailed);
+    
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
+    
+    mEndEventPage->setEnabled(true);
+    mEndEventPage->setVisible(true);
+    
+    mCurrentPage = mEndEventPage.get();
+    
+    return true;
+}
+
+
 
 ///////////////////////////////////////////////////////////////
 // Interactions with the engine
@@ -207,7 +234,7 @@ bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
 }
 
 
-bool MainContentComponent::GoToFirstEvent()
+bool MainContentComponent::GoToNextEvent()
 {
     if(mEngine != nullptr){
         

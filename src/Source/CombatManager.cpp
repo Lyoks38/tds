@@ -44,6 +44,7 @@ void CombatManager::LoadNewCombat(const Event inEvent)
     mTargets = inEvent.GetTargets();
     
     mCurrentTarget = -1;
+    mNbChoppe = 0;
     
     mEventBanner = inEvent.GetBanner();
     mEventName = inEvent.GetName();
@@ -165,17 +166,17 @@ float CombatManager::ComputeListCoeff()
 void CombatManager::HandleAttack(Attack inAttack)
 {
     if(!ApplyAlcoholOnEveryone()){
-        //End level with scenario manager
+        DisplayEndEvent(false);
     }
     
     //Si l'attaque inflige des dégats au joueur
     if(inAttack.IsImpactingPlayer()){
         int previous_attack = mPlayer->GetAttack();
         if(previous_attack - inAttack.GetPlayerImpact() < 0){
-            // End level with ScenarioManager
+            DisplayEndEvent(false);
         }
         else{
-            mPlayer->SetAttack(previous_attack + inAttack.GetPlayerImpact());
+            mPlayer->SetAttack(previous_attack - inAttack.GetPlayerImpact());
         }
     }
     
@@ -249,6 +250,7 @@ void CombatManager::TryToCatch()
         int dices = std::rand() %4;
         if(dices >= 1){
             mPlayer->AddChoppe(mTargets[mCurrentTarget].GetID());
+            mNbChoppe++;
             DisplayCatchResult(true);
         }
         else
@@ -266,7 +268,7 @@ void CombatManager::GoToNextTarget()
     
     if(mCurrentTarget >= static_cast<int>(mTargets.size())){
         mCurrentTarget = -1;
-        DisplayNormalEvent();
+        DisplayEndEvent(true);
     }
     else{
         DisplayNextTarget();
@@ -402,6 +404,12 @@ void CombatManager::DisplayCatchResult(bool inSuccess)
     if(mainWindow)
         mainWindow->CombatPageDisplayResult(textToDisplay, whereTo);
 
+}
+
+
+void CombatManager::DisplayEndEvent(bool inWasNotFailed)
+{
+    mScenarioManager->EndEvent(mNbChoppe, inWasNotFailed);
 }
 
 /////////////////////////////////////////////////////////
