@@ -105,6 +105,7 @@ public:
     void SendAttackToManager(Attack inAttack);
     void SendTryToCatchToManager();
     void SendNextTargetToManager();
+    void SendEndEventToManager();
     
     void DisplayAttacks();
     void DisplayResult(std::string inText, GoTo inWhereToGo);

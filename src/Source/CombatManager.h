@@ -44,6 +44,8 @@ public:
     const Girl* GetCurrentTarget() const { return &(mTargets[mCurrentTarget]); }
     int GetRemainingActions() const { return mRemainingActions; }
     int GetDrunkIndex() const { return mPlayer->GetAttack(); }
+    int GetTargetDrunkIndex() const { return mTargets[mCurrentTarget].GetDefense(); }
+    void EndEvent() { DisplayEndEvent(true); }
     
 protected:
     

@@ -185,7 +185,7 @@ bool MainContentComponent::DisplayEndEvent(const Event inEvent, int inNbChoppes,
     if(mEndEventPage == nullptr){
         
         mEndEventPage.reset(new EndEventPage());
-        addChildComponent(mNewEventPage.get());
+        addChildComponent(mEndEventPage.get());
         mEndEventPage->setBounds(0, 0, getWidth(), getHeight());
     }
     

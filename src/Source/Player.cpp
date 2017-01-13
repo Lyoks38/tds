@@ -61,6 +61,8 @@ void Player::AddChoppe(int inChoppeID)
         return;*/
     
     mChoppes.push_back(inChoppeID);
+    
+    SetReputation(mReputation + 5);
 }
 
 

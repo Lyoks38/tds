@@ -236,7 +236,7 @@ bool CombatManager::CanTargetBeCatched()
 {
     int girl_defense = mTargets[mCurrentTarget].GetDefense();
     
-    if(girl_defense <= 15 && mPlayer->GetAttack() >= girl_defense)
+    if(girl_defense <= 25 && mPlayer->GetAttack() >= girl_defense)
         return true;
     else
         return false;
@@ -247,14 +247,9 @@ bool CombatManager::CanTargetBeCatched()
 void CombatManager::TryToCatch()
 {
     if(CanTargetBeCatched()){
-        int dices = std::rand() %4;
-        if(dices >= 1){
-            mPlayer->AddChoppe(mTargets[mCurrentTarget].GetID());
-            mNbChoppe++;
-            DisplayCatchResult(true);
-        }
-        else
-            DisplayCatchResult(false);
+        mPlayer->AddChoppe(mTargets[mCurrentTarget].GetID());
+        mNbChoppe++;
+        DisplayCatchResult(true);
     }
     else
         DisplayCatchResult(false);

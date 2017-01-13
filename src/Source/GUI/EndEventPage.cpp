@@ -70,14 +70,27 @@ void EndEventPage::paint(juce::Graphics& inG)
     inG.setGradientFill(grad);
     inG.fillRect(0, 0, getWidth(), 200);
     
-    std::string type = mIsKfet ? "Kfet" : "Soirée";
     inG.setFont(mMainFont);
     inG.setColour(juce::Colours::white);
-    inG.drawText(mEventName + "(" + type + ")", 0, 20, getWidth(), 150, juce::Justification::centred);
+    inG.drawText(mEventName, 0, 20, getWidth(), 150, juce::Justification::centred);
+    inG.setFont(40.f);
+    inG.drawText("Resume :", 200, 300, 400, 100, juce::Justification::centred);
+
+    inG.setFont(Font(26.f));
     
-    inG.setFont(Font(40.f));
-    inG.drawText("Type : " + type, 200, 200, 400, 100, juce::Justification::centred);
-    inG.drawText("Lieu : " + mLocation, 200, 400, 400, 100, juce::Justification::centred);
-    inG.drawText("Nombre de choppes : " + std::to_string(mNbChoppes) + " / " + std::to_string(mNbTargets), 200, 300, 400, 100, juce::Justification::centred);
+    std::string type = mIsKfet ? "Kfet" : "Soirée";
+    std::string catchText;
+    if(mWasNotFailed)
+        catchText = "Là baaaaaas au Connemaraaaaaaaa ! Allez, fin de la soirée ! Voyons voir un peu ton score !";
+    else
+        catchText = "Tu es trop saoul et tu finis en PLS. Un pauvre staff est obligé de te ramener chez toi. Voyons quand même ton score...";
+    
+    inG.setFont(16.f);
+    inG.drawMultiLineText(catchText, 100, 270, 600);
+    inG.drawText("Type : " + type, 200, 370, 400, 50, juce::Justification::centred);
+    inG.drawText("Lieu : " + mLocation, 200, 400, 400, 50, juce::Justification::centred);
+    inG.drawText("Nombre de choppes : " + std::to_string(mNbChoppes) + " / " + std::to_string(mNbTargets), 200, 430, 400, 50, juce::Justification::centred);
+    inG.drawText("Bonus de reputation : + " + std::to_string(mNbChoppes * 5), 200, 460, 400, 50, juce::Justification::centred);
+
 }
 

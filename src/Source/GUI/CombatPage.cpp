@@ -174,9 +174,13 @@ void AttackResultPanel::paint(juce::Graphics& inG)
 void AttackResultPanel::onNiceComponentClicked(NiceComponent *inComp)
 {
     switch (mWhereToGo) {
-        case END_EVENT:
-            //End event with scenario manager
+        case END_EVENT:{
+            CombatPage* parent = dynamic_cast<CombatPage*>(getParentComponent());
+            if(parent){
+                parent->SendEndEventToManager();
+            }
             break;
+        }
         case NEW_ATTACK:{
             CombatPage* parent = dynamic_cast<CombatPage*>(getParentComponent());
             if(parent){
@@ -290,6 +294,11 @@ void CombatPage::SendTryToCatchToManager()
         mManager->TryToCatch();
 }
 
+void CombatPage::SendEndEventToManager()
+{
+    if(mManager)
+        mManager->EndEvent();
+}
 
 void CombatPage::DisplayAttacks()
 {
@@ -298,6 +307,8 @@ void CombatPage::DisplayAttacks()
     
     mAttackTabbedPanel->setEnabled(true);
     mAttackTabbedPanel->setVisible(true);
+    
+    repaint();
 }
 
 void CombatPage::DisplayResult(std::string inText, GoTo inWhereToGo)
@@ -309,6 +320,8 @@ void CombatPage::DisplayResult(std::string inText, GoTo inWhereToGo)
     mAttackResultPanel->SetGoTo(inWhereToGo);
     mAttackResultPanel->setEnabled(true);
     mAttackResultPanel->setVisible(true);
+    
+    repaint();
 }
 
 
