@@ -8,11 +8,11 @@
 
 #pragma once
 
-#define MAX_ACTIONS_SOIREE 30
+#define MAX_ACTIONS_SOIREE 20
 #define MAX_ACTIONS_KFET 10
 
-#define MAX_TARGETS_SOIREE 6
-#define MAX_TARGETS_KFET 3
+#define MAX_TARGETS_SOIREE 8
+#define MAX_TARGETS_KFET 4
 
 class MainContentComponent;
 

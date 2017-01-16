@@ -76,7 +76,7 @@ void EndEventPage::paint(juce::Graphics& inG)
     inG.setFont(40.f);
     inG.drawText("Resume :", 200, 300, 400, 100, juce::Justification::centred);
 
-    inG.setFont(Font(26.f));
+    inG.setFont(Font(24.f));
     
     std::string type = mIsKfet ? "Kfet" : "Soirée";
     std::string catchText;
@@ -85,8 +85,9 @@ void EndEventPage::paint(juce::Graphics& inG)
     else
         catchText = "Tu es trop saoul et tu finis en PLS. Un pauvre staff est obligé de te ramener chez toi. Voyons quand même ton score...";
     
+    inG.drawMultiLineText(catchText, 100, 230, 600);
+
     inG.setFont(16.f);
-    inG.drawMultiLineText(catchText, 100, 270, 600);
     inG.drawText("Type : " + type, 200, 370, 400, 50, juce::Justification::centred);
     inG.drawText("Lieu : " + mLocation, 200, 400, 400, 50, juce::Justification::centred);
     inG.drawText("Nombre de choppes : " + std::to_string(mNbChoppes) + " / " + std::to_string(mNbTargets), 200, 430, 400, 50, juce::Justification::centred);

@@ -159,6 +159,7 @@ AttackResultPanel::AttackResultPanel()
 
 AttackResultPanel::~AttackResultPanel()
 {
+    deleteAllChildren();
 }
 
 void AttackResultPanel::paint(juce::Graphics& inG)
@@ -220,7 +221,7 @@ juce::Component("Combat Page")
 
 CombatPage::~CombatPage()
 {
-    removeAllChildren();
+    deleteAllChildren();
 }
 
 
@@ -252,6 +253,7 @@ void CombatPage::paint(juce::Graphics &inG)
     inG.drawText("Actions restantes :", 620, 450, 150, 30, juce::Justification::centred);
     inG.drawText(std::to_string(nbActions), 620, 475, 150, 30, juce::Justification::centred);
     
+    //Barre de sobriété du joueur
     float sober = mManager->GetDrunkIndex() / 100.f;
     juce::Colour colour;
     if(sober >= 0.4f)
@@ -267,6 +269,19 @@ void CombatPage::paint(juce::Graphics &inG)
     inG.drawRoundedRectangle(30.f, 486.f, 120.f, 12.f, 5.f, 2.f);
 
     inG.drawText("Sobriete :", 30, 450, 120, 30, juce::Justification::centred);
+    
+    sober = currentTarget->GetDefense() / 100.f;
+    if(sober >= 0.4f)
+        colour = juce::Colour(0xff25c73a);
+    else if(sober >= 0.15f)
+        colour = juce::Colour(0xffffb429);
+    else
+        colour = juce::Colour(0xfff44e47);
+    
+    inG.setColour(colour);
+    inG.fillRoundedRectangle(100.f, 220.f, 600.f * sober, 12.f, 5.f);
+    inG.setColour(juce::Colours::white);
+    inG.drawRoundedRectangle(100, 220.f, 600.f, 12.f, 5.f, 2.f);
     
 }
 

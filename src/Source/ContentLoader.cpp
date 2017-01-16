@@ -50,6 +50,71 @@ std::vector<Girl> ContentLoader::LoadGirlDatabase()
     id++;
     
     output.push_back(Girl(attr));
+
+    attr.mName = "Elise";
+    attr.mGenre = LISTEE;
+    attr.mListe = PEARL;
+    attr.mID = id;
+    id++;
+
+    output.push_back(Girl(attr));
+    
+    attr.mName = "Floriane";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = PLAY;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+    
+    attr.mName = "Emma";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+    
+    attr.mName = "Agathe";
+    attr.mGenre = LISTEE;
+    attr.mListe = PEUF;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Morgane";
+    attr.mGenre = LISTEE;
+    attr.mListe = FOX;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+    
+    attr.mName = "Mathilde";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+    
+    attr.mName = "Pauline";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = FRAP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+    
+    attr.mName = "Sarah";
+    attr.mGenre = LISTEE;
+    attr.mListe = SPACE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
     
     return output;
 }
@@ -157,7 +222,90 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     attack.SetFailedText3(AttackStrings::CamionFailed3);
     output.push_back(attack);
 
+    attack = Attack("Lui mettre la main au cul");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(20);
+    attack.SetDiceThreshold(20);
+    attack.SetAttackText1(AttackStrings::MainsCulEffect1);
+    attack.SetAttackText2(AttackStrings::MainsCulEffect2);
+    attack.SetAttackText3(AttackStrings::MainsCulEffect3);
+    attack.SetFailedText1(AttackStrings::MainsCulFailed1);
+    attack.SetFailedText2(AttackStrings::MainsCulFailed2);
+    attack.SetFailedText3(AttackStrings::MainsCulFailed3);
+    output.push_back(attack);
+
+    attack = Attack("Danser avec elle");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(10);
+    attack.SetDiceThreshold(-1);
+    attack.SetAttackText1(AttackStrings::DanserEffect1);
+    attack.SetAttackText2(AttackStrings::DanserEffect2);
+    attack.SetAttackText3(AttackStrings::DanserEffect3);
+    attack.SetFailedText1(AttackStrings::DanserFailed1);
+    attack.SetFailedText2(AttackStrings::DanserFailed2);
+    attack.SetFailedText3(AttackStrings::DanserFailed3);
+    output.push_back(attack);
+
+    attack = Attack("Danser collé-serré avec elle");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(20);
+    attack.SetDiceThreshold(20);
+    attack.SetAttackText1(AttackStrings::DanserSerreEffect1);
+    attack.SetAttackText2(AttackStrings::DanserSerreEffect2);
+    attack.SetAttackText3(AttackStrings::DanserSerreEffect3);
+    attack.SetFailedText1(AttackStrings::DanserSerreFailed1);
+    attack.SetFailedText2(AttackStrings::DanserSerreFailed2);
+    attack.SetFailedText3(AttackStrings::DanserSerreFailed3);
+    output.push_back(attack);
     
+    attack = Attack("“J'ai le Syndrôme de l'Enorme Pénis !“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(30);
+    attack.SetDiceThreshold(60);
+    attack.SetAttackText1(AttackStrings::SepEffect1);
+    attack.SetAttackText2(AttackStrings::SepEffect2);
+    attack.SetAttackText3(AttackStrings::SepEffect3);
+    attack.SetFailedText1(AttackStrings::SepFailed1);
+    attack.SetFailedText2(AttackStrings::SepFailed2);
+    attack.SetFailedText3(AttackStrings::SepFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“I'm Batman !“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(30);
+    attack.SetDiceThreshold(50);
+    attack.SetAttackText1(AttackStrings::BatmanEffect1);
+    attack.SetAttackText2(AttackStrings::BatmanEffect2);
+    attack.SetAttackText3(AttackStrings::BatmanEffect3);
+    attack.SetFailedText1(AttackStrings::BatmanFailed1);
+    attack.SetFailedText2(AttackStrings::BatmanFailed2);
+    attack.SetFailedText3(AttackStrings::BatmanFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("Mettre du GHB dans son verre");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(80);
+    attack.SetDiceThreshold(99);
+    attack.SetAttackText1(AttackStrings::GhbEffect1);
+    attack.SetAttackText2(AttackStrings::GhbEffect2);
+    attack.SetAttackText3(AttackStrings::GhbEffect3);
+    attack.SetFailedText1(AttackStrings::GhbFailed1);
+    attack.SetFailedText2(AttackStrings::GhbFailed2);
+    attack.SetFailedText3(AttackStrings::GhbFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“Tu sais que la fin du monde est dans 3 jours ?“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(40);
+    attack.SetDiceThreshold(65);
+    attack.SetAttackText1(AttackStrings::FinMondeEffect1);
+    attack.SetAttackText2(AttackStrings::FinMondeEffect2);
+    attack.SetAttackText3(AttackStrings::FinMondeEffect3);
+    attack.SetFailedText1(AttackStrings::FinMondeFailed1);
+    attack.SetFailedText2(AttackStrings::FinMondeFailed2);
+    attack.SetFailedText3(AttackStrings::FinMondeFailed3);
+    output.push_back(attack);
+
     return output;
 }
 

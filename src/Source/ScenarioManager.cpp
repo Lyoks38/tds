@@ -53,7 +53,32 @@ void ScenarioManager::EndEvent(int inNbChoppe, bool inWasNotFailed)
 
 void ScenarioManager::FillEventWithTargets(Event& inEvent)
 {
-    inEvent.SetTargets(mGirlDatabase); //just for testing for now
+    std::vector<Girl> out;
+    out.resize(0);
+    
+    int ind;
+    
+    int size = inEvent.IsKfet() ? MAX_TARGETS_KFET : MAX_TARGETS_SOIREE;
+    
+    while(static_cast<int>(out.size()) != size){
+        ind = rand() % mGirlDatabase.size();
+        
+        bool alreadyIn = false;
+        
+        for(int i = 0; i < static_cast<int>(out.size()) ; i++){
+            if(out[i].GetID() == ind){
+                alreadyIn = true;
+                break;
+            }
+        }
+        
+        if(!alreadyIn){
+            Girl target = mGirlDatabase[ind];
+            out.push_back(target);
+        }
+    }
+    
+    inEvent.SetTargets(out); //just for testing for now
 }
 
 

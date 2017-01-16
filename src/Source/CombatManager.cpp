@@ -298,7 +298,6 @@ std::vector<Attack> CombatManager::DeliverAttacks() const
     }
     
     return out;
-    //return mAttackDatabase;
 }
 
 /////////////////////////////////////////////////////////
