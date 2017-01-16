@@ -70,6 +70,7 @@ int Attack::GetBaseDamages() const
 /////////////////////////////////////
 std::string Attack::GetAttackText(bool inSuccess) const
 {
+    srand(time(NULL));
     int select = rand()%3;
     std::string output_text;
     

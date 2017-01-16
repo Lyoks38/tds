@@ -294,7 +294,7 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     attack.SetFailedText3(AttackStrings::GhbFailed3);
     output.push_back(attack);
     
-    attack = Attack("“Tu sais que la fin du monde est dans 3 jours ?“");
+    attack = Attack("“T'sais que la fin du monde est dans 3 jours ?“");
     attack.SetImpactsPlayer(false);
     attack.SetBaseDamages(40);
     attack.SetDiceThreshold(65);

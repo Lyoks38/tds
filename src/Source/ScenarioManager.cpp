@@ -20,8 +20,6 @@ ScenarioManager::ScenarioManager()
     mCombatManager->SetScenarioManager(this);
     
     LoadAttacks();
-
-    srand(time(NULL));
 }
 
 
@@ -60,6 +58,7 @@ void ScenarioManager::FillEventWithTargets(Event& inEvent)
     
     int size = inEvent.IsKfet() ? MAX_TARGETS_KFET : MAX_TARGETS_SOIREE;
     
+    srand(time(NULL));
     while(static_cast<int>(out.size()) != size){
         ind = rand() % mGirlDatabase.size();
         

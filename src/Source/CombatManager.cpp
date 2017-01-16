@@ -187,6 +187,7 @@ void CombatManager::HandleAttack(Attack inAttack)
     //Si l'attaque nécessite un jet de dés
     bool attack_effective = true;
     if(inAttack.GetDiceThreshold() != -1){
+        srand(time(NULL));
         int dices = rand() % 100;
         dices += (100 - previous_defense)*0.4f;
         attack_effective = dices >= inAttack.GetDiceThreshold();
@@ -279,6 +280,7 @@ std::vector<Attack> CombatManager::DeliverAttacks() const
     
     int ind;
     
+    srand(time(NULL));
     while(static_cast<int>(out.size()) != 4){
         ind = rand() % mAttackDatabase.size();
         
@@ -314,6 +316,7 @@ void CombatManager::DisplayNextTarget()
 
 void CombatManager::DisplayAttackEffect(Attack inAttack, bool inSuccess)
 {
+    srand(time(NULL));
     int ind = rand() % 3;
     std::string textToDisplay = "";
     switch (ind) {
@@ -348,6 +351,7 @@ void CombatManager::DisplayAttackEffect(Attack inAttack, bool inSuccess)
 
 void CombatManager::DisplayCatchResult(bool inSuccess)
 {
+    srand(time(NULL));
     int ind = (rand() % 10) + 1;
     
     std::string textToDisplay = "";
