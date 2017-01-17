@@ -20,7 +20,9 @@ Player::Player()
     mGenre = POLARD;
     mListe = NON_LISTE;
     mReputation = 0;
-    mChoppes.resize(0);
+    
+    for(int i = 0; i < GIRL_DATABASE_SIZE; i++)
+        mChoppes[i] = 0;
 }
 
 /////////////////////////////////////////
@@ -30,7 +32,9 @@ Player::Player(PlayerAttributes inAttributes)
     mGenre = inAttributes.mGenre;
     mListe = inAttributes.mListe;
     mReputation = inAttributes.mReputation;
-    mChoppes = inAttributes.mChoppes;
+    
+    for(int i = 0; i < GIRL_DATABASE_SIZE; i++)
+        mChoppes[i] = inAttributes.mChoppes[i];
 }
 
 
@@ -57,14 +61,23 @@ void Player::SetReputation(int inReputation)
 void Player::AddChoppe(int inChoppeID)
 {
     //Sanity check to complete
-    /*if(inChoppeID < 0 || inChoppeID >= MAX_GIRLS_)
-        return;*/
+    if(inChoppeID < 0 || inChoppeID >= GIRL_DATABASE_SIZE)
+        return;
     
-    mChoppes.push_back(inChoppeID);
+    mChoppes[inChoppeID]++;
     
     SetReputation(mReputation + 5);
 }
 
+/////////////////////////////////////
+int Player::GetNbChoppeForID(int inChoppeID)
+{
+    //Sanity check to complete
+    if(inChoppeID < 0 || inChoppeID >= GIRL_DATABASE_SIZE)
+        return -1;
+    
+    return mChoppes[inChoppeID];
+}
 
 
 

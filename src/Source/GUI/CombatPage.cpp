@@ -221,7 +221,8 @@ juce::Component("Combat Page")
 
 CombatPage::~CombatPage()
 {
-    deleteAllChildren();
+    mAttackResultPanel.reset(nullptr);
+    mAttackTabbedPanel.reset(nullptr);
 }
 
 

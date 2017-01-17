@@ -348,7 +348,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mFrapButton->SetToggleState(false);
     }
     else if(inComp == mPulpButton){
-        mNewPlayerAttributes.mListe = WHOOP;
+        mNewPlayerAttributes.mListe = PULP;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
@@ -359,7 +359,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mFrapButton->SetToggleState(false);
     }
     else if(inComp == mSpaceButton){
-        mNewPlayerAttributes.mListe = WHOOP;
+        mNewPlayerAttributes.mListe = SPACE;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
@@ -370,7 +370,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mFrapButton->SetToggleState(false);
     }
     else if(inComp == mPeufButton){
-        mNewPlayerAttributes.mListe = WHOOP;
+        mNewPlayerAttributes.mListe = PEUF;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
@@ -381,7 +381,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mFrapButton->SetToggleState(false);
     }
     else if(inComp == mPearlButton){
-        mNewPlayerAttributes.mListe = WHOOP;
+        mNewPlayerAttributes.mListe = PEARL;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
@@ -392,7 +392,7 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         mFrapButton->SetToggleState(false);
     }
     else if(inComp == mFrapButton){
-        mNewPlayerAttributes.mListe = WHOOP;
+        mNewPlayerAttributes.mListe = FRAP;
         mFoxButton->SetToggleState(false);
         mTopButton->SetToggleState(false);
         mPlayButton->SetToggleState(false);
@@ -409,7 +409,9 @@ void NewPlayerMenu::onNiceComponentClicked(NiceComponent *inComp)
         //TODO : check we do not send wrong datas !
         mNewPlayerAttributes.mName = mPlayerNameEditor->getText().toStdString();
         mNewPlayerAttributes.mReputation = 0.f;
-        mNewPlayerAttributes.mChoppes.resize(0);
+        
+        for(int i = 0; i < GIRL_DATABASE_SIZE; i++)
+            mNewPlayerAttributes.mChoppes[i] = 0;
         
         MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
         if(parent)

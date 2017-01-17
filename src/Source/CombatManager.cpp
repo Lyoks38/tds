@@ -33,11 +33,11 @@ void CombatManager::SetScenarioManager(ScenarioManager* inScenarioManager)
 void CombatManager::LoadNewCombat(const Event inEvent)
 {
     if(inEvent.IsKfet()){
-        mRemainingActions = 10;
+        mRemainingActions = MAX_ACTIONS_KFET;
         mAlcoolEffect = 5;
     }
     else{
-        mRemainingActions = 20;
+        mRemainingActions = MAX_ACTIONS_SOIREE;
         mAlcoolEffect = 3;
     }
     
@@ -172,7 +172,7 @@ void CombatManager::HandleAttack(Attack inAttack)
     //Si l'attaque inflige des dégats au joueur
     if(inAttack.IsImpactingPlayer()){
         int previous_attack = mPlayer->GetAttack();
-        if(previous_attack - inAttack.GetPlayerImpact() < 0){
+        if(previous_attack - inAttack.GetPlayerImpact() <= 0){
             DisplayEndEvent(false);
         }
         else{

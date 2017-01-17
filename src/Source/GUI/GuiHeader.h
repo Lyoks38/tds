@@ -12,6 +12,7 @@ class NewEventPage;
 class NewTargetPage;
 class CombatPage;
 class EndEventPage;
+class EndGamePage;
 
 
 //This is where all the headers for GUI windows should be included
@@ -22,3 +23,5 @@ class EndEventPage;
 #include "NewTargetPage.h"
 #include "CombatPage.h"
 #include "EndEventPage.h"
+#include "EndGamePage.h"
+

@@ -19,7 +19,7 @@ public:
         PlayerGenre mGenre;
         List mListe;
         int mReputation;
-        std::vector<int> mChoppes;
+        int mChoppes[GIRL_DATABASE_SIZE];
     };
     
     // Constructors
@@ -35,7 +35,7 @@ public:
     List GetListe() { return mListe; }
     int GetAttack() { return mAttack; }
     int GetReputation() { return mReputation; }
-    
+    int GetNbChoppeForID(int inID);
     
     //Setters
     void SetAttack(int inAttack);
@@ -48,7 +48,7 @@ protected:
     int mAttack;
     int mReputation;
     
-    std::vector<int> mChoppes;
+    int mChoppes[GIRL_DATABASE_SIZE];
     
 private:
     

@@ -34,6 +34,7 @@
 		4588BE471DEC57120009374F /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4588BE461DEC57120009374F /* Event.cpp */; };
 		4595565F1E27A2B6001A3D76 /* EndEventPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4595565E1E27A2B6001A3D76 /* EndEventPage.cpp */; };
 		459D61391E23B26F00B1DD16 /* ChoppeStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 459D61381E23B26F00B1DD16 /* ChoppeStrings.cpp */; };
+		45AB76161E2E40380055794C /* EndGamePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AB76151E2E40380055794C /* EndGamePage.cpp */; };
 		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
 		45BD1DB21DD9DBC300FB65F1 /* NewPlayerMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */; };
 		47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50A5B0E5097DF0431F8E565E /* juce_video.mm */; };
@@ -416,6 +417,8 @@
 		459D61381E23B26F00B1DD16 /* ChoppeStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChoppeStrings.cpp; path = ../../../Resources/ChoppeStrings.cpp; sourceTree = "<group>"; };
 		45A453B12DC2D5F7343D37F0 /* compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = compat.h; path = ../../../JUCE/modules/juce_audio_formats/codecs/flac/compat.h; sourceTree = SOURCE_ROOT; };
 		45A7FCBFAE599B4149CB3AFE /* juce_Primes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_Primes.cpp; path = ../../../JUCE/modules/juce_cryptography/encryption/juce_Primes.cpp; sourceTree = SOURCE_ROOT; };
+		45AB76141E2E40220055794C /* EndGamePage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EndGamePage.h; path = ../../Source/GUI/EndGamePage.h; sourceTree = "<group>"; };
+		45AB76151E2E40380055794C /* EndGamePage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EndGamePage.cpp; path = ../../Source/GUI/EndGamePage.cpp; sourceTree = "<group>"; };
 		45AF5D111677436893631F55 /* juce_AudioProcessorGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_AudioProcessorGraph.h; path = ../../../JUCE/modules/juce_audio_processors/processors/juce_AudioProcessorGraph.h; sourceTree = SOURCE_ROOT; };
 		45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NiceButton.cpp; path = ../../Source/GUI/Utils/NiceButton.cpp; sourceTree = "<group>"; };
 		45BD1DB01DD9DBA700FB65F1 /* NewPlayerMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewPlayerMenu.h; path = ../../Source/GUI/NewPlayerMenu.h; sourceTree = "<group>"; };
@@ -1517,6 +1520,8 @@
 				456EAF901DFAD0B600A261FA /* CombatPage.h */,
 				4595565E1E27A2B6001A3D76 /* EndEventPage.cpp */,
 				459556601E27A2E4001A3D76 /* EndEventPage.h */,
+				45AB76151E2E40380055794C /* EndGamePage.cpp */,
+				45AB76141E2E40220055794C /* EndGamePage.h */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -3594,6 +3599,7 @@
 				4587047A1DF0464C00B366B8 /* BarbecueGc.cpp in Sources */,
 				8A90362B991A587E24EC5F3F /* Main.cpp in Sources */,
 				456B11611DD34E0200680878 /* OrangeJuice.cpp in Sources */,
+				45AB76161E2E40380055794C /* EndGamePage.cpp in Sources */,
 				45870CB21DF97E6600AEEAF7 /* NewTargetPage.cpp in Sources */,
 				D9794C895C21F16D49611B2A /* juce_audio_basics.mm in Sources */,
 				19AFC5C91CFF7B1000ECBC63 /* Player.cpp in Sources */,

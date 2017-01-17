@@ -318,5 +318,14 @@ std::vector<Event> ContentLoader::LoadEvents()
     Event newEvent = Event("Barbecue GC", true, ImageUtils::BarbecueGC, "MINP");
     output.push_back(newEvent);
     
+    newEvent = Event("Kfet Inté Phelma", true, ImageUtils::BarbecueGC, "MINP");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Soirée Inté GC", false, ImageUtils::BarbecueGC, "Chapiteau");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Soirée Inté Phelma", false, ImageUtils::BarbecueGC, "Cham'");
+    output.push_back(newEvent);
+    
     return output;
 }
