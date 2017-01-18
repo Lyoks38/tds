@@ -20,13 +20,21 @@ class EndGamePage: public juce::Component, public NiceComponentListener
     
 public:
     
+    enum EndGame{
+        CLASSIC = 0,
+        DEFEAT,
+        VICTORY
+    } typedef EndGame;
+    
     EndGamePage();
     
     ~EndGamePage();
     
-    void LoadPlayerInfos(Player* inPlayer);
+    void LoadPlayerInfos(Player* inPlayer, EndGame inGame);
     
     void paint(juce::Graphics& inG) override;
+    
+    static const std::string kClassicText1;
     
 protected:
     
@@ -37,9 +45,16 @@ private:
     std::string mPlayerName;
     PlayerGenre mPlayerGenre;
     List mPlayerList;
-    int mNbChoppe;
+    int mNbChoppesTotal;
+    int mNbChoppesPerso;
+    
+    EndGame mEnd = CLASSIC;
     
     NiceComponent* mReturnToMainMenuButton;
+    
+    void PaintClassicResult(juce::Graphics& inG);
+    void PaintDefeatResult(juce::Graphics& inG);
+    void PaintVictoryResult(juce::Graphics& inG);
     
     juce::Font mMainFont;
     

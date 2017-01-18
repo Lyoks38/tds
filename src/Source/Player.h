@@ -36,6 +36,7 @@ public:
     int GetAttack() { return mAttack; }
     int GetReputation() { return mReputation; }
     int GetNbChoppeForID(int inID);
+    std::string GetName() const { return mName; }
     
     //Setters
     void SetAttack(int inAttack);

@@ -11,7 +11,7 @@
 #include "MainComponent.h"
 
 EndEventPage::EndEventPage():
-juce::Component("New Event Page")
+juce::Component("End Event Page")
 {
     mNextEventButton = new NiceComponent("Go To Next Event");
     mNextEventButton->SetTextToDisplay("CONTINUER");

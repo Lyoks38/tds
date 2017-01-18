@@ -143,7 +143,8 @@ void AttackTabbedGroup::paint(juce::Graphics &inG)
 
 ////////////////////////////////////////////////////////////////
 // Attack Result Panel
-AttackResultPanel::AttackResultPanel()
+AttackResultPanel::AttackResultPanel():
+juce::Component("Attack Result Panel")
 {
     mContinueButton = new NiceComponent("Next Action");
     mContinueButton->SetTextToDisplay("Continuer");
