@@ -56,7 +56,7 @@ public:
     void FillEventWithTargets(Event& inEvent);
     
     //GUI
-    void DisplayResults(){};
+    void DisplayResults();
     void DisplayVictory(){};
     void DisplayDefeat(){};
     

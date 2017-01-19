@@ -35,7 +35,7 @@ void ScenarioManager::GoToNextEvent()
     
     if(mCurrentEvent >= static_cast<int>(mEvents.size())){
         DisplayResults();
-        mCombatManager.reset(nullptr);
+        //mCombatManager.reset(nullptr);
         mCurrentEvent = -1;
     }
     else{
@@ -95,4 +95,37 @@ void ScenarioManager::LoadGirls()
 {
     mGirlDatabase.resize(0);
     mGirlDatabase = mLoader.LoadGirlDatabase();
+}
+
+
+
+void ScenarioManager::DisplayResults()
+{
+    ScoreData score;
+    
+    score.nbEventPlayed = static_cast<int>(mEvents.size());
+    
+    int nbChoppeTotal = 0;
+    int nbChoppePerso = 0;
+    
+    for(int i = 0; i < GIRL_DATABASE_SIZE; i ++){
+        
+        int choppe = mPlayer->GetNbChoppeForID(i);
+        if(choppe > 0){
+            nbChoppeTotal += choppe;
+            nbChoppePerso++;
+        }
+    }
+    
+    score.nbChoppeTotal = nbChoppeTotal;
+    score.nbChoppePerso = nbChoppePerso;
+    
+    int nbGirlMet = 0;
+    for(int i = 0; i < mEvents.size(); i++){
+        nbGirlMet += static_cast<int>(mEvents[i].GetTargets().size());
+    }
+    
+    score.nbGirlMet = nbGirlMet;
+    
+    mMainGUI->DisplayEndGame(score, CLASSIC);
 }

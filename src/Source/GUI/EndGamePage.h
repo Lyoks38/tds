@@ -15,27 +15,31 @@
 #include "Utils/NiceComponentListener.h"
 #include "Player.h"
 
+enum EndGame{
+    CLASSIC = 0,
+    DEFEAT,
+    VICTORY
+} typedef EndGame;
+
 class EndGamePage: public juce::Component, public NiceComponentListener
 {
     
 public:
     
-    enum EndGame{
-        CLASSIC = 0,
-        DEFEAT,
-        VICTORY
-    } typedef EndGame;
-    
     EndGamePage();
     
     ~EndGamePage();
     
-    void LoadPlayerInfos(Player* inPlayer, EndGame inGame);
+    void LoadPlayerInfos(Player* inPlayer, EndGame inGame, ScoreData inScore);
     
     void paint(juce::Graphics& inG) override;
     
-    static const std::string kClassicText1;
-    
+    static const std::string kClassicText;
+    static const std::string kClassicRatio1;
+    static const std::string kClassicRatio2;
+    static const std::string kClassicRatio3;
+    static const std::string kClassicRatio4;
+
 protected:
     
     void onNiceComponentClicked(NiceComponent* inComp) override;
@@ -45,8 +49,12 @@ private:
     std::string mPlayerName;
     PlayerGenre mPlayerGenre;
     List mPlayerList;
+    
     int mNbChoppesTotal;
     int mNbChoppesPerso;
+    int mNbEventPlayed;
+    int mNbGirlMet;
+    
     
     EndGame mEnd = CLASSIC;
     

@@ -27,6 +27,8 @@ public:
     ScenarioManager* GetScenarioManager() const { return mScenarioManager.get(); }
     CombatManager* GetCombatManager() const { return mScenarioManager->GetCombatManager(); }
     
+    Player* GetPlayer() const { return mScenarioManager->GetPlayer(); }
+    
     void AttachGUI(MainContentComponent* inGUI);
     
     void SaveGame(){};

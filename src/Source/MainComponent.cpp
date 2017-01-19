@@ -203,6 +203,29 @@ bool MainContentComponent::DisplayEndEvent(const Event inEvent, int inNbChoppes,
 }
 
 
+bool MainContentComponent::DisplayEndGame(const ScoreData inData, const EndGame inGame)
+{
+    if(mEndGamePage == nullptr){
+        
+        mEndGamePage.reset(new EndGamePage());
+        addChildComponent(mEndGamePage.get());
+        mEndGamePage->setBounds(0, 0, getWidth(), getHeight());
+    }
+    
+    mEndGamePage->LoadPlayerInfos(mEngine->GetPlayer(), inGame, inData);
+    
+    mCurrentPage->setEnabled(false);
+    mCurrentPage->setVisible(false);
+    
+    mEndGamePage->setEnabled(true);
+    mEndGamePage->setVisible(true);
+    
+    mCurrentPage = mEndGamePage.get();
+    
+    return true;
+}
+
+
 
 ///////////////////////////////////////////////////////////////
 // Interactions with the engine

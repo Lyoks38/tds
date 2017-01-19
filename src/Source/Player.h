@@ -57,3 +57,17 @@ private:
     PlayerGenre mGenre;
     List mListe;
 };
+
+
+class ScoreData {
+    
+public:
+    
+    ScoreData(){}
+    ~ScoreData(){}
+    
+    int nbChoppeTotal;
+    int nbChoppePerso;
+    int nbEventPlayed;
+    int nbGirlMet;
+};

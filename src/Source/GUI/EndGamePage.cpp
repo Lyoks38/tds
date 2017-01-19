@@ -38,28 +38,21 @@ void EndGamePage::onNiceComponentClicked(NiceComponent *inComp)
 {
     if(inComp == mReturnToMainMenuButton){
         MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
-        /*if(parent)
-            parent->GoToNextEvent();*/
+        if(parent)
+            parent->DisplayMainMenu();
     }
 }
 
-void EndGamePage::LoadPlayerInfos(Player *inPlayer, EndGame inGame)
+void EndGamePage::LoadPlayerInfos(Player *inPlayer, EndGame inGame, ScoreData inScore)
 {
     mPlayerName = inPlayer->GetName();
     mPlayerList = inPlayer->GetListe();
     mPlayerGenre = inPlayer->GetGenre();
     
-    mNbChoppesTotal = 0;
-    mNbChoppesPerso = 0;
-    
-    for(int i = 0; i < GIRL_DATABASE_SIZE; i ++){
-        
-        int choppe = inPlayer->GetNbChoppeForID(i);
-        if(choppe > 0){
-            mNbChoppesTotal += choppe;
-            mNbChoppesPerso++;
-        }
-    }
+    mNbChoppesTotal = inScore.nbChoppeTotal;
+    mNbChoppesPerso = inScore.nbChoppePerso;
+    mNbEventPlayed = inScore.nbEventPlayed;
+    mNbGirlMet = inScore.nbGirlMet;
     
     mEnd = inGame;
 }
@@ -89,9 +82,34 @@ void EndGamePage::PaintClassicResult(juce::Graphics& inG)
     inG.drawText("Fin de la partie", 0, 0, getWidth(), 150, juce::Justification::centred);
 
     inG.setFont(Font(24.f));
-    inG.drawMultiLineText("Felicitations " + mPlayerName + " ! " + kClassicText1, 200, 170, 400);
+    inG.drawMultiLineText("Felicitations " + mPlayerName + " ! " + kClassicText, 200, 170, 400);
     
-    inG.setFont(Font(16.f));
+    inG.setFont(Font(20.f));
+    inG.drawText("Tu as participe a " + std::to_string(mNbEventPlayed) + " evenements.", 200, 240, 400, 50, juce::Justification::centred);
+    inG.drawText("Tu as rencontre " + std::to_string(mNbGirlMet) + " filles en tout.", 200, 270, 400, 50, juce::Justification::centred);
+    inG.drawText("Tu as choppe " + std::to_string(mNbChoppesTotal) + " fois au total.", 200, 300, 400, 50, juce::Justification::centred);
+    inG.drawText("Tu as choppe " + std::to_string(mNbChoppesPerso) + " filles differentes.", 200, 330, 400, 50, juce::Justification::centred);
+    
+    int reputation = mNbChoppesTotal * 5;
+    int reputationMax = mNbGirlMet * 5;
+    
+    inG.drawText("Reputation : " + std::to_string(reputation) + " / " + std::to_string(reputationMax), 200, 360, 400, 50, juce::Justification::centred);
+
+    float ratio = static_cast<float>(reputation) / reputationMax;
+    
+    std::string finalRes;
+    if(ratio < 0.25f)
+        finalRes = kClassicRatio1;
+    else if(ratio < 0.5f)
+        finalRes = kClassicRatio2;
+    else if(ratio < 0.75f)
+        finalRes = kClassicRatio3;
+    else if(ratio < 1.f)
+        finalRes = kClassicRatio4;
+    
+    inG.drawText("Grade final", 200, 400, 400, 50, juce::Justification::centred);
+    inG.setFont(mMainFont.withHeight(40.f));
+    inG.drawText(finalRes, 200, 440, 400, 75, juce::Justification::centred);
 }
 
 void EndGamePage::PaintDefeatResult(juce::Graphics& inG)
@@ -105,4 +123,8 @@ void EndGamePage::PaintVictoryResult(juce::Graphics& inG)
 }
 
 
-const std::string EndGamePage::kClassicText1 = "Tu viens de passer une année entière à Phelma, et tu n'as pas chômé ! Voyons voir tes résultats.";
+const std::string EndGamePage::kClassicText = "Tu viens de passer une année entière à Phelma, et tu n'as pas chômé ! Voyons voir tes résultats.";
+const std::string EndGamePage::kClassicRatio1 = "Puceau";
+const std::string EndGamePage::kClassicRatio2 = "Batifoleur";
+const std::string EndGamePage::kClassicRatio3 = "Beau gosse";
+const std::string EndGamePage::kClassicRatio4 = "Dieu sur Terre";

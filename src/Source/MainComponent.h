@@ -41,6 +41,7 @@ public:
     bool DisplayCombatPage();
     bool CombatPageDisplayResult(std::string inText, GoTo inWhereToGo);
     bool DisplayEndEvent(const Event inEvent, int inNbChoppes, bool inWasNotFailed);
+    bool DisplayEndGame(const ScoreData inData, const EndGame inGame);
     
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
     bool GoToNextEvent();
@@ -59,6 +60,7 @@ private:
     std::unique_ptr<NewTargetPage> mNewTargetPage = nullptr;
     std::unique_ptr<CombatPage> mCombatPage = nullptr;
     std::unique_ptr<EndEventPage> mEndEventPage = nullptr;
+    std::unique_ptr<EndGamePage> mEndGamePage = nullptr;
     
     
     juce::Component* mCurrentPage = nullptr; //maybe not useful
