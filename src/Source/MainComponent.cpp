@@ -18,11 +18,12 @@ MainContentComponent::MainContentComponent()
     mEngine.reset(new GameEngine());
     mEngine->AttachGUI(this);
     
+    ResetGame();
     //We open the Main Menu of the game at opening
-    mMainMenu.reset(new MainMenu());
+    /*mMainMenu.reset(new MainMenu());
     addAndMakeVisible(mMainMenu.get());
     mMainMenu->setBounds(0, 0, getWidth(), getHeight());
-    mCurrentPage = mMainMenu.get();
+    mCurrentPage = mMainMenu.get();*/
 }
 
 MainContentComponent::~MainContentComponent()
@@ -61,9 +62,10 @@ bool MainContentComponent::DisplayNewPlayer()
         mNewPlayerMenu->setBounds(0, 0, getWidth(), getHeight());
     }
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
-    
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     mNewPlayerMenu->setEnabled(true);
     mNewPlayerMenu->setVisible(true);
     
@@ -80,8 +82,10 @@ bool MainContentComponent::DisplayMainMenu()
         mMainMenu->setBounds(0, 0, getWidth(), getHeight());
     }
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     
     mMainMenu->setEnabled(true);
     mMainMenu->setVisible(true);
@@ -103,8 +107,10 @@ bool MainContentComponent::DisplayNewEvent(const Event inEvent)
     
     mNewEventPage->LoadEventInfos(inEvent);
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     
     mNewEventPage->setEnabled(true);
     mNewEventPage->setVisible(true);
@@ -126,8 +132,10 @@ bool MainContentComponent::DisplayNewTarget(const Girl inTarget, juce::Image inB
     
     mNewTargetPage->LoadTargetInfos(inTarget, inBanner, inEventName);
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     
     mNewTargetPage->setEnabled(true);
     mNewTargetPage->setVisible(true);
@@ -149,8 +157,10 @@ bool MainContentComponent::DisplayCombatPage()
     if(!mCombatPage->IsCombatManagerLinked())
         mCombatPage->LinkToCombatManager(mEngine->GetCombatManager());
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     
     mCombatPage->LoadInfos();
     mCombatPage->DisplayAttacks();
@@ -191,8 +201,10 @@ bool MainContentComponent::DisplayEndEvent(const Event inEvent, int inNbChoppes,
     
     mEndEventPage->LoadEventInfos(inEvent, inNbChoppes, inWasNotFailed);
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     
     mEndEventPage->setEnabled(true);
     mEndEventPage->setVisible(true);
@@ -214,8 +226,10 @@ bool MainContentComponent::DisplayEndGame(const ScoreData inData, const EndGame 
     
     mEndGamePage->LoadPlayerInfos(mEngine->GetPlayer(), inGame, inData);
     
-    mCurrentPage->setEnabled(false);
-    mCurrentPage->setVisible(false);
+    if(mCurrentPage != nullptr){
+        mCurrentPage->setEnabled(false);
+        mCurrentPage->setVisible(false);
+    }
     
     mEndGamePage->setEnabled(true);
     mEndGamePage->setVisible(true);
@@ -229,6 +243,27 @@ bool MainContentComponent::DisplayEndGame(const ScoreData inData, const EndGame 
 
 ///////////////////////////////////////////////////////////////
 // Interactions with the engine
+
+
+bool MainContentComponent::ResetGame()
+{
+    if(mEngine)
+        mEngine->Reset();
+    
+    mCurrentPage = nullptr;
+    mNewPlayerMenu.reset(nullptr);
+    mWelcomePage.reset(nullptr);
+    mNewEventPage.reset(nullptr);
+    mNewTargetPage.reset(nullptr);
+    mCombatPage.reset(nullptr);
+    mEndEventPage.reset(nullptr);
+    mEndGamePage.reset(nullptr);
+    
+    DisplayMainMenu();
+    
+    return true;
+}
+
 
 bool MainContentComponent::LaunchNewGame(Player::PlayerAttributes inAttributes)
 {

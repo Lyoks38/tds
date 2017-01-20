@@ -43,6 +43,7 @@ public:
     bool DisplayEndEvent(const Event inEvent, int inNbChoppes, bool inWasNotFailed);
     bool DisplayEndGame(const ScoreData inData, const EndGame inGame);
     
+    bool ResetGame();
     bool LaunchNewGame(Player::PlayerAttributes inAttributes);
     bool GoToNextEvent();
     bool GoToFirstTarget();

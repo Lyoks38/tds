@@ -129,3 +129,16 @@ void ScenarioManager::DisplayResults()
     
     mMainGUI->DisplayEndGame(score, CLASSIC);
 }
+
+
+void ScenarioManager::DisplayDefeat()
+{
+    ScoreData fakeScore;
+    mMainGUI->DisplayEndGame(fakeScore, DEFEAT);
+}
+
+void ScenarioManager::DisplayVictory()
+{
+    ScoreData fakeScore;
+    mMainGUI->DisplayEndGame(fakeScore, VICTORY);
+}

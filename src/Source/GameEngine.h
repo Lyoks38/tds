@@ -36,6 +36,8 @@ public:
     
     void NewGame(Player::PlayerAttributes inAttributes);
     
+    void Reset();
+    
 private:
     
     std::unique_ptr<ScenarioManager> mScenarioManager = nullptr;

@@ -32,6 +32,14 @@ void GameEngine::AttachGUI(MainContentComponent *inGUI)
     mScenarioManager->AttachToGUI(inGUI);
 }
 
+void GameEngine::Reset()
+{
+    if(mScenarioManager)
+        mScenarioManager.reset(nullptr);
+    
+    mScenarioManager.reset(new ScenarioManager());
+    mScenarioManager->AttachToGUI(mMainGUI);
+}
 
 ////////////////////////////////////////////////////////////////////////
 // Games

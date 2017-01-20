@@ -57,8 +57,8 @@ public:
     
     //GUI
     void DisplayResults();
-    void DisplayVictory(){};
-    void DisplayDefeat(){};
+    void DisplayVictory();
+    void DisplayDefeat();
     
 protected:
     

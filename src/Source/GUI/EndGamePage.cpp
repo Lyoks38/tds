@@ -14,7 +14,7 @@ EndGamePage::EndGamePage():
 juce::Component("End Game Page")
 {
     mReturnToMainMenuButton = new NiceComponent("Go To Next Event");
-    mReturnToMainMenuButton->SetTextToDisplay("CONTINUER");
+    mReturnToMainMenuButton->SetTextToDisplay("Retour au menu principal");
     mReturnToMainMenuButton->SetBgColor(juce::Colour((uint8)255,255,255,0.2f));
     mReturnToMainMenuButton->SetBgHoverColor(juce::Colour((uint8)255,255,255,0.5f));
     mReturnToMainMenuButton->SetTextColor(juce::Colours::white);
@@ -39,7 +39,7 @@ void EndGamePage::onNiceComponentClicked(NiceComponent *inComp)
     if(inComp == mReturnToMainMenuButton){
         MainContentComponent* parent = dynamic_cast<MainContentComponent*>(getParentComponent());
         if(parent)
-            parent->DisplayMainMenu();
+            parent->ResetGame();
     }
 }
 
@@ -107,19 +107,36 @@ void EndGamePage::PaintClassicResult(juce::Graphics& inG)
     else if(ratio < 1.f)
         finalRes = kClassicRatio4;
     
-    inG.drawText("Grade final", 200, 400, 400, 50, juce::Justification::centred);
+    inG.drawText("Grade final :", 200, 400, 400, 50, juce::Justification::centred);
     inG.setFont(mMainFont.withHeight(40.f));
     inG.drawText(finalRes, 200, 440, 400, 75, juce::Justification::centred);
 }
 
 void EndGamePage::PaintDefeatResult(juce::Graphics& inG)
 {
+    inG.setColour(juce::Colour(191,39,13));
+    inG.fillAll();
     
+    inG.setFont(mMainFont);
+    inG.setColour(juce::Colours::white);
+    inG.drawText("Game Over", 0, 0, getWidth(), 150, juce::Justification::centred);
+
+    inG.setFont(Font(24.f));
+    inG.drawMultiLineText(kDefeatText, 200, 200, 400);
 }
 
 void EndGamePage::PaintVictoryResult(juce::Graphics& inG)
 {
+    inG.setColour(juce::Colour(34,182,11));
+    inG.fillAll();
     
+    inG.setFont(mMainFont);
+    inG.setColour(juce::Colours::white);
+    inG.drawText("You Win", 0, 0, getWidth(), 150, juce::Justification::centred);
+    
+    inG.setFont(Font(24.f));
+    inG.drawMultiLineText(kVictoryText, 200, 200, 400);
+
 }
 
 
@@ -128,3 +145,7 @@ const std::string EndGamePage::kClassicRatio1 = "Puceau";
 const std::string EndGamePage::kClassicRatio2 = "Batifoleur";
 const std::string EndGamePage::kClassicRatio3 = "Beau gosse";
 const std::string EndGamePage::kClassicRatio4 = "Dieu sur Terre";
+
+const std::string EndGamePage::kDefeatText = "Tu connais les règles ! Chopper 3 fois la même fille n'est pas autorisé ! Tu finis en couple, à faire coincoin. Fin de la partie.";
+
+const std::string EndGamePage::kVictoryText = "Le Saint Graal de tout élève ingénieur... Chopper une GEM... Bravo fils, nous n'avons plus rien à t'apprendre. Célèbre ton triomphe, ô Dieu de l'amour.";

@@ -85,5 +85,8 @@ private:
     std::vector<Attack> mAttackDatabase;
     
     ContentLoader mLoader;
+    
+    bool mDisplayDefeat = false;
+    bool mDisplayVictory = false;
         
 };

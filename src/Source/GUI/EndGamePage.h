@@ -39,6 +39,11 @@ public:
     static const std::string kClassicRatio2;
     static const std::string kClassicRatio3;
     static const std::string kClassicRatio4;
+    
+    static const std::string kDefeatText;
+
+    static const std::string kVictoryText;
+
 
 protected:
     

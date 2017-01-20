@@ -251,15 +251,30 @@ void CombatManager::TryToCatch()
         mPlayer->AddChoppe(mTargets[mCurrentTarget].GetID());
         mNbChoppe++;
         DisplayCatchResult(true);
+        
+        //Check if the catch is valid
+        int nbChoppe = mPlayer->GetNbChoppeForID(mTargets[mCurrentTarget].GetID());
+        if(nbChoppe >= 3){
+            //end game
+        }
+        else if(mTargets[mCurrentTarget].GetGenre() == GEM){
+            //end game
+        }
     }
     else
         DisplayCatchResult(false);
-
 }
 
 /////////////////////////////////////////////////////////
 void CombatManager::GoToNextTarget()
 {
+    if(mDisplayDefeat){
+        mScenarioManager->DisplayDefeat();
+    }
+    else if(mDisplayVictory){
+        mScenarioManager->DisplayVictory();
+    }
+    
     mCurrentTarget++;
     
     if(mCurrentTarget >= static_cast<int>(mTargets.size())){
