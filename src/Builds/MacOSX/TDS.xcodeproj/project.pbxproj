@@ -37,6 +37,10 @@
 		45AB76161E2E40380055794C /* EndGamePage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45AB76151E2E40380055794C /* EndGamePage.cpp */; };
 		45B8A7951DD20B0F00E361A7 /* NiceButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B8A7941DD20B0F00E361A7 /* NiceButton.cpp */; };
 		45BD1DB21DD9DBC300FB65F1 /* NewPlayerMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45BD1DB11DD9DBC300FB65F1 /* NewPlayerMenu.cpp */; };
+		45D892861E362892007FD226 /* KfetIntePhelma.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D892801E362892007FD226 /* KfetIntePhelma.cpp */; };
+		45D892871E362892007FD226 /* PapetPhelma.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D892821E362892007FD226 /* PapetPhelma.cpp */; };
+		45D892881E362892007FD226 /* SoireeGc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D892841E362892007FD226 /* SoireeGc.cpp */; };
+		45D8928B1E362C9C007FD226 /* SoireeAutomne.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D892891E362C9C007FD226 /* SoireeAutomne.cpp */; };
 		47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50A5B0E5097DF0431F8E565E /* juce_video.mm */; };
 		567516F1CC296B91ACFE418A /* RecentFilesMenuTemplate.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD70D7B1111CE7CAC7D8E4A /* RecentFilesMenuTemplate.nib */; };
 		59AF506B2FB0B6A6BFA011A5 /* juce_audio_devices.mm in Sources */ = {isa = PBXBuildFile; fileRef = 629AA793DEC2442C630B22A7 /* juce_audio_devices.mm */; };
@@ -426,6 +430,14 @@
 		45BD1DB31DD9E5D200FB65F1 /* NiceComponentListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiceComponentListener.h; path = ../../Source/GUI/Utils/NiceComponentListener.h; sourceTree = "<group>"; };
 		45CC7A34B37DAB56D3E13304 /* juce_LocalisedStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_LocalisedStrings.h; path = ../../../JUCE/modules/juce_core/text/juce_LocalisedStrings.h; sourceTree = SOURCE_ROOT; };
 		45CEA2C6E70A52F4579B465A /* inffixed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = inffixed.h; path = ../../../JUCE/modules/juce_core/zip/zlib/inffixed.h; sourceTree = SOURCE_ROOT; };
+		45D892801E362892007FD226 /* KfetIntePhelma.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KfetIntePhelma.cpp; path = ../../../Resources/KfetIntePhelma.cpp; sourceTree = "<group>"; };
+		45D892811E362892007FD226 /* KfetIntePhelma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KfetIntePhelma.h; path = ../../../Resources/KfetIntePhelma.h; sourceTree = "<group>"; };
+		45D892821E362892007FD226 /* PapetPhelma.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PapetPhelma.cpp; path = ../../../Resources/PapetPhelma.cpp; sourceTree = "<group>"; };
+		45D892831E362892007FD226 /* PapetPhelma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PapetPhelma.h; path = ../../../Resources/PapetPhelma.h; sourceTree = "<group>"; };
+		45D892841E362892007FD226 /* SoireeGc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoireeGc.cpp; path = ../../../Resources/SoireeGc.cpp; sourceTree = "<group>"; };
+		45D892851E362892007FD226 /* SoireeGc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoireeGc.h; path = ../../../Resources/SoireeGc.h; sourceTree = "<group>"; };
+		45D892891E362C9C007FD226 /* SoireeAutomne.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SoireeAutomne.cpp; path = ../../../Resources/SoireeAutomne.cpp; sourceTree = "<group>"; };
+		45D8928A1E362C9C007FD226 /* SoireeAutomne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoireeAutomne.h; path = ../../../Resources/SoireeAutomne.h; sourceTree = "<group>"; };
 		4639838A767CEC4784FF93AF /* juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_gui_extra.mm; path = ../../../JUCE/modules/juce_gui_extra/juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
 		470C1F86816F5931A9104108 /* juce_Justification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_Justification.h; path = ../../../JUCE/modules/juce_graphics/placement/juce_Justification.h; sourceTree = SOURCE_ROOT; };
 		470F3B4C6BC2DFD6291163EC /* juce_mac_CoreGraphicsHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = juce_mac_CoreGraphicsHelpers.h; path = ../../../JUCE/modules/juce_graphics/native/juce_mac_CoreGraphicsHelpers.h; sourceTree = SOURCE_ROOT; };
@@ -2031,6 +2043,14 @@
 		456B115E1DD34DEB00680878 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				45D892891E362C9C007FD226 /* SoireeAutomne.cpp */,
+				45D8928A1E362C9C007FD226 /* SoireeAutomne.h */,
+				45D892801E362892007FD226 /* KfetIntePhelma.cpp */,
+				45D892811E362892007FD226 /* KfetIntePhelma.h */,
+				45D892821E362892007FD226 /* PapetPhelma.cpp */,
+				45D892831E362892007FD226 /* PapetPhelma.h */,
+				45D892841E362892007FD226 /* SoireeGc.cpp */,
+				45D892851E362892007FD226 /* SoireeGc.h */,
 				458704781DF0464C00B366B8 /* BarbecueGc.cpp */,
 				458704791DF0464C00B366B8 /* BarbecueGc.h */,
 				456B115F1DD34E0200680878 /* OrangeJuice.cpp */,
@@ -3618,6 +3638,8 @@
 				4595565F1E27A2B6001A3D76 /* EndEventPage.cpp in Sources */,
 				194773DD1D0D97FA009AC9D5 /* CombatManager.cpp in Sources */,
 				83F8BBD33ABD7BF3635E0678 /* juce_data_structures.mm in Sources */,
+				45D892861E362892007FD226 /* KfetIntePhelma.cpp in Sources */,
+				45D8928B1E362C9C007FD226 /* SoireeAutomne.cpp in Sources */,
 				458704771DF0443100B366B8 /* ImageUtils.cpp in Sources */,
 				FFBBCBB6F7A50D5670CAB910 /* juce_events.mm in Sources */,
 				EE31C73BD0A5BA0B67E36B06 /* juce_graphics.mm in Sources */,
@@ -3627,7 +3649,9 @@
 				CE5CC945798B83CFFEF19D27 /* juce_gui_extra.mm in Sources */,
 				194822BA1D04CB2B008C728F /* GameEngine.cpp in Sources */,
 				73472D42337813788C99BDFD /* juce_opengl.mm in Sources */,
+				45D892871E362892007FD226 /* PapetPhelma.cpp in Sources */,
 				457223721DEDA81900DAE1F0 /* NewEventPage.cpp in Sources */,
+				45D892881E362892007FD226 /* SoireeGc.cpp in Sources */,
 				459D61391E23B26F00B1DD16 /* ChoppeStrings.cpp in Sources */,
 				47C0FBEB60C195A81233FAC4 /* juce_video.mm in Sources */,
 				196019EC1DD13262004108F2 /* NiceComponent.cpp in Sources */,
