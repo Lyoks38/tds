@@ -1578,6 +1578,37 @@
 			name = Engine;
 			sourceTree = "<group>";
 		};
+		194D62AF1E36B26A00E57421 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				194D62AC1E36B16C00E57421 /* KfetAwards.cpp */,
+				194D62AD1E36B16C00E57421 /* KfetAwards.h */,
+				194D629A1E36ACB100E57421 /* FinAnnee.cpp */,
+				194D629B1E36ACB100E57421 /* FinAnnee.h */,
+				194D629C1E36ACB100E57421 /* Kfet1A.cpp */,
+				194D629D1E36ACB100E57421 /* Kfet1A.h */,
+				194D629E1E36ACB100E57421 /* KfetCamp.cpp */,
+				194D629F1E36ACB100E57421 /* KfetCamp.h */,
+				194D62A01E36ACB100E57421 /* Olinp.cpp */,
+				194D62A11E36ACB100E57421 /* Olinp.h */,
+				194D62A21E36ACB100E57421 /* SoireeCamp1.cpp */,
+				194D62A31E36ACB100E57421 /* SoireeCamp1.h */,
+				194D62A41E36ACB100E57421 /* SoireeCamp2.cpp */,
+				194D62A51E36ACB100E57421 /* SoireeCamp2.h */,
+				45D892891E362C9C007FD226 /* SoireeAutomne.cpp */,
+				45D8928A1E362C9C007FD226 /* SoireeAutomne.h */,
+				45D892801E362892007FD226 /* KfetIntePhelma.cpp */,
+				45D892811E362892007FD226 /* KfetIntePhelma.h */,
+				45D892821E362892007FD226 /* PapetPhelma.cpp */,
+				45D892831E362892007FD226 /* PapetPhelma.h */,
+				45D892841E362892007FD226 /* SoireeGc.cpp */,
+				45D892851E362892007FD226 /* SoireeGc.h */,
+				458704781DF0464C00B366B8 /* BarbecueGc.cpp */,
+				458704791DF0464C00B366B8 /* BarbecueGc.h */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		196019E81DD129B1004108F2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -2064,30 +2095,7 @@
 		456B115E1DD34DEB00680878 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				194D62AC1E36B16C00E57421 /* KfetAwards.cpp */,
-				194D62AD1E36B16C00E57421 /* KfetAwards.h */,
-				194D629A1E36ACB100E57421 /* FinAnnee.cpp */,
-				194D629B1E36ACB100E57421 /* FinAnnee.h */,
-				194D629C1E36ACB100E57421 /* Kfet1A.cpp */,
-				194D629D1E36ACB100E57421 /* Kfet1A.h */,
-				194D629E1E36ACB100E57421 /* KfetCamp.cpp */,
-				194D629F1E36ACB100E57421 /* KfetCamp.h */,
-				194D62A01E36ACB100E57421 /* Olinp.cpp */,
-				194D62A11E36ACB100E57421 /* Olinp.h */,
-				194D62A21E36ACB100E57421 /* SoireeCamp1.cpp */,
-				194D62A31E36ACB100E57421 /* SoireeCamp1.h */,
-				194D62A41E36ACB100E57421 /* SoireeCamp2.cpp */,
-				194D62A51E36ACB100E57421 /* SoireeCamp2.h */,
-				45D892891E362C9C007FD226 /* SoireeAutomne.cpp */,
-				45D8928A1E362C9C007FD226 /* SoireeAutomne.h */,
-				45D892801E362892007FD226 /* KfetIntePhelma.cpp */,
-				45D892811E362892007FD226 /* KfetIntePhelma.h */,
-				45D892821E362892007FD226 /* PapetPhelma.cpp */,
-				45D892831E362892007FD226 /* PapetPhelma.h */,
-				45D892841E362892007FD226 /* SoireeGc.cpp */,
-				45D892851E362892007FD226 /* SoireeGc.h */,
-				458704781DF0464C00B366B8 /* BarbecueGc.cpp */,
-				458704791DF0464C00B366B8 /* BarbecueGc.h */,
+				194D62AF1E36B26A00E57421 /* Images */,
 				456B115F1DD34E0200680878 /* OrangeJuice.cpp */,
 				456B11601DD34E0200680878 /* OrangeJuice.h */,
 				456FC2221E0A98F3004DB888 /* AttackStrings.cpp */,

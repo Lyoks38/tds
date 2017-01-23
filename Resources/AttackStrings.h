@@ -135,6 +135,21 @@ public:
     static const std::string FinMondeFailed2;
     static const std::string FinMondeFailed3;
 
+    //Montrer ses abdos
+    static const std::string AbdosEffect1;
+    static const std::string AbdosEffect2;
+    static const std::string AbdosEffect3;
+    static const std::string AbdosFailed1;
+    static const std::string AbdosFailed2;
+    static const std::string AbdosFailed3;
+
+    //Musicien
+    static const std::string MusicienEffect1;
+    static const std::string MusicienEffect2;
+    static const std::string MusicienEffect3;
+    static const std::string MusicienFailed1;
+    static const std::string MusicienFailed2;
+    static const std::string MusicienFailed3;
 
 };
 #endif /* AttackStrings_h */

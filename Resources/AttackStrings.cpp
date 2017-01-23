@@ -129,6 +129,18 @@ const std::string AttackStrings::FinMondeFailed1 = "“Sérieux ?! Faut absolume
 const std::string AttackStrings::FinMondeFailed2 = "“C'était en 2012 la fin du monde, abruti.“ Gnagnagna ! Mademoiselle je-sais-tout, va ! Allez, on se casse !";
 const std::string AttackStrings::FinMondeFailed3 = "Elle est tellement saoule qu'elle s'effondre en larmes à l'idée de sa mort imminente. Une amie arrive pour la consoler et toi tu n'as plus qu'à aller voir ailleurs.";
 
+//Montrer ses abdos
+const std::string AttackStrings::AbdosEffect1 = "“Mmmmmh... Plutôt mignon tout ça...“ dit-elle se caressant lentement tes tablettes. Héhé.";
+const std::string AttackStrings::AbdosEffect2 = "“Toi tu t'es fait trop de tacos !“ te lâche-t-elle en explosant de rire. Elle a pas tort, mais bon, elle ne s'enfuit pas en courant donc ça passe !";
+const std::string AttackStrings::AbdosEffect3 = "Elle hoche la tête, sans rien dire. Elle mate tranquille quoi.";
+const std::string AttackStrings::AbdosFailed1 = "Tu oublies quelques secondes que tu as un bon bide à bière des familles. Trop tard, ce qu'elle voit la dégoûte et elle court aux toilettes vomir.";
+const std::string AttackStrings::AbdosFailed2 = "Malgré un corps de rêve, tu es doté d'une pilosité digne de Chewbacca. Et visiblement, elle n'apprécie pas trop ça, vu la tête qu'elle tire. Tant pis !";
+const std::string AttackStrings::AbdosFailed3 = "Tu es trop saoul et remonte juste ton pull. Du coup, tu lui montres ton t-shirt. Elle ne comprend pas et se casse.";
 
-
-
+//Musicien
+const std::string AttackStrings::MusicienEffect1 = "“Je pourrais jouer avec ta flûte plus tard, s'il te plaît ?“ Houla, en voilà une qui a envie !";
+const std::string AttackStrings::MusicienEffect2 = "“Tu dois être habile de tes doigts du coup...“ C'est moi ou c'est extrêmement tendancieux comme phrase ?";
+const std::string AttackStrings::MusicienEffect3 = "“Je te jetterai ma culotte au prochain concert du Club Zik alors...“ Yeaaaaah ! Bon, plus qu'à prier qu'elle aura pas ses règles ce jour-là.";
+const std::string AttackStrings::MusicienFailed1 = "“Et tu joues quoi ? Du triangle ?“ dit-elle en rigolant. “...Oui“ Allez, remballe tes larmes et va voir ailleurs.";
+const std::string AttackStrings::MusicienFailed2 = "“C'est dommage, je préfère les sportifs.“ Ok, message reçu !";
+const std::string AttackStrings::MusicienFailed3 = "“Oooooh c'est vrai ?! Tu pourras me jouer du Kendji à la guitare ?“ AAAAAH ! Fuyons !";
