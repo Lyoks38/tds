@@ -13,7 +13,7 @@
 #include <vector>
 #include <memory>
 
-#define GIRL_DATABASE_SIZE 12
+#define GIRL_DATABASE_SIZE 40
 
 
 //////////////////////////////////////////////////////

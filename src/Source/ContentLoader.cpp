@@ -114,7 +114,231 @@ std::vector<Girl> ContentLoader::LoadGirlDatabase()
     id++;
     
     output.push_back(Girl(attr));
+    
+    attr.mName = "Amélie";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
 
+    attr.mName = "Sophie";
+    attr.mGenre = LISTEE;
+    attr.mListe = PULP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Léa";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = TOP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Camille";
+    attr.mGenre = LISTEE;
+    attr.mListe = FRAP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Fanny";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Andréa";
+    attr.mGenre = LISTEE;
+    attr.mListe = PULP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Laurine";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = PEARL;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Carole";
+    attr.mGenre = LISTEE;
+    attr.mListe = PEUF;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Claire";
+    attr.mGenre = LISTEE;
+    attr.mListe = PLAY;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Alexandra";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = SPACE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Emilie";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Juliette";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Laetitia";
+    attr.mGenre = LISTEE;
+    attr.mListe = WHOOP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Estelle";
+    attr.mGenre = LISTEE;
+    attr.mListe = TOP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Aline";
+    attr.mGenre = LISTEE;
+    attr.mListe = FRAP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Lucile";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = PEUF;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Marion";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Noémie";
+    attr.mGenre = LISTEE;
+    attr.mListe = PLAY;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Océane";
+    attr.mGenre = LISTEE;
+    attr.mListe = FOX;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Mélanie";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Tiffany";
+    attr.mGenre = LISTEE;
+    attr.mListe = PLAY;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Andréa";
+    attr.mGenre = LISTEE;
+    attr.mListe = PULP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Stéphanie";
+    attr.mGenre = LISTEE;
+    attr.mListe = WHOOP;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Valentine";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Gabrielle";
+    attr.mGenre = LISTEE;
+    attr.mListe = PEARL;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Aurélie";
+    attr.mGenre = POLARDE;
+    attr.mListe = NON_LISTE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Chloé";
+    attr.mGenre = LISTEE;
+    attr.mListe = SPACE;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+
+    attr.mName = "Justine";
+    attr.mGenre = AMIE_DE_LISTE;
+    attr.mListe = FOX;
+    attr.mID = id;
+    id++;
+    
+    output.push_back(Girl(attr));
+    
     
     return output;
 }
@@ -327,9 +551,29 @@ std::vector<Event> ContentLoader::LoadEvents()
     newEvent = Event("Soirée Papet - Phelma", false, ImageUtils::PapetPhelma, "Cham'");
     output.push_back(newEvent);
     
+    newEvent = Event("Soirée Ol'INPiades", false, ImageUtils::SoireeOlinp, "Apo'");
+    output.push_back(newEvent);
+    
     newEvent = Event("Soirée d'automne", false, ImageUtils::SoireeAutomne, "Apo'");
     output.push_back(newEvent);
 
+    newEvent = Event("Kfet 1A", true, ImageUtils::Kfet1A, "MINP");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Soirée de campagne 1", false, ImageUtils::SoireeCamp1, "Ambiance Café");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Kfet de campagne", true, ImageUtils::KfetCamp, "MINP");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Soirée de campagne 2", false, ImageUtils::SoireeCamp2, "Evénement'ciel");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Kfet Awards", true, ImageUtils::KfetAwards, "MINP");
+    output.push_back(newEvent);
+    
+    newEvent = Event("Soirée de fin d'année GC", false, ImageUtils::FinAnnee, "2 Colombes");
+    output.push_back(newEvent);
     
     return output;
 }
