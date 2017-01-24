@@ -529,6 +529,79 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     attack.SetFailedText2(AttackStrings::FinMondeFailed2);
     attack.SetFailedText3(AttackStrings::FinMondeFailed3);
     output.push_back(attack);
+    
+    attack = Attack("Montrer tes abdos");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(30);
+    attack.SetDiceThreshold(30);
+    attack.SetAttackText1(AttackStrings::AbdosEffect1);
+    attack.SetAttackText2(AttackStrings::AbdosEffect2);
+    attack.SetAttackText3(AttackStrings::AbdosEffect3);
+    attack.SetFailedText1(AttackStrings::AbdosFailed1);
+    attack.SetFailedText2(AttackStrings::AbdosFailed2);
+    attack.SetFailedText3(AttackStrings::AbdosFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“T'sais que je suis musicien ?“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(20);
+    attack.SetDiceThreshold(20);
+    attack.SetAttackText1(AttackStrings::MusicienEffect1);
+    attack.SetAttackText2(AttackStrings::MusicienEffect2);
+    attack.SetAttackText3(AttackStrings::MusicienEffect3);
+    attack.SetFailedText1(AttackStrings::MusicienFailed1);
+    attack.SetFailedText2(AttackStrings::MusicienFailed2);
+    attack.SetFailedText3(AttackStrings::MusicienFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“On échange nos MSTs ?“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(20);
+    attack.SetDiceThreshold(40);
+    attack.SetAttackText1(AttackStrings::EchangeMstEffect1);
+    attack.SetAttackText2(AttackStrings::EchangeMstEffect2);
+    attack.SetAttackText3(AttackStrings::EchangeMstEffect3);
+    attack.SetFailedText1(AttackStrings::EchangeMstFailed1);
+    attack.SetFailedText2(AttackStrings::EchangeMstFailed2);
+    attack.SetFailedText3(AttackStrings::EchangeMstFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("“Tu veux voir ma bite ?“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(25);
+    attack.SetDiceThreshold(60);
+    attack.SetAttackText1(AttackStrings::CoucouEffect1);
+    attack.SetAttackText2(AttackStrings::CoucouEffect2);
+    attack.SetAttackText3(AttackStrings::CoucouEffect3);
+    attack.SetFailedText1(AttackStrings::CoucouFailed1);
+    attack.SetFailedText2(AttackStrings::CoucouFailed2);
+    attack.SetFailedText3(AttackStrings::CoucouFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("Dire que tu es sportif");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(25);
+    attack.SetDiceThreshold(20);
+    attack.SetAttackText1(AttackStrings::SportifEffect1);
+    attack.SetAttackText2(AttackStrings::SportifEffect2);
+    attack.SetAttackText3(AttackStrings::SportifEffect3);
+    attack.SetFailedText1(AttackStrings::SportifFailed1);
+    attack.SetFailedText2(AttackStrings::SportifFailed2);
+    attack.SetFailedText3(AttackStrings::SportifFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("Dire que tu es écrivain");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(30);
+    attack.SetDiceThreshold(50);
+    attack.SetAttackText1(AttackStrings::EcrivainEffect1);
+    attack.SetAttackText2(AttackStrings::EcrivainEffect2);
+    attack.SetAttackText3(AttackStrings::EcrivainEffect3);
+    attack.SetFailedText1(AttackStrings::EcrivainFailed1);
+    attack.SetFailedText2(AttackStrings::EcrivainFailed2);
+    attack.SetFailedText3(AttackStrings::EcrivainFailed3);
+    output.push_back(attack);
+
 
     return output;
 }

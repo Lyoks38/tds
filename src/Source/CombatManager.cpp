@@ -66,7 +66,7 @@ int CombatManager::ComputeAttackEffect(Attack inAttack){
     }
     else if (target_genre == GEM){
         // Les gems s'en battent de la réput, par contre elles aiment pas les ingé de base...
-        coeff *= 0.5f;
+        coeff *= 0.2f;
     }
     else {
         coeff_reputation -= std::max(mPlayer->GetReputation() / 100.f, 0.f); //std::max to be sure we do not go negative
@@ -255,10 +255,10 @@ void CombatManager::TryToCatch()
         //Check if the catch is valid
         int nbChoppe = mPlayer->GetNbChoppeForID(mTargets[mCurrentTarget].GetID());
         if(nbChoppe >= 3){
-            //end game
+            mScenarioManager->DisplayDefeat();
         }
         else if(mTargets[mCurrentTarget].GetGenre() == GEM){
-            //end game
+            mScenarioManager->DisplayVictory();
         }
     }
     else

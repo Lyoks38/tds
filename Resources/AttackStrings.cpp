@@ -144,3 +144,35 @@ const std::string AttackStrings::MusicienEffect3 = "“Je te jetterai ma culotte
 const std::string AttackStrings::MusicienFailed1 = "“Et tu joues quoi ? Du triangle ?“ dit-elle en rigolant. “...Oui“ Allez, remballe tes larmes et va voir ailleurs.";
 const std::string AttackStrings::MusicienFailed2 = "“C'est dommage, je préfère les sportifs.“ Ok, message reçu !";
 const std::string AttackStrings::MusicienFailed3 = "“Oooooh c'est vrai ?! Tu pourras me jouer du Kendji à la guitare ?“ AAAAAH ! Fuyons !";
+
+//Echange mst
+const std::string AttackStrings::EchangeMstEffect1 = "“J'avoue que j'ai pas encore le sida. Tu me l'échanges contre mon hépatite C ?“ Héhé, elle a de l'humour la petite !";
+const std::string AttackStrings::EchangeMstEffect2 = "“Pas chaude. Mais si tu mets une capote, faut voir.“ Oh ? Hé elle a pas dit non !";
+const std::string AttackStrings::EchangeMstEffect3 = "“On peut déjà commencer par nos salives, ne précipite pas tout.“ Booyah !";
+const std::string AttackStrings::EchangeMstFailed1 = "“Putain mais t'es dégueulasse... Casse-toi !“ Ok, pardon !";
+const std::string AttackStrings::EchangeMstFailed2 = "“Pour que t'aies des MSTs, faudrait déjà que tu fasses l'amour.“ Et bim ! Ramasse ta dignité et va voir ailleurs !";
+const std::string AttackStrings::EchangeMstFailed3 = "Elle te regarde d'un air dégoûté avant de tourner les talons. Au revoir !";
+
+//Tu veux voir ma bite
+const std::string AttackStrings::CoucouEffect1 = "“Alleeeeez !“ lâche-t-elle. L'hélico ! L'hélico ! L'hélico !";
+const std::string AttackStrings::CoucouEffect2 = "“Tu veux pas attendre qu'on soit chez toi plutôt ?“ Hohoho ! Caliente, mamène !";
+const std::string AttackStrings::CoucouEffect3 = "“M'en fous de la voir, tant que je la sens.“ Euuuuh wait, elle a vraiment dit ça ?";
+const std::string AttackStrings::CoucouFailed1 = "“Non.“ Ah.";
+const std::string AttackStrings::CoucouFailed2 = "“Chais pas, t'as amené une loupe ? Parce que sinon je vais avoir du mal.“ Boum. Allez dégage connasse !";
+const std::string AttackStrings::CoucouFailed3 = "“Oui.“ “C'est vrai ?!“ “Non.“ Et merde.";
+
+//Sportif
+const std::string AttackStrings::SportifEffect1 = "“C'est vrai que t'as un joli petit cul quand tu portes ton short de rugby !“ Ah la coquine !";
+const std::string AttackStrings::SportifEffect2 = "Elle te tape le biceps et lâche un petit “Ouuuh“ de plaisir. Viens là, poupée.";
+const std::string AttackStrings::SportifEffect3 = "“Ca veut dire que t'es endurant alors...“ dit-elle sur un ton suave et sensuel. T'imagines pas à quel point, ma grande.";
+const std::string AttackStrings::SportifFailed1 = "“Sportif ? Tu crois que faire du frisbee aux Ol'INPiades c'est du sport ? Hahahaha !“ Bon elle a pas tort... Dommage, t'auras essayé.";
+const std::string AttackStrings::SportifFailed2 = "“Vu ton bide à bière, tu joues qu'à Fifa non ?“ Le E-Sport est un sport, mademoiselle. Inculte !";
+const std::string AttackStrings::SportifFailed3 = "“Dommage je préfère les artistes.“ Ok, message reçu !";
+
+//ecrivain
+const std::string AttackStrings::EcrivainEffect1 = "“Wow trop classe !“ dit-elle bouche bée. Et ouais, ça marche tout le temps !";
+const std::string AttackStrings::EcrivainEffect2 = "“Wow trop classe !“ dit-elle bouche bée. Et ouais, ça marche tout le temps !";
+const std::string AttackStrings::EcrivainEffect3 = "“Wow trop classe !“ dit-elle bouche bée. Et ouais, ça marche tout le temps !";
+const std::string AttackStrings::EcrivainFailed1 = "“M'en fous, j'aime pas lire.“ Ah bah tant pis alors !";
+const std::string AttackStrings::EcrivainFailed2 = "Dommage, je préfère les sportifs. Ok, message reçu !";
+const std::string AttackStrings::EcrivainFailed3 = "“Ca parle de vampires et de loups-garous ?“ Aaaaaaah une fan de Twilight ! Fuis !";

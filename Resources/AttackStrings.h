@@ -151,5 +151,37 @@ public:
     static const std::string MusicienFailed2;
     static const std::string MusicienFailed3;
 
+    //Echange MST
+    static const std::string EchangeMstEffect1;
+    static const std::string EchangeMstEffect2;
+    static const std::string EchangeMstEffect3;
+    static const std::string EchangeMstFailed1;
+    static const std::string EchangeMstFailed2;
+    static const std::string EchangeMstFailed3;
+
+    //Tu veux voir ma bite
+    static const std::string CoucouEffect1;
+    static const std::string CoucouEffect2;
+    static const std::string CoucouEffect3;
+    static const std::string CoucouFailed1;
+    static const std::string CoucouFailed2;
+    static const std::string CoucouFailed3;
+    
+    //Sportif
+    static const std::string SportifEffect1;
+    static const std::string SportifEffect2;
+    static const std::string SportifEffect3;
+    static const std::string SportifFailed1;
+    static const std::string SportifFailed2;
+    static const std::string SportifFailed3;
+    
+    //ecrivain
+    static const std::string EcrivainEffect1;
+    static const std::string EcrivainEffect2;
+    static const std::string EcrivainEffect3;
+    static const std::string EcrivainFailed1;
+    static const std::string EcrivainFailed2;
+    static const std::string EcrivainFailed3;
+
 };
 #endif /* AttackStrings_h */
