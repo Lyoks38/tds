@@ -182,6 +182,30 @@ public:
     static const std::string EcrivainFailed1;
     static const std::string EcrivainFailed2;
     static const std::string EcrivainFailed3;
+    
+    //tu suces
+    static const std::string SuceEffect1;
+    static const std::string SuceEffect2;
+    static const std::string SuceEffect3;
+    static const std::string SuceFailed1;
+    static const std::string SuceFailed2;
+    static const std::string SuceFailed3;
+
+    //proto
+    static const std::string ProtoEffect1;
+    static const std::string ProtoEffect2;
+    static const std::string ProtoEffect3;
+    static const std::string ProtoFailed1;
+    static const std::string ProtoFailed2;
+    static const std::string ProtoFailed3;
+
+    //BG
+    static const std::string BGEffect1;
+    static const std::string BGEffect2;
+    static const std::string BGEffect3;
+    static const std::string BGFailed1;
+    static const std::string BGFailed2;
+    static const std::string BGFailed3;
 
 };
 #endif /* AttackStrings_h */

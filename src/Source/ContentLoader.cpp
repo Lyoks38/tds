@@ -602,6 +602,43 @@ std::vector<Attack> ContentLoader::LoadAttackDatabase()
     attack.SetFailedText3(AttackStrings::EcrivainFailed3);
     output.push_back(attack);
 
+    attack = Attack("“Tu suces ?“");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(15);
+    attack.SetDiceThreshold(40);
+    attack.SetAttackText1(AttackStrings::SuceEffect1);
+    attack.SetAttackText2(AttackStrings::SuceEffect2);
+    attack.SetAttackText3(AttackStrings::SuceEffect3);
+    attack.SetFailedText1(AttackStrings::SuceFailed1);
+    attack.SetFailedText2(AttackStrings::SuceFailed2);
+    attack.SetFailedText3(AttackStrings::SuceFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("Proposer un proto");
+    attack.SetImpactsPlayer(true);
+    attack.SetPlayerImpact(15);
+    attack.SetBaseDamages(20);
+    attack.SetDiceThreshold(-1);
+    attack.SetAttackText1(AttackStrings::ProtoEffect1);
+    attack.SetAttackText2(AttackStrings::ProtoEffect2);
+    attack.SetAttackText3(AttackStrings::ProtoEffect3);
+    attack.SetFailedText1(AttackStrings::ProtoFailed1);
+    attack.SetFailedText2(AttackStrings::ProtoFailed2);
+    attack.SetFailedText3(AttackStrings::ProtoFailed3);
+    output.push_back(attack);
+    
+    attack = Attack("Être un beau gosse");
+    attack.SetImpactsPlayer(false);
+    attack.SetBaseDamages(35);
+    attack.SetDiceThreshold(50);
+    attack.SetAttackText1(AttackStrings::BGEffect1);
+    attack.SetAttackText2(AttackStrings::BGEffect2);
+    attack.SetAttackText3(AttackStrings::BGEffect3);
+    attack.SetFailedText1(AttackStrings::BGFailed1);
+    attack.SetFailedText2(AttackStrings::BGFailed2);
+    attack.SetFailedText3(AttackStrings::BGFailed3);
+    output.push_back(attack);
+
 
     return output;
 }

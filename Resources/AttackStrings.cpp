@@ -171,8 +171,32 @@ const std::string AttackStrings::SportifFailed3 = "“Dommage je préfère les a
 
 //ecrivain
 const std::string AttackStrings::EcrivainEffect1 = "“Wow trop classe !“ dit-elle bouche bée. Et ouais, ça marche tout le temps !";
-const std::string AttackStrings::EcrivainEffect2 = "“Wow trop classe !“ dit-elle bouche bée. Et ouais, ça marche tout le temps !";
-const std::string AttackStrings::EcrivainEffect3 = "“Wow trop classe !“ dit-elle bouche bée. Et ouais, ça marche tout le temps !";
+const std::string AttackStrings::EcrivainEffect2 = "“Tu dois bien savoir manier la langue alors...“ Héhéhé.";
+const std::string AttackStrings::EcrivainEffect3 = "Elle te demande d'absolument lui dédicacer un exemplaire. Trop facile.";
 const std::string AttackStrings::EcrivainFailed1 = "“M'en fous, j'aime pas lire.“ Ah bah tant pis alors !";
 const std::string AttackStrings::EcrivainFailed2 = "Dommage, je préfère les sportifs. Ok, message reçu !";
 const std::string AttackStrings::EcrivainFailed3 = "“Ca parle de vampires et de loups-garous ?“ Aaaaaaah une fan de Twilight ! Fuis !";
+
+//tu suces
+const std::string AttackStrings::SuceEffect1 = "“Tu perds pas ton temps, toi !“ dit-elle en rigolant. Au moins ça la fait marrer, c'est déjà ça !";
+const std::string AttackStrings::SuceEffect2 = "“Peut-être...“ dit-elle avec un petit clin d'oeil suggestif. Oooooh yeah.";
+const std::string AttackStrings::SuceEffect3 = "“Oui, mais je mords !“ dit-elle en faisant la tigresse. Tu ne sais pas trop si c'est vrai (ça serait quand même con qu'elle te bouffe ton prépuce), mais dans le doute...";
+const std::string AttackStrings::SuceFailed1 = "“Oui, mais pas toi.“ Dommage.";
+const std::string AttackStrings::SuceFailed2 = "“Vous pensez vraiment qu'à ça, les mecs, putain ! Dégage !“";
+const std::string AttackStrings::SuceFailed3 = "“Non, je trouve ça dégueulasse et dégradant pour la femme.“ Ah parce que, pour nous, bouffer un clito c'est mieux ? Connasse.";
+
+//proto
+const std::string AttackStrings::ProtoEffect1 = "Vous vous calez tranquille dans un coin et aspirez vos ballons. Elle en rigole tellement qu'elle se jette à moitié sur toi.";
+const std::string AttackStrings::ProtoEffect2 = "La cartouche lui fait tellement d'effet qu'elle en devient très tactile. Attention à l'érection.";
+const std::string AttackStrings::ProtoEffect3 = "";
+const std::string AttackStrings::ProtoFailed1 = "La cartouche lui dézingue la tête et elle s'endort profondément sur le sol. Impossible de la réveiller, elle finit dans la voiture d'un staff.";
+const std::string AttackStrings::ProtoFailed2 = "“Non merci, j'aime pas ça.“ Tu te retrouves donc seul avec ton ballon. Tristesse.";
+const std::string AttackStrings::ProtoFailed3 = "Elle aspire mal et commence à tousser. Puis elle part en crise d'asthme. Elle part désespéremment à la recherche de ventoline, t'abandonnant là, tel une pauvre merde.";
+
+//BG
+const std::string AttackStrings::BGEffect1 = "Tu es vraiment trop un beau gosse. Elle te dévore du regard, telle un lion devant un gazelle.";
+const std::string AttackStrings::BGEffect2 = "Tu transpires la beauté et la virilité. Sa culotte transpire la cyprine.";
+const std::string AttackStrings::BGEffect3 = "Ton petit côté Ryan Gosling ne la laisse clairement pas indifférente.";
+const std::string AttackStrings::BGFailed1 = "Tu es tellement un beau gosse que tu lui fais peur. Elle n'ose plus te parler.";
+const std::string AttackStrings::BGFailed2 = "Raté, en fait t'es moche.";
+const std::string AttackStrings::BGFailed3 = "Si une échelle de beauté de 18 à 43 existait, tu serais à -7.";
